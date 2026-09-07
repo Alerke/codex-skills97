@@ -1,0 +1,58 @@
+[
+  {
+    "key": "nav_list",
+    "label": "页脚导航",
+    "value": "[{\"id\":\"about\",\"title\":\"关于我们\",\"remark\":\"\",\"hidden\":false,\"jump\":{\"type\":\"web\",\"href\":\"/about\",\"target\":\"_self\"},\"icon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hoverIcon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"children\":[{\"id\":\"company\",\"title\":\"公司简介\",\"remark\":\"\",\"hidden\":false,\"jump\":{\"type\":\"web\",\"href\":\"/about/company\",\"target\":\"_self\"},\"children\":[]}]},{\"id\":\"service\",\"title\":\"服务支持\",\"remark\":\"\",\"hidden\":false,\"jump\":{\"type\":\"none\",\"href\":\"\",\"target\":\"_self\"},\"children\":[{\"id\":\"contact\",\"title\":\"联系我们\",\"remark\":\"\",\"hidden\":false,\"jump\":{\"type\":\"web\",\"href\":\"/contact\",\"target\":\"_self\"},\"children\":[]}]}]",
+    "default_value": "[{\"id\":\"about\",\"title\":\"关于我们\",\"jump\":{\"type\":\"web\",\"href\":\"/about\",\"target\":\"_self\"},\"children\":[]},{\"id\":\"contact\",\"title\":\"联系我们\",\"jump\":{\"type\":\"web\",\"href\":\"/contact\",\"target\":\"_self\"},\"children\":[]}]",
+    "input_type": "navList"
+  },
+  {
+    "key": "i18n",
+    "label": "多语言文案",
+    "value": "{\"zh-cn\":{\"footer_nav\":\"页脚导航\",\"expand\":\"展开\",\"collapse\":\"收起\"},\"zh\":{\"footer_nav\":\"頁腳導航\",\"expand\":\"展開\",\"collapse\":\"收起\"},\"en\":{\"footer_nav\":\"Footer navigation\",\"expand\":\"Expand\",\"collapse\":\"Collapse\"},\"kr\":{\"footer_nav\":\"바닥글 탐색\",\"expand\":\"펼치기\",\"collapse\":\"접기\"},\"ru\":{\"footer_nav\":\"Навигация в подвале\",\"expand\":\"Развернуть\",\"collapse\":\"Свернуть\"},\"jp\":{\"footer_nav\":\"フッターナビゲーション\",\"expand\":\"展開\",\"collapse\":\"折りたたむ\"}}",
+    "default_value": "{\"zh-cn\":{\"footer_nav\":\"页脚导航\",\"expand\":\"展开\",\"collapse\":\"收起\"},\"zh\":{\"footer_nav\":\"頁腳導航\",\"expand\":\"展開\",\"collapse\":\"收起\"},\"en\":{\"footer_nav\":\"Footer navigation\",\"expand\":\"Expand\",\"collapse\":\"Collapse\"},\"kr\":{\"footer_nav\":\"바닥글 탐색\",\"expand\":\"펼치기\",\"collapse\":\"접기\"},\"ru\":{\"footer_nav\":\"Навигация в подвале\",\"expand\":\"Развернуть\",\"collapse\":\"Свернуть\"},\"jp\":{\"footer_nav\":\"フッターナビゲーション\",\"expand\":\"展開\",\"collapse\":\"折りたたむ\"}}",
+    "input_type": "i18n"
+  },
+  {
+    "key": "mobile_collapsible",
+    "label": "移动端折叠",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "switch"
+  },
+  {
+    "key": "show_contact",
+    "label": "显示联系信息",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "switch"
+  },
+  {
+    "key": "phone",
+    "label": "联系电话",
+    "value": "",
+    "default_value": "",
+    "input_type": "text"
+  },
+  {
+    "key": "email",
+    "label": "联系邮箱",
+    "value": "",
+    "default_value": "",
+    "input_type": "text"
+  },
+  {
+    "key": "address",
+    "label": "联系地址",
+    "value": "",
+    "default_value": "",
+    "input_type": "text"
+  },
+  {
+    "key": "copyright",
+    "label": "版权文案",
+    "value": "",
+    "default_value": "",
+    "input_type": "text"
+  }
+]

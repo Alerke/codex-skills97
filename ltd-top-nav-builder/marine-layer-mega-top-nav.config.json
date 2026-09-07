@@ -1,0 +1,184 @@
+[
+  {
+    "key": "nav",
+    "label": "导航菜单",
+    "value": "[{\"id\":\"home\",\"title\":\"首页\",\"jump\":{\"type\":\"web\",\"href\":\"/\",\"target\":\"_self\"},\"children\":[],\"remark\":\"\",\"icon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hoverIcon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hidden\":false,\"isBackend\":false},{\"id\":\"products\",\"title\":\"产品系列\",\"jump\":{\"type\":\"web\",\"href\":\"/products\",\"target\":\"_self\"},\"children\":[{\"id\":\"featured\",\"title\":\"精选推荐\",\"jump\":{\"type\":\"web\",\"href\":\"/products\",\"target\":\"_self\"},\"children\":[{\"id\":\"new-arrivals\",\"title\":\"当季新品\",\"jump\":{\"type\":\"web\",\"href\":\"/products?sort=new\",\"target\":\"_self\"},\"children\":[],\"hidden\":false},{\"id\":\"best-sellers\",\"title\":\"人气精选\",\"jump\":{\"type\":\"web\",\"href\":\"/products?sort=hot\",\"target\":\"_self\"},\"children\":[],\"hidden\":false},{\"id\":\"limited\",\"title\":\"限量系列\",\"jump\":{\"type\":\"web\",\"href\":\"/products?tag=limited\",\"target\":\"_self\"},\"children\":[],\"hidden\":false}],\"remark\":\"\",\"icon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hoverIcon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hidden\":false},{\"id\":\"categories\",\"title\":\"产品分类\",\"jump\":{\"type\":\"web\",\"href\":\"/products\",\"target\":\"_self\"},\"children\":[{\"id\":\"category-a\",\"title\":\"分类一\",\"jump\":{\"type\":\"web\",\"href\":\"/products/category-a\",\"target\":\"_self\"},\"children\":[],\"hidden\":false},{\"id\":\"category-b\",\"title\":\"分类二\",\"jump\":{\"type\":\"web\",\"href\":\"/products/category-b\",\"target\":\"_self\"},\"children\":[],\"hidden\":false},{\"id\":\"category-c\",\"title\":\"分类三\",\"jump\":{\"type\":\"web\",\"href\":\"/products/category-c\",\"target\":\"_self\"},\"children\":[],\"hidden\":false}],\"remark\":\"\",\"icon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hoverIcon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hidden\":false},{\"id\":\"product-promo-one\",\"title\":\"当季灵感\",\"jump\":{\"type\":\"web\",\"href\":\"/products?tag=season\",\"target\":\"_self\"},\"children\":[],\"remark\":\"轻盈质感，为日常注入松弛气息。\",\"icon\":{\"type\":\"image\",\"value\":\"https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=900&q=82\",\"name\":\"当季灵感\"},\"hoverIcon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hidden\":false},{\"id\":\"product-promo-two\",\"title\":\"经典系列\",\"jump\":{\"type\":\"web\",\"href\":\"/products?tag=classic\",\"target\":\"_self\"},\"children\":[],\"remark\":\"值得反复穿用的舒适单品。\",\"icon\":{\"type\":\"image\",\"value\":\"https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=82\",\"name\":\"经典系列\"},\"hoverIcon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hidden\":false}],\"remark\":\"\",\"icon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hoverIcon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hidden\":false,\"isBackend\":false},{\"id\":\"story\",\"title\":\"品牌故事\",\"jump\":{\"type\":\"web\",\"href\":\"/about\",\"target\":\"_self\"},\"children\":[{\"id\":\"our-story\",\"title\":\"我们的故事\",\"jump\":{\"type\":\"web\",\"href\":\"/about\",\"target\":\"_self\"},\"children\":[],\"remark\":\"从一个简单想法开始，持续做好每一个细节。\",\"icon\":{\"type\":\"image\",\"value\":\"https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=82\",\"name\":\"我们的故事\"},\"hoverIcon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hidden\":false},{\"id\":\"sustainability\",\"title\":\"可持续理念\",\"jump\":{\"type\":\"web\",\"href\":\"/sustainability\",\"target\":\"_self\"},\"children\":[],\"remark\":\"选择更负责任的材料与生产方式。\",\"icon\":{\"type\":\"image\",\"value\":\"https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=900&q=82\",\"name\":\"可持续理念\"},\"hoverIcon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hidden\":false},{\"id\":\"stores\",\"title\":\"线下空间\",\"jump\":{\"type\":\"web\",\"href\":\"/stores\",\"target\":\"_self\"},\"children\":[],\"remark\":\"到访我们的空间，近距离感受产品。\",\"icon\":{\"type\":\"image\",\"value\":\"https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=82\",\"name\":\"线下空间\"},\"hoverIcon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hidden\":false}],\"remark\":\"\",\"icon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hoverIcon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hidden\":false,\"isBackend\":false},{\"id\":\"contact\",\"title\":\"联系我们\",\"jump\":{\"type\":\"web\",\"href\":\"/contact\",\"target\":\"_self\"},\"children\":[],\"remark\":\"\",\"icon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hoverIcon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hidden\":false,\"isBackend\":false}]",
+    "default_value": "[{\"id\":\"home\",\"title\":\"首页\",\"jump\":{\"type\":\"web\",\"href\":\"/\",\"target\":\"_self\"},\"children\":[]},{\"id\":\"products\",\"title\":\"产品系列\",\"jump\":{\"type\":\"web\",\"href\":\"/products\",\"target\":\"_self\"},\"children\":[{\"id\":\"featured\",\"title\":\"精选推荐\",\"jump\":{\"type\":\"web\",\"href\":\"/products\",\"target\":\"_self\"},\"children\":[{\"id\":\"new-arrivals\",\"title\":\"当季新品\",\"jump\":{\"type\":\"web\",\"href\":\"/products?sort=new\",\"target\":\"_self\"},\"children\":[]},{\"id\":\"best-sellers\",\"title\":\"人气精选\",\"jump\":{\"type\":\"web\",\"href\":\"/products?sort=hot\",\"target\":\"_self\"},\"children\":[]}]},{\"id\":\"product-promo-one\",\"title\":\"当季灵感\",\"jump\":{\"type\":\"web\",\"href\":\"/products?tag=season\",\"target\":\"_self\"},\"children\":[],\"remark\":\"轻盈质感，为日常注入松弛气息。\",\"icon\":{\"type\":\"image\",\"value\":\"https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=900&q=82\",\"name\":\"当季灵感\"}}]},{\"id\":\"story\",\"title\":\"品牌故事\",\"jump\":{\"type\":\"web\",\"href\":\"/about\",\"target\":\"_self\"},\"children\":[]},{\"id\":\"contact\",\"title\":\"联系我们\",\"jump\":{\"type\":\"web\",\"href\":\"/contact\",\"target\":\"_self\"},\"children\":[]}]",
+    "input_type": "navList"
+  },
+  {
+    "key": "use_custom_language_jump",
+    "label": "使用自定义语言跳转",
+    "value": "1",
+    "default_value": "0",
+    "input_type": "switch"
+  },
+  {
+    "key": "language_nav",
+    "label": "语言跳转列表",
+    "value": "[{\"id\":\"zh-cn\",\"title\":\"简体中文\",\"jump\":{\"type\":\"web\",\"href\":\"/\",\"target\":\"_self\"},\"children\":[],\"hidden\":false},{\"id\":\"en\",\"title\":\"English\",\"jump\":{\"type\":\"web\",\"href\":\"/en\",\"target\":\"_self\"},\"children\":[],\"hidden\":false}]",
+    "default_value": "[{\"id\":\"zh-cn\",\"title\":\"简体中文\",\"jump\":{\"type\":\"web\",\"href\":\"/\",\"target\":\"_self\"},\"children\":[]},{\"id\":\"en\",\"title\":\"English\",\"jump\":{\"type\":\"web\",\"href\":\"/en\",\"target\":\"_self\"},\"children\":[]}]",
+    "input_type": "navList"
+  },
+  {
+    "key": "logo",
+    "label": "默认 Logo",
+    "value": "",
+    "default_value": "",
+    "input_type": "image"
+  },
+  {
+    "key": "stickyLogo",
+    "label": "滚动后 Logo",
+    "value": "",
+    "default_value": "",
+    "input_type": "image"
+  },
+  {
+    "key": "logo_link",
+    "label": "Logo 跳转链接",
+    "value": "{\"type\":\"web\",\"href\":\"/\",\"target\":\"_self\"}",
+    "default_value": "{\"type\":\"web\",\"href\":\"/\",\"target\":\"_self\"}",
+    "input_type": "jump"
+  },
+  {
+    "key": "phone",
+    "label": "联系电话",
+    "value": "400-000-0000",
+    "default_value": "",
+    "input_type": "text"
+  },
+  {
+    "key": "email",
+    "label": "联系邮箱",
+    "value": "hello@example.com",
+    "default_value": "",
+    "input_type": "text"
+  },
+  {
+    "key": "address",
+    "label": "联系地址",
+    "value": "请在后台填写企业地址",
+    "default_value": "",
+    "input_type": "text"
+  },
+  {
+    "key": "sticky_mode",
+    "label": "透明悬浮并吸顶",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "switch"
+  },
+  {
+    "key": "sticky_scroll_distance",
+    "label": "滚动态切换距离",
+    "value": "12",
+    "default_value": "12",
+    "input_type": "number"
+  },
+  {
+    "key": "theme_color",
+    "label": "主题色",
+    "value": "#d4573b",
+    "default_value": "#d4573b",
+    "input_type": "color"
+  },
+  {
+    "key": "nav_background_color",
+    "label": "首屏导航背景",
+    "value": "rgba(255,255,255,0.00)",
+    "default_value": "rgba(255,255,255,0.00)",
+    "input_type": "color"
+  },
+  {
+    "key": "nav_blur",
+    "label": "毛玻璃强度",
+    "value": "0",
+    "default_value": "0",
+    "input_type": "number"
+  },
+  {
+    "key": "nav_text_color",
+    "label": "首屏文字颜色",
+    "value": "#ffffff",
+    "default_value": "#ffffff",
+    "input_type": "color"
+  },
+  {
+    "key": "i18n",
+    "label": "多语言文案",
+    "value": "{\"zh-cn\":{\"searchPlaceholder\":\"搜索\",\"loginText\":\"登录\",\"loginUserName\":\"用户中心\",\"searchLabel\":\"搜索\",\"closeSearch\":\"取消\",\"openMenu\":\"打开菜单\",\"closeMenu\":\"关闭菜单\",\"expandSubmenu\":\"展开子菜单\",\"featuredTitle\":\"精选推荐\",\"moreLinksTitle\":\"更多\",\"phoneLabel\":\"电话\",\"emailLabel\":\"邮箱\",\"addressLabel\":\"地址\"},\"en\":{\"searchPlaceholder\":\"Search\",\"loginText\":\"Login\",\"loginUserName\":\"Account\",\"searchLabel\":\"Search\",\"closeSearch\":\"Cancel\",\"openMenu\":\"Open menu\",\"closeMenu\":\"Close menu\",\"expandSubmenu\":\"Expand submenu\",\"featuredTitle\":\"Featured\",\"moreLinksTitle\":\"More\",\"phoneLabel\":\"Phone\",\"emailLabel\":\"Email\",\"addressLabel\":\"Address\"}}",
+    "default_value": "{\"zh-cn\":{\"searchPlaceholder\":\"搜索\",\"loginText\":\"登录\",\"loginUserName\":\"用户中心\",\"searchLabel\":\"搜索\",\"closeSearch\":\"取消\",\"openMenu\":\"打开菜单\",\"closeMenu\":\"关闭菜单\",\"expandSubmenu\":\"展开子菜单\",\"featuredTitle\":\"精选推荐\",\"moreLinksTitle\":\"更多\",\"phoneLabel\":\"电话\",\"emailLabel\":\"邮箱\",\"addressLabel\":\"地址\"},\"en\":{\"searchPlaceholder\":\"Search\",\"loginText\":\"Login\",\"loginUserName\":\"Account\",\"searchLabel\":\"Search\",\"closeSearch\":\"Cancel\",\"openMenu\":\"Open menu\",\"closeMenu\":\"Close menu\",\"expandSubmenu\":\"Expand submenu\",\"featuredTitle\":\"Featured\",\"moreLinksTitle\":\"More\",\"phoneLabel\":\"Phone\",\"emailLabel\":\"Email\",\"addressLabel\":\"Address\"}}",
+    "input_type": "i18n"
+  },
+  {
+    "key": "show_search",
+    "label": "显示搜索",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "switch"
+  },
+  {
+    "key": "search_link",
+    "label": "搜索跳转链接",
+    "value": "{\"type\":\"web\",\"href\":\"/search\",\"target\":\"_self\"}",
+    "default_value": "{\"type\":\"web\",\"href\":\"/search\",\"target\":\"_self\"}",
+    "input_type": "jump"
+  },
+  {
+    "key": "show_login",
+    "label": "显示登录",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "switch"
+  },
+  {
+    "key": "sticky_nav_background_color",
+    "label": "滚动后背景色",
+    "value": "#ffffff",
+    "default_value": "#ffffff",
+    "input_type": "color"
+  },
+  {
+    "key": "sticky_nav_text_color",
+    "label": "滚动后文字颜色",
+    "value": "#172033",
+    "default_value": "#172033",
+    "input_type": "color"
+  },
+  {
+    "key": "logo_height_percent",
+    "label": "Logo 高度百分比",
+    "value": "48",
+    "default_value": "48",
+    "input_type": "number"
+  },
+  {
+    "key": "company_name",
+    "label": "公司名称",
+    "value": "YOUR BRAND",
+    "default_value": "YOUR BRAND",
+    "input_type": "text"
+  },
+  {
+    "key": "company_name_color",
+    "label": "首屏公司名颜色",
+    "value": "#ffffff",
+    "default_value": "#ffffff",
+    "input_type": "color"
+  },
+  {
+    "key": "sticky_company_name_color",
+    "label": "滚动后公司名颜色",
+    "value": "#172033",
+    "default_value": "#172033",
+    "input_type": "color"
+  },
+  {
+    "key": "mobile_menu_company_name_color",
+    "label": "移动端菜单公司名颜色",
+    "value": "#172033",
+    "default_value": "#172033",
+    "input_type": "color"
+  }
+]

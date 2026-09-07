@@ -1,0 +1,201 @@
+LTD Banner 模块 Skill
+
+用途
+
+创建、重构或排查 LTD 图片或视频 Banner、首屏横幅和媒体轮播。默认同步交付完整 HTML 与可直接导入的 18 项配置 JSON。只生成 HTML、原生 CSS 和成熟 ES6，不设计 Python、后端或构建工程。
+
+一、内容模式
+
+1. media_type=image 时读取 slides，input_type=imageList。
+2. media_type=video 时读取 video_slides，input_type=videoList。
+3. media_type 只接受 image/video，非法值回退 image。
+4. 两份列表不能静默拼接；imageList 与 videoList 没有共同的跨列表排序。
+2. 默认视觉是全屏/比例双模式、背景图、主标题、副标题、渐变遮罩和数字进度条。
+5. 多项使用 fade + crossFade；单项保持静态；空数据进入稳定空状态。
+6. 不默认增加箭头、圆点分页、缩略图、视差、粒子、接口或广告统计。
+7. 根类使用 .ltdBannerYYYYMMDD，子级使用 .ltd-banner-*。
+
+二、输出
+
+<style data-banner-initial>原生首屏 CSS</style>
+<style data-banner-styles>原生业务 CSS</style>
+<!-- HTML -->
+<script>当前实例 JavaScript</script>
+
+禁止输出 style type="text/less"，禁止加载 less.js。参考 Less 的嵌套选择器和媒体查询必须展开为保留根类前缀的标准 CSS。
+
+三、slides
+
+配置：
+
+{
+  "key": "slides",
+  "label": "轮播内容列表",
+  "value": "[]",
+  "default_value": "[]",
+  "input_type": "imageList"
+}
+
+已验证节点：
+
+{
+  "url": "https://example.com/banner.jpg",
+  "filepath_thumb": "https://example.com/banner-thumb.jpg",
+  "name": "图片名称",
+  "title": "可见主标题",
+  "subtitle": "可见副标题",
+  "hidden": false,
+  "jump": {
+    "type": "none",
+    "href": "",
+    "target": "_self"
+  }
+}
+
+字段优先级：
+
+- 图片：url、image、filepath、src、filepath_thumb。
+- 主标题：title、name。
+- 副标题：subtitle、desc、description。
+- alt：name、title；装饰图可使用空 alt。
+- 点击：jump；扁平 href/target 只作旧数据兼容。
+
+title/subtitle 是当前参考 Banner 的扩展字段，维护时必须保留。
+
+读取 slides 时数组直接使用；旧 JSON 字符串只解析一次。显式 [] 保持为空，不能自动恢复默认数据。过滤 hidden，true、1、"1"、"true" 为隐藏；不能使用 Boolean("false")。
+
+不要把原始标题、副标题或 URL 直接拼入 innerHTML 或 style。优先用 createElement、textContent、setAttribute 和经过校验的 image.src。
+
+四、点击
+
+必须保留 item.jump，不能像旧参考代码一样读取后丢弃。
+
+- none 或空地址：不可点击。
+- web/url：安全相对地址或 HTTP(S)。
+- mobile/email：补 tel:/mailto:。
+- _blank：补 rel="noopener noreferrer"。
+- 拒绝任意 javascript:/data:/vbscript:。
+
+imageList 嵌套 jump 不会自动获得根级 jump 属性注入。openForm、popup、module、miniProgram 未实测时降级为不可点击。
+
+五、video_slides
+
+配置：
+
+{
+  "key": "video_slides",
+  "label": "Banner 视频列表",
+  "value": "[]",
+  "default_value": "[]",
+  "input_type": "videoList"
+}
+
+视频节点字段：
+
+- url：视频地址。
+- poster：视频封面。
+- name/description：标题和说明。
+- autoplay/controls/muted/hidden：播放与显示状态。
+- jump：点击操作。
+
+自动播放视频必须静音并设置 playsinline。先创建 autoplay=false 的 video，只允许活动 slide 调用 play()；Promise 拒绝必须捕获并保留 poster。非活动视频暂停。单视频可按配置循环，多视频不能让每项永久 loop。
+
+prefers-reduced-motion、页面隐藏或 saveData=true 时不主动播放。controls=true 时不能用透明整卡链接遮挡视频控件。
+
+六、实例
+
+脚本首次执行时立即捕获 document.currentScript 和当前根节点。setTimeout、requestAnimationFrame 或 Swiper 回调中不得再次读取 document.currentScript。
+
+禁止固定 id、全局首个 .ltdBanner、全局 Swiper 状态。DOM 查询、计时器、进度、事件和实例全部限制在当前根节点。
+
+七、Swiper
+
+0 张：空状态。
+1 张：静态显示，禁用 loop/autoplay，隐藏进度。
+2 张以上：检测 window.Swiper 后初始化 fade、crossFade=true、loop=true、speed=1200。
+
+不得重复加载 Swiper。等待依赖必须有上限，例如 20 次 × 100ms；禁止无限 setTimeout(initBanner, 100)。超时或初始化失败时显示第一张。
+
+图片模式的自动切换由 autoplay 和 autoplay_delay 控制。视频模式中全局 autoplay 控制 slide 推进，每项 autoplay/controls/muted 控制视频本身。页面隐藏、键盘焦点进入或 prefers-reduced-motion 时暂停或关闭非必要自动播放。
+
+八、进度
+
+总数必须根据过滤后的 slides 设置，不能在 HTML 固定 03。单图隐藏进度。
+
+不使用 padStart，提供：
+
+const pad2 = (value) => value < 10 ? '0' + value : String(value);
+
+新版 Swiper 有 autoplayTimeLeft 时使用其 progress；旧版用本实例 requestAnimationFrame 回退。每次重启前取消旧 frame，销毁时清理。
+
+九、尺寸模式
+
+非比例模式使用：
+
+height: 100vh;
+height: 100svh;
+
+保留合理 min-height。PC 比例模式只在 769px 以上生效；移动比例模式在 768px 以下生效。比例模式取消视口高度和 min-height。
+
+比例支持 16/9、16:9、全角分隔符和正小数，非法值回退 16 / 9。优先使用 aspect-ratio；旧浏览器不支持时按当前实例宽度和比例用 JavaScript 计算高度，并绑定当前实例 resize handler。
+
+十、配置容错
+
+switch 必须显式识别 "1"/1/true/"true" 和 "0"/0/false/"false"，不能使用 Boolean("0")。
+
+数值必须有限并限制范围：
+
+- autoplay_delay：1500–20000。
+- title_font_size：16–120。
+- subtitle_font_size：10–60。
+- title_font_weight：100–900。
+- overlay_opacity：0–1。
+- content_bottom/content_left：0–1000。
+
+0 是 overlay_opacity、content_bottom、content_left 的合法值。禁止 parseFloat(value) || fallback。
+
+颜色通过 CSS.supports 或严格白名单验证；字重只接受安全值；比例统一输出 width / height。每个配置单独回退，不能用空 catch 包住整个初始化。
+
+十一、基线的 18 项配置
+
+1. media_type：text，值为 image/video
+2. slides：imageList
+3. video_slides：videoList
+4. autoplay：switch
+5. autoplay_delay：number
+6. title_font_size：number
+7. subtitle_font_size：number
+8. title_font_weight：number
+9. text_color：color
+10. subtitle_color：color
+11. overlay_opacity：number
+12. content_bottom：number
+13. content_left：number
+14. mobile_ratio_mode：switch
+15. mobile_aspect_ratio：text
+16. pc_ratio_mode：switch
+17. pc_aspect_ratio：text
+18. show_overlay：switch
+
+不得混入旧 key：banner_list、transition_speed、show_navigation、show_pagination、pause_on_hover、desktop_height、tablet_height、mobile_height。
+
+title_font_weight 使用新编辑器已支持的 number，并在运行时限制到 100–900。不要沿用参考配置中的未知 select 类型。
+
+十二、验收
+
+- media_type、slides、video_slides 和 18 项 JSON 完整且可解析。
+- 图片模式只读取 imageList，视频模式只读取 videoList。
+- 视频封面、静音自动播放、playsinline、controls、hidden 和播放失败降级正确。
+- 非活动视频暂停，单视频和多视频 loop/推进不会冲突。
+- title/subtitle、name/description 回退、hidden、jump 和缩略图回退正确。
+- 原生 CSS 已展开且没有 Less 依赖。
+- 全屏、PC 比例、移动比例和旧浏览器比例 fallback 正常。
+- 0、1、2+ 张分别进入空、静态、轮播状态。
+- 单图不循环且隐藏进度。
+- Swiper 等待有上限，缺失时仍显示第一张。
+- 异步回调不依赖失效的 document.currentScript。
+- 进度序号、总数和动画正确，销毁时完成清理。
+- overlay_opacity=0、content_bottom=0、content_left=0 能保留。
+- 标题、URL、颜色、比例和数值均经过安全归一化。
+- 同页两个 Banner 的计时器、事件、进度和 Swiper 实例互不影响。
+- 同步交付完整 HTML 和可直接导入的 18 项 JSON。

@@ -1,0 +1,226 @@
+[
+  {
+    "key": "media_type",
+    "label": "Banner 内容类型（image/video）",
+    "value": "image",
+    "default_value": "image",
+    "input_type": "text"
+  },
+  {
+    "key": "slides",
+    "label": "Banner 图片、标题、副标题及跳转",
+    "value": "[{\"url\":\"https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=1920&q=86&auto=format&fit=crop\",\"filepath_thumb\":\"https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=720&q=75&auto=format&fit=crop\",\"name\":\"海岸假日穿搭\",\"title\":\"把夏日，穿得更松弛\",\"subtitle\":\"柔软面料与轻盈层次，陪你自在走过每一个明亮日常。\",\"hidden\":false,\"jump\":{\"type\":\"web\",\"href\":\"#new-arrivals\",\"target\":\"_self\"}},{\"url\":\"https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=1920&q=86&auto=format&fit=crop\",\"filepath_thumb\":\"https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=720&q=75&auto=format&fit=crop\",\"name\":\"城市轻盈穿搭\",\"title\":\"城市里，也要慢一点\",\"subtitle\":\"利落轮廓融入舒适质感，让通勤与周末自然切换。\",\"hidden\":false,\"jump\":{\"type\":\"web\",\"href\":\"#the-edit\",\"target\":\"_self\"}},{\"url\":\"https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1920&q=86&auto=format&fit=crop\",\"filepath_thumb\":\"https://images.unsplash.com/photo-1483985988355-763728e1935b?w=720&q=75&auto=format&fit=crop\",\"name\":\"新季衣橱\",\"title\":\"新一季，依然自在\",\"subtitle\":\"从熟悉的舒适出发，为日常衣橱添一抹恰到好处的新意。\",\"hidden\":false,\"jump\":{\"type\":\"web\",\"href\":\"#shop-all\",\"target\":\"_self\"}}]",
+    "default_value": "[{\"url\":\"https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=1920&q=86&auto=format&fit=crop\",\"filepath_thumb\":\"https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=720&q=75&auto=format&fit=crop\",\"name\":\"海岸假日穿搭\",\"title\":\"把夏日，穿得更松弛\",\"subtitle\":\"柔软面料与轻盈层次，陪你自在走过每一个明亮日常。\",\"hidden\":false,\"jump\":{\"type\":\"web\",\"href\":\"#new-arrivals\",\"target\":\"_self\"}},{\"url\":\"https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=1920&q=86&auto=format&fit=crop\",\"filepath_thumb\":\"https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=720&q=75&auto=format&fit=crop\",\"name\":\"城市轻盈穿搭\",\"title\":\"城市里，也要慢一点\",\"subtitle\":\"利落轮廓融入舒适质感，让通勤与周末自然切换。\",\"hidden\":false,\"jump\":{\"type\":\"web\",\"href\":\"#the-edit\",\"target\":\"_self\"}},{\"url\":\"https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1920&q=86&auto=format&fit=crop\",\"filepath_thumb\":\"https://images.unsplash.com/photo-1483985988355-763728e1935b?w=720&q=75&auto=format&fit=crop\",\"name\":\"新季衣橱\",\"title\":\"新一季，依然自在\",\"subtitle\":\"从熟悉的舒适出发，为日常衣橱添一抹恰到好处的新意。\",\"hidden\":false,\"jump\":{\"type\":\"web\",\"href\":\"#shop-all\",\"target\":\"_self\"}}]",
+    "input_type": "imageList"
+  },
+  {
+    "key": "slide_1_title",
+    "label": "第1张大标题",
+    "value": "把夏日，穿得更松弛",
+    "default_value": "把夏日，穿得更松弛",
+    "input_type": "text"
+  },
+  {
+    "key": "slide_1_subtitle",
+    "label": "第1张小标题",
+    "value": "柔软面料与轻盈层次，陪你自在走过每一个明亮日常。",
+    "default_value": "柔软面料与轻盈层次，陪你自在走过每一个明亮日常。",
+    "input_type": "text"
+  },
+  {
+    "key": "slide_2_title",
+    "label": "第2张大标题",
+    "value": "城市里，也要慢一点",
+    "default_value": "城市里，也要慢一点",
+    "input_type": "text"
+  },
+  {
+    "key": "slide_2_subtitle",
+    "label": "第2张小标题",
+    "value": "利落轮廓融入舒适质感，让通勤与周末自然切换。",
+    "default_value": "利落轮廓融入舒适质感，让通勤与周末自然切换。",
+    "input_type": "text"
+  },
+  {
+    "key": "slide_3_title",
+    "label": "第3张大标题",
+    "value": "新一季，依然自在",
+    "default_value": "新一季，依然自在",
+    "input_type": "text"
+  },
+  {
+    "key": "slide_3_subtitle",
+    "label": "第3张小标题",
+    "value": "从熟悉的舒适出发，为日常衣橱添一抹恰到好处的新意。",
+    "default_value": "从熟悉的舒适出发，为日常衣橱添一抹恰到好处的新意。",
+    "input_type": "text"
+  },
+  {
+    "key": "video_slides",
+    "label": "Banner 视频列表",
+    "value": "[]",
+    "default_value": "[]",
+    "input_type": "videoList"
+  },
+  {
+    "key": "autoplay",
+    "label": "自动轮播",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "switch"
+  },
+  {
+    "key": "autoplay_delay",
+    "label": "轮播间隔（毫秒）",
+    "value": "6000",
+    "default_value": "6000",
+    "input_type": "number"
+  },
+  {
+    "key": "title_font_size",
+    "label": "标题字号（px）",
+    "value": "64",
+    "default_value": "64",
+    "input_type": "number"
+  },
+  {
+    "key": "subtitle_font_size",
+    "label": "副标题字号（px）",
+    "value": "17",
+    "default_value": "17",
+    "input_type": "number"
+  },
+  {
+    "key": "title_font_weight",
+    "label": "标题字重",
+    "value": "500",
+    "default_value": "500",
+    "input_type": "number"
+  },
+  {
+    "key": "text_color",
+    "label": "标题颜色",
+    "value": "#ffffff",
+    "default_value": "#ffffff",
+    "input_type": "color"
+  },
+  {
+    "key": "subtitle_color",
+    "label": "副标题颜色",
+    "value": "#ffffff",
+    "default_value": "#ffffff",
+    "input_type": "color"
+  },
+  {
+    "key": "overlay_opacity",
+    "label": "底部渐变遮罩强度",
+    "value": "0.28",
+    "default_value": "0.28",
+    "input_type": "number"
+  },
+  {
+    "key": "content_bottom",
+    "label": "内容距底距离（px）",
+    "value": "86",
+    "default_value": "86",
+    "input_type": "number"
+  },
+  {
+    "key": "content_left",
+    "label": "内容中心水平偏移（px）",
+    "value": "0",
+    "default_value": "0",
+    "input_type": "number"
+  },
+  {
+    "key": "mobile_ratio_mode",
+    "label": "移动端按比例显示",
+    "value": "0",
+    "default_value": "0",
+    "input_type": "switch"
+  },
+  {
+    "key": "mobile_aspect_ratio",
+    "label": "移动端宽高比例",
+    "value": "4/5",
+    "default_value": "4/5",
+    "input_type": "text"
+  },
+  {
+    "key": "pc_ratio_mode",
+    "label": "PC 端按比例显示",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "switch"
+  },
+  {
+    "key": "pc_aspect_ratio",
+    "label": "PC 端宽高比例",
+    "value": "21/9",
+    "default_value": "21/9",
+    "input_type": "text"
+  },
+  {
+    "key": "show_overlay",
+    "label": "显示渐变遮罩",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "switch"
+  },
+  {
+    "key": "button_text",
+    "label": "按钮文字",
+    "value": "探索新季",
+    "default_value": "探索新季",
+    "input_type": "text"
+  },
+  {
+    "key": "button_link",
+    "label": "按钮默认跳转（每张图片的跳转优先）",
+    "value": "{\"type\":\"web\",\"href\":\"#new-arrivals\",\"target\":\"_self\"}",
+    "default_value": "{\"type\":\"web\",\"href\":\"#new-arrivals\",\"target\":\"_self\"}",
+    "input_type": "jump"
+  },
+  {
+    "key": "button_background_color",
+    "label": "按钮背景颜色",
+    "value": "#ffffff",
+    "default_value": "#ffffff",
+    "input_type": "color"
+  },
+  {
+    "key": "button_text_color",
+    "label": "按钮文字颜色",
+    "value": "#31434a",
+    "default_value": "#31434a",
+    "input_type": "color"
+  },
+  {
+    "key": "button_hover_background_color",
+    "label": "按钮悬浮背景颜色",
+    "value": "#31434a",
+    "default_value": "#31434a",
+    "input_type": "color"
+  },
+  {
+    "key": "button_hover_text_color",
+    "label": "按钮悬浮文字颜色",
+    "value": "#ffffff",
+    "default_value": "#ffffff",
+    "input_type": "color"
+  },
+  {
+    "key": "indicator_color",
+    "label": "轮播分段线颜色",
+    "value": "#c6cfd1",
+    "default_value": "#c6cfd1",
+    "input_type": "color"
+  },
+  {
+    "key": "indicator_active_color",
+    "label": "轮播当前分段颜色",
+    "value": "#ffffff",
+    "default_value": "#ffffff",
+    "input_type": "color"
+  }
+]

@@ -1,0 +1,31 @@
+[
+  {
+    "key": "cat",
+    "label": "自定义内容分类",
+    "value": "{\"moduleType\":\"customContent\",\"type\":\"1\",\"ids\":\"\",\"names\":[],\"pageSize\":12,\"sortColumn\":\"sort\",\"sortDirection\":\"asc\",\"sortColumnVersion\":2}",
+    "default_value": "{\"moduleType\":\"customContent\",\"type\":\"1\",\"ids\":\"\",\"names\":[],\"pageSize\":12,\"sortColumn\":\"sort\",\"sortDirection\":\"asc\",\"sortColumnVersion\":2}",
+    "input_type": "category"
+  },
+  {
+    "key": "i18n",
+    "label": "多语言文案",
+    "value": "{\"zh-cn\":{\"title\":\"内容列表\",\"search\":\"搜索内容\",\"all\":\"全部\",\"loading\":\"正在加载...\",\"empty\":\"暂无内容\",\"error\":\"加载失败\",\"retry\":\"重新加载\",\"previous\":\"上一页\",\"next\":\"下一页\"},\"zh\":{\"title\":\"內容列表\",\"search\":\"搜尋內容\",\"all\":\"全部\",\"loading\":\"正在載入...\",\"empty\":\"暫無內容\",\"error\":\"載入失敗\",\"retry\":\"重新載入\",\"previous\":\"上一頁\",\"next\":\"下一頁\"},\"en\":{\"title\":\"Content\",\"search\":\"Search content\",\"all\":\"All\",\"loading\":\"Loading...\",\"empty\":\"No content\",\"error\":\"Failed to load\",\"retry\":\"Retry\",\"previous\":\"Previous\",\"next\":\"Next\"},\"kr\":{\"title\":\"콘텐츠\",\"search\":\"콘텐츠 검색\",\"all\":\"전체\",\"loading\":\"불러오는 중...\",\"empty\":\"콘텐츠가 없습니다\",\"error\":\"불러오지 못했습니다\",\"retry\":\"다시 시도\",\"previous\":\"이전\",\"next\":\"다음\"},\"ru\":{\"title\":\"Материалы\",\"search\":\"Поиск\",\"all\":\"Все\",\"loading\":\"Загрузка...\",\"empty\":\"Нет материалов\",\"error\":\"Ошибка загрузки\",\"retry\":\"Повторить\",\"previous\":\"Назад\",\"next\":\"Далее\"},\"jp\":{\"title\":\"コンテンツ\",\"search\":\"検索\",\"all\":\"すべて\",\"loading\":\"読み込み中...\",\"empty\":\"コンテンツがありません\",\"error\":\"読み込めませんでした\",\"retry\":\"再読み込み\",\"previous\":\"前へ\",\"next\":\"次へ\"}}",
+    "default_value": "{\"zh-cn\":{\"title\":\"内容列表\",\"search\":\"搜索内容\",\"all\":\"全部\",\"loading\":\"正在加载...\",\"empty\":\"暂无内容\",\"error\":\"加载失败\",\"retry\":\"重新加载\",\"previous\":\"上一页\",\"next\":\"下一页\"},\"zh\":{\"title\":\"內容列表\",\"search\":\"搜尋內容\",\"all\":\"全部\",\"loading\":\"正在載入...\",\"empty\":\"暫無內容\",\"error\":\"載入失敗\",\"retry\":\"重新載入\",\"previous\":\"上一頁\",\"next\":\"下一頁\"},\"en\":{\"title\":\"Content\",\"search\":\"Search content\",\"all\":\"All\",\"loading\":\"Loading...\",\"empty\":\"No content\",\"error\":\"Failed to load\",\"retry\":\"Retry\",\"previous\":\"Previous\",\"next\":\"Next\"},\"kr\":{\"title\":\"콘텐츠\",\"search\":\"콘텐츠 검색\",\"all\":\"전체\",\"loading\":\"불러오는 중...\",\"empty\":\"콘텐츠가 없습니다\",\"error\":\"불러오지 못했습니다\",\"retry\":\"다시 시도\",\"previous\":\"이전\",\"next\":\"다음\"},\"ru\":{\"title\":\"Материалы\",\"search\":\"Поиск\",\"all\":\"Все\",\"loading\":\"Загрузка...\",\"empty\":\"Нет материалов\",\"error\":\"Ошибка загрузки\",\"retry\":\"Повторить\",\"previous\":\"Назад\",\"next\":\"Далее\"},\"jp\":{\"title\":\"コンテンツ\",\"search\":\"検索\",\"all\":\"すべて\",\"loading\":\"読み込み中...\",\"empty\":\"コンテンツがありません\",\"error\":\"読み込めませんでした\",\"retry\":\"再読み込み\",\"previous\":\"前へ\",\"next\":\"次へ\"}}",
+    "input_type": "i18n"
+  },
+  {"key":"show_category_filter","label":"显示分类筛选","value":"1","default_value":"1","input_type":"switch"},
+  {"key":"show_all_button","label":"显示全部选项","value":"1","default_value":"1","input_type":"switch"},
+  {"key":"show_search","label":"显示搜索","value":"0","default_value":"0","input_type":"switch"},
+  {"key":"show_images","label":"显示图片","value":"1","default_value":"1","input_type":"switch"},
+  {"key":"show_abstract","label":"显示摘要","value":"1","default_value":"1","input_type":"switch"},
+  {"key":"show_content","label":"显示净化后的内容","value":"0","default_value":"0","input_type":"switch"},
+  {"key":"show_attrs","label":"显示动态字段","value":"0","default_value":"0","input_type":"switch"},
+  {"key":"attr_keys","label":"动态字段键","value":"","default_value":"","input_type":"text"},
+  {"key":"show_pagination","label":"显示分页","value":"0","default_value":"0","input_type":"switch"},
+  {"key":"columns","label":"桌面每行数量","value":"3","default_value":"3","input_type":"number"},
+  {"key":"image_aspect_ratio","label":"图片宽高比例","value":"4/3","default_value":"4/3","input_type":"text"},
+  {"key":"theme_color","label":"主题色","value":"#111111","default_value":"#111111","input_type":"color"},
+  {"key":"text_color","label":"文字颜色","value":"#111111","default_value":"#111111","input_type":"color"},
+  {"key":"muted_color","label":"辅助文字颜色","value":"#777777","default_value":"#777777","input_type":"color"},
+  {"key":"background_color","label":"背景颜色","value":"#ffffff","default_value":"#ffffff","input_type":"color"}
+]

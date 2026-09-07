@@ -1,0 +1,4 @@
+interface:
+  display_name: "LTD 自定义内容列表"
+  short_description: "创建兼容 LTD 分类、动态字段、筛选和分页的自定义内容模块"
+  default_prompt: "使用 $ltd-custom-content-list-builder 创建 LTD 自定义内容列表模块，并同步生成可直接导入的配置 JSON。"

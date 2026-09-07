@@ -1,0 +1,4 @@
+interface:
+  display_name: "LTD 产品与商品列表生成"
+  short_description: "创建共用内核并区分数据适配的 LTD 产品与商品列表"
+  default_prompt: "使用 $ltd-product-list-builder 创建 LTD 产品或商品列表，共用 UI 与状态内核，按 cat_id.moduleType 选择数据适配器，点击操作使用 jump 点号字段，所有配置逐项容错，JavaScript 必须采用成熟 ES6，图标优先使用 SVG 或复用 Font Awesome，并同时输出模块代码和可直接导入的配置 JSON。"

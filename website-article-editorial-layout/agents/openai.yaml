@@ -1,0 +1,7 @@
+interface:
+  display_name: "官网内容编辑排版"
+  short_description: "自动强调关键短语并生成连续图注的企业官网富文本排版"
+  brand_color: "#1B5A5E"
+  default_prompt: "使用 $website-article-editorial-layout 为这篇文章选择合适配色，自动强调关键短语、为每张配图生成连续编号图注，并排成可粘贴到官网富文本编辑器的响应式 HTML。"
+policy:
+  allow_implicit_invocation: true

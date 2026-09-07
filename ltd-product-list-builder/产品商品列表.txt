@@ -1,0 +1,519 @@
+LTD 产品商品列表 Skill
+
+你正在创建、重构、审查或排查 LTD 建站平台的产品与商品通用列表模块。请严格执行以下规范，并在同一轮交付完整模块 HTML 与可直接导入 LTD 的配置 JSON。用户明确说“只要代码”或“不要 JSON”时，才可以省略 JSON。
+没有特殊要求， 不要使用mock数据， 直接使用真实的请求
+一、任务边界
+
+1. 产品和商品共用一套列表内核：分类、搜索、排序、分页、URL、状态、卡片壳和点击操作只实现一次。
+2. 开始前读取 $[cat_id.moduleType]：product 表示产品，goods 表示商品，当前只允许这两个精确值。分类接口、列表接口、参数和字段解析全部来自已选适配器，不能先写死接口再反推类型。
+3. moduleType 当前只允许 product 和 goods；shopGoods 仅是商品 API 路径命名，不能作为类型或旧别名。
+4. 产品详情、SKU、加购、收藏、购物车、支付、订单和会员业务不属于默认范围，只有用户明确要求时才增加。
+5. 只生成前端 HTML、原生 CSS 和 JavaScript，不设计 Python、后端、数据库、构建工程或无关依赖。
+6. 若用户提供现有模块，保留原有视觉、字段和交互，只修改任务要求及必要的平台适配。
+
+二、输出合同
+
+模块代码固定使用以下顺序：
+
+<style data-product-list-initial>原生首屏 CSS</style>
+<style data-product-list-styles>原生业务 CSS</style>
+<!-- HTML -->
+<script>JavaScript</script>
+
+初始状态和业务样式都必须是标准 CSS，不使用 Less、Sass 或运行时样式编译器。
+
+代码之后同步输出完整配置 JSON 数组：
+
+1. 顶层必须是数组。
+2. 每项包含 key、label、value、default_value、input_type。
+3. HTML 占位符的根 key 必须在 JSON 中恰好出现一次；$[cat_id] 及其点号子字段共同对应一个 cat_id 配置项，不能生成 cat_id.moduleType 等独立 key。JSON 也不得包含未使用配置。
+4. 不用注释、省略号、字段表或伪代码代替真实 JSON。
+5. 配置 JSON 中 cat_id、i18n 等复合字段的 value 和 default_value 必须是可再次 JSON.parse 的字符串；这不代表 $[cat_id] 在模块运行时输出完整 JSON。
+6. 产品列表不强制固定 key 数量，按实际功能生成，但必须完整、一致、可导入。
+7. 分类选择配置的 input_type 固定为 category，不能写成 cat、select、product、goods 或自定义类型。category 表示控件类型，product/goods 只能写在分类值的 moduleType 中。
+8. 多语言配置的根 key 固定使用 i18n，对应 input_type 也固定使用 i18n。前者用于 $[i18n] 占位符引用，后者用于平台识别多语言控件。
+
+三、样式与平台
+
+1. 根类使用 .productListYYYYMMDD，例如 .productList20260723；子类使用项目缩写或 pl- 前缀。该根类可同时承载产品和商品适配器。
+2. 所有业务选择器从当前根类开始。平台规则从真实模块名称 .gw-browse-module[name="产品列表"]、.gw-browse-module[name="商品列表"] 或当前实例宿主类开始。
+3. 不裸写 html、body、:root、通用标签、.container、.wrapper、.content、.pagination 等全局选择器。
+4. 不修改 .merge.html，不重复引入平台已有的 jQuery、Vue、Swiper。
+5. PC 优先，至少检查 1024px、768px、576px。卡片图片用稳定比例，避免加载跳动。
+6. 不依赖 :has()、:scope、replaceChildren()、structuredClone() 等旧 Safari/Chromium/WebView 风险能力。
+7. 搜索、重试、分页均使用真实 button；加载区域使用 aria-busy，当前页使用 aria-current="page"。
+8. JavaScript 使用普通 script，默认必须采用成熟 ES6 语法：使用 const/let 管理变量，回调和纯函数优先使用箭头函数，多行模板必须优先使用模板字面量（template literals），并可使用数组迭代、解构和默认参数。除非用户或目标环境明确要求 ES5，不得自行降级为以 var、普通回调和字符串 + 拼接为主的写法。
+   多行静态 HTML、卡片批量模板和可读字符串必须优先使用模板字面量；插入接口数据前必须按文本、属性和 URL 上下文分别转义或校验，禁止把原始值直接写入 innerHTML。需要动态 this、构造函数语义或明确兼容点时可以使用普通 function。
+9. 兼容性优先于追求新语法。未确认目标环境时避免可选链 ?.、空值合并 ??、async/await、动态 import()、对象展开，以及 Array.prototype.flat/flatMap、Object.fromEntries、String.prototype.replaceAll 等较新能力。
+10. Element.closest、Object.assign、URL、URLSearchParams 等在旧 WebView 中先做特性检测，再使用当前模块内的局部兼容函数；不通过 user-agent 猜测能力，也不为少量 API 加载整套 polyfill。
+11. ES6 语法不能靠运行时 polyfill 修复。若项目明确覆盖无法解析 ES6 的浏览器，必须整体转译或按要求另交 ES5 版本，不能零散替换几处语法后声称兼容；ES5 是明确兼容目标下的例外交付，必须说明降级原因。
+12. 搜索、清空、布局切换、分页箭头、展开/收起和状态图标默认优先使用内联 SVG。SVG 必须有 viewBox，尺寸由当前模块根类内 CSS 控制，fill/stroke 优先使用 currentColor；不使用 Emoji、Unicode 箭头或系统字符冒充正式图标。
+13. 纯装饰 SVG 设置 aria-hidden="true"、focusable="false"；图标按钮必须使用真实 button，并由 aria-label 或可见文字提供名称，不能只依赖 SVG title。接口返回的原始 SVG 字符串不得直接写入 innerHTML。
+14. 大量统一图标可使用 Font Awesome。先复用宿主已经加载的兼容版本，不重复插入 link/script/kit。只有确认未加载、项目允许外部依赖且内联 SVG 不合适时，才引入固定版本；优先项目静态资源或自托管地址，CDN 必须锁定版本。
+15. 同一模块不能混用多个 Font Awesome major 版本或图标前缀；不写全局 svg/.fa/.fas 样式。Font Awesome 加载失败时，核心按钮仍要有文本或内联 SVG 回退。
+
+四、多实例
+
+1. 使用 document.currentScript 找到当前代码组件，再查找当前 .productListYYYYMMDD。
+2. 普通 DOM 查询全部限制在当前根节点。
+3. 状态、请求序号、事件、分类和分页放在当前实例闭包或实例类中。
+4. 不使用固定 id、getElementById、全局 querySelectorAll 批量重复绑定。
+5. 根节点设置 data-mounted 防止重复初始化。
+6. 每个实例生成独立 URL 参数前缀，不能让多个列表共用固定 cpcat_ 前缀。
+7. 分类、分页和窗口事件只绑定一次；重新渲染 DOM 后不得重复绑定同一容器。
+
+五、共用内核与两种数据适配器
+
+共用能力：cat_id 六个占位符、限定分类树、关键词、排序、分页、URL 状态、loading/success/empty/error、最新请求优先、通用卡片模型、点击操作、多语言和多实例。这些逻辑不能复制两份。
+
+product 产品体系：
+- 分类：GET /api/common/productCat?format=tree
+- 列表：GET /api/gatewayCms/product/getProductList
+- 详情数据：GET /api/website/noAuthProductDetail/{id}
+
+goods 商品体系：
+- 分类：GET /api/gatewayCms/shopGoods/category
+- 列表：GET /api/gatewayCms/shopGoods/getShopGoodsList
+- 详情数据：GET /api/gatewayCms/shopGoods/item/{id}
+
+分类类型必须使用点号语法读取：
+- $[cat_id]：直接输出选中分类 ID，逗号分隔，不是完整 JSON。
+- $[cat_id.moduleType]：当前只允许 product / goods。
+- $[cat_id.type]：业务细分类型。
+- $[cat_id.pageSize]：每页条数。
+- $[cat_id.sortColumn]：排序字段，支持业务自定义字段。
+- $[cat_id.sortDirection]：desc / asc。
+
+上述六个字段共同属于同一个 input_type="category" 的 cat_id 根配置项，不能为点号子字段分别生成配置；input_type 和 moduleType 不能互换。
+
+$[cat_id.moduleType] 为 product 时自动使用产品分类接口 /api/common/productCat?format=tree 和列表接口 /api/gatewayCms/product/getProductList；为 goods 时自动使用商品分类接口 /api/gatewayCms/shopGoods/category 和列表接口 /api/gatewayCms/shopGoods/getShopGoodsList。shopGoods 只允许出现在 API 路径中，不是 moduleType。
+
+两个适配器必须提供相同边界：分类 URL、列表 URL、参数构造、分类提取、列表提取、总数提取、分类归一化、卡片归一化和 capabilities。通用请求器只使用适配器 URL/参数，通用渲染器只消费归一化模型；不要在模板各处反复判断 moduleType。
+
+通用模块必须同时注册 product/goods 两个适配器，先用有效 category moduleType 选择唯一 adapter，再从 adapter.categoryUrl 和 adapter.listUrl 发请求。旧代码若写死了与类型不同的接口，必须删除固定 URL；有效类型不能被接口常量覆盖。只有类型缺失或占位符未替换时才使用 DEFAULT_MODULE_TYPE。
+
+生成代码至少包含以下等价逻辑，不能只写说明：
+
+const isPlaceholder = (value) => (
+  typeof value === 'string' && /^\$\[[^\]]+\]$/.test(value.trim())
+);
+
+const readModuleType = (value, fallback) => {
+  if (value === undefined || value === null || value === '' || isPlaceholder(value)) {
+    return fallback;
+  }
+  return value === 'product' || value === 'goods' ? value : '';
+};
+
+const adapters = {
+  product: {
+    categoryUrl: '/api/common/productCat?format=tree',
+    listUrl: '/api/gatewayCms/product/getProductList'
+  },
+  goods: {
+    categoryUrl: '/api/gatewayCms/shopGoods/category',
+    listUrl: '/api/gatewayCms/shopGoods/getShopGoodsList'
+  }
+};
+
+const moduleType = readModuleType('$[cat_id.moduleType]', DEFAULT_MODULE_TYPE);
+const adapter = adapters[moduleType];
+
+if (!adapter) {
+  renderConfigError();
+  return;
+}
+
+loadCategories(adapter.categoryUrl);
+loadList(adapter.listUrl);
+
+loadCategories/loadList 的参数构造和响应解析也必须委托给同一个 adapter。禁止在函数内部再次固定商品或产品接口，否则表面选择了 adapter，实际请求仍不会随类型切换。
+
+新模块固定同时输出上述六个占位符，分别检测未替换状态并转换类型。只有明确兼容旧项目且 $[cat_id] 的实际值以 { 开始时，才尝试把它解析为旧完整对象；标准逗号 ID 不执行 JSON.parse，点号字段优先于旧对象字段。
+
+sortColumn 允许平台配置的自定义字段，不维护固定字段白名单；需要限制异常长度和控制字符，并通过对象计算属性后 JSON.stringify 生成 order，禁止直接拼接 JSON 文本。
+
+所有 LTD 请求携带 website_id: localStorage.getItem("websiteId")，并按页面当前语言传 language_type 或语言请求头。优先使用平台请求封装 r(url, data, "get")；仅当运行环境没有 r() 时，才在当前模块内提供兼容实现。不得重复加载 jQuery。
+
+共同列表参数：
+- cat_id：分类 ID，空字符串表示全部。
+- keywords：关键词，注意是复数。
+- page：页码。
+- page_size：每页数量，注意下划线。
+- order：JSON 字符串，例如 {"created_at":"desc"} 或 {"price":"asc"}。
+- language_type：当前语言。
+
+不要默认传全部高级参数。产品适配器按需使用 parameter_management_id、attr_value、attr_flag、s_price、e_price、is_recommended、is_content、is_all_image、area、para、is_file；商品适配器按需使用 ids、stock、status、mold、is_sku、is_video、is_url、is_consume_integral。产品不得发送商品专属参数，商品不得默认发送产品专属参数。
+
+筛选型配置为空或没有传时表示不附加该筛选条件。cat_id 为空/未传/未选择分类时，省略请求中的 cat_id 或按接口要求传空字符串，获取当前已确定的 product 或 goods 适配器全部数据；不能自动选择第一个分类，也不能同时请求产品和商品。若后台配置了非空允许分类 ids，必须先递归展开为 allowedScopeIds，“全部”只获取该展开范围内的数据。关键词、价格和属性等可选筛选为空时同样不附加对应参数。
+
+六、响应与字段归一化
+
+1. 当前已确认的业务响应结构如下，必须作为第一适配路径：
+
+{
+  "code": 0,
+  "msg": "",
+  "data": {
+    "data": [
+      {
+        "id": 1404,
+        "title": "asdfasdfad",
+        "thumbnail": {
+          "id": 0,
+          "duration": 0,
+          "url": "https://static.ltdcdn.com/assets/images/no-image.jpg",
+          "thumbnail": "https://static.ltdcdn.com/assets/images/no-image.jpg"
+        },
+        "cat_id": 90,
+        "abstract": "",
+        "new_price": "",
+        "price": "120.00",
+        "price_ceiling": "0.00",
+        "created_at": "2017-08-02 10:52:20",
+        "updated_at": "2021-04-14 21:11:48",
+        "defined_link": null,
+        "detail_url": "http://fdfdf/goods/1404",
+        "tags": []
+      }
+    ],
+    "total": 3,
+    "page_size": "12",
+    "current_page": 1
+  }
+}
+
+列表数组固定先读取 response.data.data；分页先读取 response.data.total、response.data.page_size、response.data.current_page。page_size 可能是字符串，必须转换为有限整数并限制范围。仍可在同一个响应适配器内有序兼容 data.list、data.rows 或直接数组，但不能把结构判断散落在渲染器中。
+
+使用以下等价的 ES6 安全提取逻辑：
+
+const readBoundedInteger = (value, fallback, min, max) => {
+  const number = Number(value);
+  if (!Number.isFinite(number)) return fallback;
+  return Math.min(max, Math.max(min, Math.floor(number)));
+};
+
+const pickListPayload = (response) => {
+  const payload = response && response.data && typeof response.data === 'object'
+    ? response.data
+    : {};
+  const confirmedItems = Array.isArray(payload.data) ? payload.data : null;
+  const fallbackItems = Array.isArray(payload.list)
+    ? payload.list
+    : (Array.isArray(payload.rows) ? payload.rows : []);
+
+  return {
+    items: confirmedItems || fallbackItems,
+    total: readBoundedInteger(payload.total, 0, 0, 1000000000),
+    pageSize: readBoundedInteger(payload.page_size, 12, 1, 100),
+    currentPage: readBoundedInteger(payload.current_page, 1, 1, 1000000000)
+  };
+};
+
+示例完整响应必须提取出 3 条数据、total=3、pageSize=12、currentPage=1。总数也可能位于旧结构的 data.count 或分页对象；不能拿当前列表长度冒充总数。
+
+2. 两个适配器都先归一化为统一模型再渲染：kind、id、title、subtitle、summary、imageUrl、imageAlt、priceText、marketPriceText、categoryText、views、sales、stock、href、target、badges。
+3. 字段映射：id→id，title→title，abstract→summary，cat_id→分类 ID，tags→可选 badges，created_at/updated_at→按需元数据。空摘要、空 tags 和缺失可选字段必须安全降级。
+4. 主图优先校验 thumbnail.url，不依赖 thumbnail.id。示例中 thumbnail.id=0 仍有有效缺省图，必须显示；url 不可用时再校验 thumbnail.thumbnail，最后才回退模块占位状态。不要自行重写接口图片处理参数。
+5. 动态链接优先使用经过安全校验的 defined_link；其为 null、空值或非法 URL 时回退 detail_url；两者都无效时卡片不可点击。不能根据 detail_url 中的 /goods/ 或 /product/ 反推 moduleType，数据类型仍只由 cat_id.moduleType 决定。
+6. 价格在适配器内归一化成包含最终单位的 priceText/marketPriceText。当前已确认响应的 price 是元单位十进制字符串："120.00" 必须按 120 元显示，不能除以 100；"0.00" 是有效零价格。price_ceiling 是可选区间上限，不是市场价或原价；"0.00" 表示没有有效上限，不得生成灰色划线 marketPriceText。只有上限大于 price 且设计明确支持区间时才可生成单符号区间，否则忽略。marketPriceText 只能来自语义明确的 market_price/original_price 或已确认等价字段；当前响应没有此类字段时必须为空。new_price 为空时忽略，非空语义未经接口确认前不得猜测为销售价、市场价或促销价。
+
+price_format 的数字文本已带 ¥/￥/$/€/£/₽/₩、RMB/CNY/USD/EUR/GBP/JPY/KRW/RUB 或“元”时，不得再次拼 price_icon；price_icon 自身重复时只保留一个标识。模板、独立单位 span 和 CSS ::before 不得再添加货币符号。价格 0 是有效值，不能按 falsy 隐藏。其他接口回退有限数值 price 时，只有适配器明确单位为分才除以 100，明确为元时不换算。
+
+价格至少使用以下等价归一化函数，销售价和市场价共用它：
+
+const CURRENCY_TOKEN = '(?:CN¥|RMB|CNY|USD|EUR|GBP|JPY|KRW|RUB|[¥￥$€£₽₩])';
+const leadingCurrencyPattern = new RegExp(`^\\s*(${CURRENCY_TOKEN})(?:\\s*${CURRENCY_TOKEN})*\\s*`, 'i');
+const anyCurrencyPattern = new RegExp(`${CURRENCY_TOKEN}|元`, 'i');
+const singleCurrencyPattern = new RegExp(CURRENCY_TOKEN, 'i');
+
+const normalizeCurrencySymbol = (value) => {
+  const text = String(value === undefined || value === null ? '' : value).trim();
+  const match = text.match(singleCurrencyPattern);
+  return match ? match[0] : text;
+};
+
+const formatPriceParts = (priceFormat) => {
+  const format = priceFormat && typeof priceFormat === 'object' ? priceFormat : {};
+  if (format.price_integer === undefined || format.price_integer === null) return '';
+  let integer = String(format.price_integer).trim();
+  let symbol = normalizeCurrencySymbol(format.price_icon);
+  const leading = integer.match(leadingCurrencyPattern);
+  if (leading) {
+    symbol = normalizeCurrencySymbol(leading[1]);
+    integer = integer.replace(leadingCurrencyPattern, '');
+  } else if (anyCurrencyPattern.test(integer)) {
+    symbol = '';
+  }
+  let decimal = format.price_decimal;
+  decimal = decimal === undefined || decimal === null ? '' : String(decimal).trim();
+  decimal = decimal.replace(/^[.,]+/, '');
+  const amount = decimal && !/\.\d+$/.test(integer) ? `${integer}.${decimal}` : integer;
+  return `${symbol}${amount}`;
+};
+
+默认价格 DOM 只能使用一个最终文本节点：
+
+<span class="pl-price-text"></span>
+<del class="pl-market-price-text"></del>
+
+priceTextElement.textContent = item.priceText;
+marketPriceTextElement.textContent = item.marketPriceText;
+
+禁止生成以下结构：
+
+<span class="pl-price-symbol">¥</span>
+<span class="pl-price-text"></span>
+
+当 item.priceText 已经是 "¥123.00" 时，上述结构必然得到截图中的“¥ ¥123.00”。同样禁止 .pl-price-text::before { content: "¥"; }、模板字面量内硬编码单位、渲染函数再次拼接 price_icon。
+
+只有设计明确要求货币符号单独控制字号时，适配器才输出 priceSymbol 和完全不含单位的 priceAmount，渲染器只使用这两个字段；此时禁止再使用 priceText。同一价格只能在“单节点 priceText”和“priceSymbol + priceAmount”两种模式中选择一种，市场价也遵循相同规则。
+
+7. counter.views、counter.sales 缺失时隐藏 UI，不能显示 undefined。
+8. 详情 URL 优先使用接口明确返回值或用户给定规则。未确认路由时不制造假链接。
+9. 不根据 user-agent 自动决定 _blank；打开方式由明确配置或接口字段决定。
+
+产品差异：可按需使用 abstract/summary、产品参数、附件、多图、推荐和内容字段；默认不显示库存、SKU 或交易按钮。
+
+商品差异：可按需使用 stock、status、mold、SKU、视频、积分、销量、评论、收藏和 attrs/props；默认仍是展示列表，不自动增加 SKU 弹窗、加购或结算。
+
+两种分类数据最终统一为 { id, name, children }。产品分类通常由 format=tree 直接返回树；商品分类可能直接带 children，也可能需用 parent_id 获取层级，必须检查真实响应后归一化。
+
+详情数据接口不等于前台页面路由。product 和 goods 都只使用接口明确返回的 defined_link/detail_url/url 或用户提供的规则，不能猜测 /product/{id} 或 /goods/{id}。
+
+分类树实现必须区分 allowedIds、allowedScopeIds、selectedCatId、queryCatIds：allowedIds 由 $[cat_id] 直接输出；allowedScopeIds 是每个允许节点展开为“自身 + 所有层级后代”的去重集合；selectedCatId 是用户选中的单个语义分类并写入 URL；queryCatIds 是请求时计算的分类集合。四个概念不能共用一个逗号字符串。
+
+后台只选子分类时，将子分类提升到展示树顶层；父子同时选择时，只保留父分类在顶层，子分类仍在父级 children 中，不能重复展示。选择父分类时，queryCatIds 必须递归包含父级自身、子级、孙级和所有更深后代；不能只读取直接 children。选择“全部”时 selectedCatId 为空，但存在 allowedIds 时必须使用展开后的 allowedScopeIds，而不是原始 allowedIds。
+
+必须生成与以下等价的递归逻辑：
+
+const collectDescendantIds = (category) => {
+  const result = [];
+  const seen = new Set();
+  const visitedNodes = new Set();
+  const walk = (node) => {
+    if (!node) return;
+    if (visitedNodes.has(node)) return;
+    visitedNodes.add(node);
+    const id = node.id === undefined || node.id === null ? '' : String(node.id);
+    if (id && !seen.has(id)) {
+      seen.add(id);
+      result.push(id);
+    }
+    const children = Array.isArray(node.children) ? node.children : [];
+    children.forEach((child) => walk(child));
+  };
+  walk(category);
+  return result;
+};
+
+const expandAllowedScopeIds = (allowedIds, nodeById) => {
+  const result = [];
+  const seen = new Set();
+  allowedIds.forEach((rawId) => {
+    const node = nodeById.get(String(rawId));
+    collectDescendantIds(node).forEach((id) => {
+      if (!seen.has(id)) {
+        seen.add(id);
+        result.push(id);
+      }
+    });
+  });
+  return result;
+};
+
+按 allowedIds 的配置顺序查找完整树节点并调用 expandAllowedScopeIds 得到 allowedScopeIds。父级筛选先收集完整后代，再与 allowedScopeIds 取交集；发送前按深度优先顺序去重并 join(',')。例如 1→2→3 必须发送 1,2,3。
+
+show_all_button 控制是否显示“全部”选项，必须使用配置：
+
+{
+  "key": "show_all_button",
+  "label": "显示全部选项",
+  "value": "1",
+  "default_value": "1",
+  "input_type": "switch"
+}
+
+readSwitch 必须使用以下等价逻辑，保证 "0" 不会回退成默认 true：
+
+const readSwitch = (fallback, value) => {
+  if (value === '1' || value === 1 || value === true || value === 'true') return true;
+  if (value === '0' || value === 0 || value === false || value === 'false') return false;
+  return fallback;
+};
+
+const showAllButton = readSwitch(true, '$[show_all_button]');
+
+只有 showAllButton 为 true 时才生成“全部”按钮，按钮使用真实 button、文字 t('all')、data-category-action="all"，并在 selectedCatId 为空时设置 aria-pressed="true"。false 时不生成按钮或给静态节点设置 hidden，不能只用 opacity 隐藏。
+
+该开关只控制 UI。show_all_button=false 且 selectedCatId 为空时，仍查询当前适配器全部数据或 allowedScopeIds；不得自动选择第一个分类、修改 URL 或发起额外筛选。show_sidebar 控制整个分类区，show_all_button 只控制“全部”选项。
+
+七、安全渲染
+
+1. 标题、副标题、分类、价格和统计使用 textContent。
+2. 图片用 setAttribute 设置 src、alt、loading="lazy"、decoding="async"，失败时显示局部占位。
+3. 接口动态链接只允许相对地址、http:、https:、tel:、mailto:；拒绝 javascript:、data:、vbscript:。仅平台静态 none 和明确 miniProgram 的严格 javascript:jumpMall(...) 属于受控例外，不能用于接口数据。
+4. target="_blank" 时补 rel="noopener noreferrer"。
+5. 不把接口文本直接拼入 innerHTML，列表默认不渲染富文本。
+
+八、点击操作类型、运行时与样式
+
+后台静态点击配置使用平台 input_type="jump"。link 代表任意配置根 key，例如 card_click。所有点号字段共同对应一个根配置项，不能创建 link.href 等独立 key，也不能把 $[link] 当成 JSON 解析。模板始终优先使用：
+
+<a href="$[link.href]" target="$[link.target]">点击跳转</a>
+
+标准点号字段：
+- $[link] / $[link.href]：最终链接；openForm 输出 javascript:void(0)。
+- $[link.target]：_self / _blank；openForm 固定 _self。
+- $[link.type]：none、web、url、module、miniProgram、openForm、popup、mobile、email。
+- $[link.formId]：表单 ID。
+- $[link.popupType]：form、qrcode、page、html；openForm 归一为 form。
+- $[link.popupWidth] / $[link.popupHeight]：弹窗尺寸。
+- $[link.miniProgramPath] / $[link.path]：小程序内部路径。
+
+类型语义：none 不跳转；web 是站内页面；url 是自定义链接；module 跳转当前或指定页面模块；miniProgram 跳小程序；openForm 打开表单；popup 弹出内容；mobile 自动补 tel:；email 自动补 mailto:。平台在保存和渲染阶段完成归一化，并为复杂类型注入 data-gw-* 属性和关联模板，模块不得自行复制属性映射器。
+
+历史 type=url 或 type=web 只要 href 是严格的 javascript:jumpMall('路径')，编辑器会归一为 miniProgram，$[link.miniProgramPath] 输出纯路径。该格式是平台受控桥接例外，不代表允许任意 javascript:；来自接口的任何脚本链接仍须拒绝。
+
+常见小程序路径包括 /mall、/mall/search、/mall/classification?cat_id=category_id、/mall/classify、/mall/list、/mall/businessOpportunity、/mall/myBuy、/mall/club 及 /mall/posting/*。分类参数可使用 cat_id、category_id、goods_category_id 等，编辑器负责提供分类选择并按 URL query 规则编码。
+
+弹窗字段：
+- form：$[link.formId]、$[link.autoCloseOnSuccess]、$[link.popupWidth]、$[link.popupHeight]。
+- qrcode：$[link.qrcode]、$[link.qrcodeImage]、$[link.qrcodeStyle]、$[link.title]、$[link.summary]、$[link.description]。
+- page：$[link.pageUrl]、$[link.popupWidth]、$[link.popupHeight]，前台 iframe 带加载状态。
+- html：$[link.html]、$[link.content]、$[link.contentFormat]、$[link.popupContents]。
+
+contentFormat=text 时按纯文本换行展示，markdown 由平台在保存替换时转成 HTML，html 按原生 HTML 展示。表单、二维码、指定页面和指定内容都由前台拦截后调用 Utils.Dialog.open；表单、页面和指定内容默认无弹窗头部，二维码按内容标题与尺寸适配。
+
+若所有产品/商品共用一个点击动作，配置 JSON 增加一个 jump 根 key，并在静态模板使用其点号字段。若每张卡片使用接口返回的不同详情 URL，则不增加 jump 配置；在适配器中归一化 href/target，用 DOM API 创建安全真实 a，并默认只按普通导航处理，不推断为 module、openForm 或 popup。
+
+若页面已存在 script[data-gw-open-form-jump-runtime] 或 window.__gwOpenFormJumpReady，直接复用。平台在 document 捕获阶段处理 module、openForm、popup，并通过 Utils.Dialog.open 打开内容；模块不得再次 preventDefault、location.href、scrollTo 或打开弹窗，也不得复制完整运行时或全局 .gw-dialog-* 样式。最终 DOM 中的 data-gw-jump-*、data-gw-module-*、data-gw-popup-* 用于运行时和排查，不要求静态模板手工拼装。
+
+整卡只有一个详情操作时可使用整卡 a，但内部不得再嵌套 a 或 button。卡片有咨询、收藏等独立操作时使用 article，整卡事件必须排除 a、button、input、select、textarea、label、[data-no-card-jump]。禁止用透明绝对定位链接覆盖整个卡片。
+
+只有有效点击卡片才添加 .is-clickable，并设置 cursor:pointer、克制的 hover、清晰的 focus-visible 和 active 状态。hover 可使用约 translateY(-2px) 与轻阴影，但不能改变尺寸或导致网格重排；focus 使用 2px 主题色 outline 和 3px offset；active 恢复位移；prefers-reduced-motion 下取消非必要 transition。none、无地址和 disabled 状态移除手型、位移、阴影反馈。触屏设备不能依赖 hover 传达关键信息。
+
+平台弹窗视觉参考为：约 50% 黑色遮罩，玻璃模式约 25% 遮罩和 12px blur；白色对话框、约 12px 圆角、多层轻阴影、最大约 95vw × 92vh；约 0.2–0.25 秒淡入与 scale(.96 → 1)；32–34px 圆形关闭按钮。该样式只用于对齐平台视觉，不要求产品列表再次注入。
+
+平台会在 document 捕获阶段处理 module、openForm、popup，模块本地事件不得再次 preventDefault 或执行相同行为。一次点击只允许产生一个跳转、弹窗或模块滚动。
+
+九、配置解析
+
+推荐行为配置包括 cat_id、show_sidebar、show_all_button、show_description、enable_list_mode、show_title、show_count、open_in_current、i18n，以及按功能选择的 show_search、show_sort、show_price、show_pagination。颜色、字号、尺寸和列数仅在模块真实需要可视化样式配置时加入。
+
+cat_id 实际商品配置示例值：
+{"moduleType":"goods","type":"1","ids":"165567,212865,212869,212867,169069,190933,212861,212863","names":["客厅","客厅-1","客厅-1-1","客厅-2","餐厅","test","test-1","test-1-1"],"pageSize":12,"sortColumn":"sort","sortDirection":"asc","sortColumnVersion":2}
+
+产品配置使用 moduleType=product，商品配置使用 moduleType=goods，运行时由该值自动选接口。只有人工把已有配置迁移到另一体系时，才必须清空原体系的 ids/names/type；正常运行时不能因旧代码固定了错误接口而丢弃有效分类。
+
+该字符串化对象只存在于可导入配置 JSON 的 value/default_value。模块运行时使用 $[cat_id] 和五个点号子字段读取；$[cat_id] 只作为 ids。可兼容旧模块完整对象，但新模块不要同时输出语义重复的 category key。
+
+ids 是按编辑器顺序保存的逗号字符串，names 是对应的展示元数据并可包含多级名称；运行时请求只使用清洗后的字符串 ids，分类名称仍以分类接口为准。names 缺失、重复或数量与 ids 不一致不能阻塞列表。
+
+type 允许为 "1" 或空字符串，空值不发送细分类型参数。sortColumnVersion 是新编辑器分类控件的可选版本元数据：维护现有配置时原样保留，不发送接口、不参与 order、不生成独立配置项，也不要求 default_value 一定包含该字段。value/default_value 只需属于同一配置类型并分别可解析，不要求可选元数据完全一致。
+
+switch 常见值是字符串 "1" 或 "0"，必须显式比较，不能使用 Boolean("0")。number 要转换为有限数字并限制范围，例如列数 1–6、每页数量 1–100。CSS 配置通过当前根节点 CSS 变量写入。
+
+i18n 使用嵌套 JSON 对象，对应的配置项必须是 key="i18n"、input_type="i18n"。外层是 zh-cn、zh、en、kr、ru、jp 六种标准语言，内层是固定翻译键，六种语言的键集合保持一致。可导入配置 JSON 的 value/default_value 保存为可再次 JSON.parse 的字符串化 JSON；模板完成变量替换后，标准写法直接得到对象：
+
+const i18n = $[i18n];
+
+不要默认执行 JSON.parse($[i18n])。只有维护旧项目且实际运行值确实是字符串时，才在一个归一化函数中兼容一次解析。未替换占位符、数组、null 和非对象值回退模块内置中文；平台输出会去除 _comments，运行时不能依赖它。
+
+语言读取顺序固定为 URL 查询参数 editor_language_type、localStorage.lang、zh-cn。映射规则为 zh-cn→zh-cn，zh/zh-tw/zh-hk→zh，en→en，ko/kr→kr，ru→ru，ja/jp→jp。原始值先去空格并转小写，未知值回退 zh-cn。URLSearchParams 先做特性检测，localStorage 读取使用 try/catch。
+
+读取文案时先取 i18n[lang][key]，再取 i18n['zh-cn'][key]，最后取模块内置中文。必须逐键回退，不能只在整种语言缺失时回退；空字符串允许表示用户主动隐藏文案，只把 undefined/null 当作缺失。
+
+建议键包括 product_title、goods_title、subtitle、search_placeholder、search、clear、all、default_sort、newest、price_asc、price_desc、loading、empty、reset、error、retry、previous、next，只保留实际使用项。六种语言都必须包含 product_title/goods_title。默认不要用固定 title 同时表示两种类型。
+
+标题必须在 moduleType 解析完成后自动切换：
+
+const titleKeyMap = {
+  product: 'product_title',
+  goods: 'goods_title'
+};
+const titleKey = titleKeyMap[moduleType];
+const titleText = titleKey ? t(titleKey) : '';
+const defaultTitleMap = {
+  product: '产品列表',
+  goods: '商品列表'
+};
+const accessibleTitle = titleText || defaultTitleMap[moduleType] || '';
+const title = root.querySelector('.pl-title');
+if (title) title.textContent = titleText;
+if (accessibleTitle) root.setAttribute('aria-label', accessibleTitle);
+
+模块初始 HTML 不硬编码“产品列表”或“商品列表”。product/goods 切换适配器后必须重新执行标题绑定；关闭 show_title 时仍给根节点设置当前类型的无障碍名称。翻译内容只写当前根节点内的 textContent/setAttribute，不使用全局 document.querySelector，也不把翻译内容直接写入 innerHTML。
+
+表单实例确实存在时，可调用 fitForm_10126.setI18n($[i18n]).setLanguage(lang)，但实例名必须来自真实表单，不能照抄编号；产品/商品列表不复制表单多语言运行时。
+
+所有配置项必须具有错误处理适配。每个根配置独立读取：先检测未替换的 $[...]，再转换类型或解析 JSON；任一配置失败只回退该项默认值，不能抛出未捕获异常、阻塞初始化或影响同页其他模块。
+
+统一提供稳定类型读取器：readText 跳过 null/undefined/未替换占位符；readSwitch 显式识别 "1"/1/true/"true" 为开启、"0"/0/false/"false" 为关闭，其他值才回退；readNumber 先检查有限数字再限制范围；readEnum 只接受允许值；readObject 只接受非数组对象，字符串仅在明确兼容旧数据时用 try/catch 解析。颜色、尺寸和 URL 使用各自白名单，不能共用未经校验的字符串读取器。
+
+直接注入对象的 $[i18n] 在占位符未替换时可能于求值阶段报错，因此读取动作本身用局部 try/catch 包裹并回退内置中文；这不代表标准路径需要 JSON.parse($[i18n])。
+
+各类型错误降级：category 的 ids 回退空数组，表示不限制分类并获取当前适配器全部数据，pageSize/排序回退安全默认值；i18n 回退内置中文；jump 回退 none 并移除点击样式；switch/number/颜色/尺寸回退设计默认值；URL 非法时取消链接，target 回退 _self。
+
+moduleType 配置缺失、空值或未替换时使用 DEFAULT_MODULE_TYPE；任何其他非空值（包括 shopGoods）都属于非法类型，不得静默映射或回退，只停止当前实例并显示局部配置错误。配置类型有效但旧固定接口不一致时，从类型重新选择 adapter，不清空同类型的 ids/type。
+
+不要用覆盖整个初始化流程的空 catch 隐藏问题。开发调试可记录不含原始值的错误代码，生产前台不连续输出 console.error，也不打印完整配置、接口响应或敏感数据。
+
+十、状态和交互
+
+1. 至少实现 loading、success、empty、error 四个互斥状态。
+2. 新搜索、新分类或新排序时把 page 重置为 1。
+3. 每次请求递增 requestId，只有最后一次请求允许更新 DOM，避免旧请求覆盖新结果。
+   不能使用 if (state.loading) return 直接丢弃加载期间的新分类或页码操作。
+4. 请求失败保留工具栏和重试入口，不隐藏整个宿主。
+5. 搜索按钮和回车执行同一逻辑；即时搜索需 250–400ms 防抖。
+6. 分类“全部”清空 selectedCatId，不使用虚构 ID；$[cat_id] 已限定范围时不展示或查询范围外分类。
+7. 分页提供上一页、有限页码窗口、下一页；总页数为 1 时隐藏。若明确使用“加载更多”，不要同时保留两套主分页。
+8. URL 只保存 selectedCatId、page、keywords、sortKey 等源状态，不保存展开后的 queryCatIds 或 order JSON。
+9. 需要浏览器历史恢复筛选时，用户操作用 pushState、初始化修正用 replaceState；若只用 replaceState，不得声称每一步筛选都能后退恢复。
+
+十一、默认能力
+
+默认实现一套产品/商品通用的分类配置、卡片网格、点击状态、加载态、空状态、错误重试和分页。搜索、排序、布局切换、价格区间、属性筛选、推荐标识、销量和浏览量按用户要求或现有模块启用。商品库存/SKU/交易能力和产品参数/附件能力必须同时满足“适配器支持、配置开启、数据存在”才显示。默认不加入 SKU 弹窗、加购、收藏、对比、无限滚动、复杂筛选抽屉或强动效。
+
+十二、工作流
+
+1. 检查现有模块、真实模块名称、设计参考和交付位置。
+2. 解析 cat_id.moduleType，从适配器表自动选择分类/列表接口；确保通用请求器只使用 adapter URL。
+3. 确定根类、宿主类和配置 key。
+4. 先完成初始 CSS 和 HTML 状态壳。
+5. 完成逐项容错的配置解析、请求状态机、字段归一化、卡片渲染、点击操作、分类和分页。
+6. 同步生成覆盖所有占位符的完整配置 JSON。
+7. 验证脚本语法、JSON、占位符一致性、CSS 作用域、多实例和请求乱序。
+8. 能实测时在 LTD 前台和编辑器检查；无法实测时明确说明。
+
+十三、最终验收
+
+- 产品与商品共用同一套 UI、状态、分类、分页和交互内核。
+- product 或 goods 只在数据适配层分支，接口、专属参数和专属字段未混用。
+- 把配置从 product 改为 goods 时，不修改 JS 即自动切换到商品分类/列表接口；从 goods 改为 product 时自动切回产品接口。
+- 通用请求器只使用 adapter.categoryUrl/listUrl，不存在独立固定的产品或商品 URL。
+- 产品没有自动出现库存/SKU/加购，商品没有自动出现产品参数/附件能力。
+- HTML 与完整配置 JSON 同时交付。
+- 页面不依赖 Less 编译即可显示。
+- 加载、成功、空数据、错误与重试状态正常。
+- 搜索/筛选/排序会重置页码，旧请求不会覆盖新结果。
+- 后台只选子分类、父子同时选择、父分类递归聚合自身及全部层级后代、展开后的“全部允许范围”正确。
+- category 配置为空、未传或没有选择分类时获取当前适配器全部数据，不会自动选择首个分类；非空允许 ids 仍限制查询范围。
+- 分类六个点号占位符齐全，$[cat_id] 没有被错误当成 JSON 解析，自定义 sortColumn 能安全生成 order。
+- 分类根配置项的 input_type 严格等于 category，没有生成点号子字段的独立配置项。
+- 分类配置保留 ids/names 顺序、空 type 和可选 sortColumnVersion，且这些编辑器元数据没有进入列表接口参数。
+- show_all_button=1/0 能显示/隐藏“全部”按钮；隐藏时空分类仍代表全部范围，不自动选中首项。
+- URL 参数按实例隔离，URL 只保存语义选中项，历史策略一致。
+- 图片、价格、链接和响应字段具有降级逻辑；销售价/市场价默认各只有一个最终价格节点，不存在静态符号 span、CSS content 或重复拼接，价格 0 正常显示。
+- product/goods 切换后，可见标题、根节点 aria-label 和多语言标题同步切换。
+- 点击属性与平台运行时一致，hover/focus/active/无操作样式正确，复杂操作不会双重触发。
+- 卡片内部链接或按钮不会误触整卡跳转，同页多实例模板 key 不冲突。
+- JavaScript 明确使用 const/let、适用的箭头函数和模板字面量，没有无故退回 ES5，也未默认使用未经确认的 ES2017+ 能力。
+- 图标优先使用作用域内联 SVG；使用 Font Awesome 时没有重复加载、版本混用或图标按钮无障碍名称缺失。
+- 320px 手机、平板、PC 和同页两个实例互不影响。
+- 后台变量未替换、旧多语言字符串解析失败、语言或单个文案缺失时仍有可读降级；标准 $[i18n] 对象不被重复解析。
+- 多语言配置同时使用 key=i18n、input_type=i18n。
+- 单个配置缺失、未替换、类型错误、JSON 错误、越界或非法 URL 时使用安全默认值，没有未捕获异常或全局阻塞。
+- 配置与固定接口错配时当前实例继续运行；只有无法确定数据源或适配器不存在时才停止当前实例并显示局部配置错误。
+- 默认产物没有产品列表范围外的交易、后台或工程功能。

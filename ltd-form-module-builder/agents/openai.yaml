@@ -1,0 +1,4 @@
+interface:
+  display_name: "LTD 表单模块"
+  short_description: "创建 preset-first 且可复用的 LTD 表单模块生成规范指南"
+  default_prompt: "使用 $ltd-form-module-builder 创建一个默认使用表单 preset、代码模块样式才读取 config 的 LTD 表单模块。"

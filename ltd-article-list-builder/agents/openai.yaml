@@ -1,0 +1,4 @@
+interface:
+  display_name: "LTD 文章列表"
+  short_description: "创建兼容 LTD 分类、搜索、排序与分页的文章列表模块"
+  default_prompt: "使用 $ltd-article-list-builder 创建一个 LTD 文章列表模块，并同步生成可直接导入的配置 JSON。"

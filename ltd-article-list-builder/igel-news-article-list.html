@@ -1,0 +1,593 @@
+<style data-article-list-initial>
+.articleList20260811{background:linear-gradient(var(--news-gradient-angle,105deg),var(--news-bg-start,#2675c5) 0%,var(--news-bg-end,#59c2dc) 100%);color:var(--news-title-color,#fff);font-family:var(--news-font-family,Arial,"Microsoft YaHei",sans-serif);min-height:var(--news-section-height,740px);overflow:hidden;width:100%;}
+.articleList20260811 *{box-sizing:border-box;}
+.articleList20260811 .news-inner{margin:0 auto;max-width:var(--news-max-width,1200px);padding:var(--news-padding-top,73px) 0 var(--news-padding-bottom,64px);width:calc(100% - var(--news-side-padding,48px));}
+.articleList20260811 .news-header{align-items:center;display:flex;justify-content:space-between;margin-bottom:var(--news-header-gap,47px);}
+.articleList20260811 .news-heading{color:var(--news-title-color,#fff);font-size:var(--news-heading-size,44px);font-weight:var(--news-heading-weight,400);letter-spacing:var(--news-heading-letter-spacing,-.02em);line-height:var(--news-heading-line-height,1.1);margin:0;}
+.articleList20260811 .news-viewport{overflow:hidden;touch-action:pan-y;width:100%;}
+.articleList20260811 .news-viewport:focus{outline:1px solid rgba(255,255,255,.72);outline-offset:6px;}
+.articleList20260811 .news-track{display:flex;gap:var(--news-card-gap,20px);transition:transform .45s ease;}
+.articleList20260811 .news-status{align-items:center;color:var(--news-title-color,#fff);display:flex;flex:0 0 100%;font-size:var(--news-status-size,16px);justify-content:center;min-height:var(--news-card-height,513px);text-align:center;}
+</style>
+
+<style data-article-list-styles>
+.articleList20260811 .news-actions{align-items:center;display:flex;gap:var(--news-action-gap,14px);}
+.articleList20260811 .news-all-link{align-items:center;border:var(--news-top-button-border-width,1px) solid var(--news-button-border,#fff);border-radius:var(--news-top-button-radius,999px);color:var(--news-button-text,#fff);display:inline-flex;font-size:var(--news-top-button-size,13px);font-weight:var(--news-top-button-weight,600);height:var(--news-top-button-height,36px);justify-content:center;min-width:var(--news-top-button-min-width,92px);padding:0 var(--news-top-button-padding-x,18px);text-decoration:none;transition:background .2s ease,color .2s ease;}
+.articleList20260811 .news-all-link:hover,.articleList20260811 .news-all-link:focus{background:var(--news-button-text,#fff);color:var(--news-bg-start,#2675c5);outline:none;}
+.articleList20260811 .news-nav{align-items:center;background:transparent;border:var(--news-top-arrow-border-width,1px) solid var(--news-button-border,#fff);border-radius:50%;color:var(--news-button-text,#fff);cursor:pointer;display:flex;height:var(--news-top-arrow-size,36px);justify-content:center;padding:0;width:var(--news-top-arrow-size,36px);}
+.articleList20260811 .news-nav:disabled{cursor:default;opacity:.38;}
+.articleList20260811 .news-nav svg{height:var(--news-top-arrow-icon-size,17px);width:var(--news-top-arrow-icon-size,17px);}
+.articleList20260811 .news-nav svg path{stroke-width:var(--news-top-arrow-stroke-width,1.7);}
+.articleList20260811 .news-card{background:var(--news-card-bg,rgba(255,255,255,.1));border:var(--news-card-border-width,1px) solid var(--news-card-border,rgba(255,255,255,.11));border-radius:var(--news-card-radius,10px);display:flex;flex:0 0 var(--news-card-width,calc((100% - 40px)/3));flex-direction:column;height:var(--news-card-height,513px);min-width:0;padding:var(--news-card-padding,13px);}
+.articleList20260811 .news-media{align-items:center;background:var(--news-image-bg,rgba(255,255,255,.08));border-radius:var(--news-image-radius,9px);display:flex;height:var(--news-image-height,240px);justify-content:center;margin-left:auto;margin-right:auto;overflow:hidden;width:var(--news-image-width,100%);}
+.articleList20260811 .news-image{display:block;height:100%;object-fit:var(--news-image-fit,cover);width:100%;}
+.articleList20260811 .news-card-title{color:var(--news-card-title-color,#fff);display:-webkit-box;font-size:var(--news-card-title-size,23px);font-weight:var(--news-card-title-weight,600);line-height:var(--news-card-title-line-height,1.45);margin:var(--news-card-title-margin-top,10px) 0 0;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:var(--news-card-title-lines,3);}
+.articleList20260811 .news-card-title a{color:inherit;text-decoration:none;}
+.articleList20260811 .news-card-title a:hover,.articleList20260811 .news-card-title a:focus{text-decoration:underline;text-underline-offset:3px;}
+.articleList20260811 .news-abstract{color:var(--news-abstract-color,#fff);display:-webkit-box;font-size:var(--news-abstract-size,14px);font-weight:var(--news-abstract-weight,500);line-height:var(--news-abstract-line-height,1.38);margin:var(--news-abstract-margin-top,9px) 0 0;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:var(--news-abstract-lines,3);}
+.articleList20260811 .news-date{color:var(--news-abstract-color,#fff);font-size:var(--news-date-size,13px);line-height:var(--news-date-line-height,1.4);margin-top:var(--news-date-margin-top,8px);opacity:.85;}
+.articleList20260811 .news-card-link{align-items:center;align-self:flex-end;border:var(--news-card-arrow-border-width,1px) solid var(--news-button-border,#fff);border-radius:50%;color:var(--news-button-text,#fff);display:flex;height:var(--news-card-arrow-size,48px);justify-content:center;margin-top:auto;text-decoration:none;width:var(--news-card-arrow-size,48px);}
+.articleList20260811 .news-card-link:hover,.articleList20260811 .news-card-link:focus{background:var(--news-button-text,#fff);color:var(--news-bg-start,#2675c5);outline:none;}
+.articleList20260811 .news-card-link svg{height:var(--news-card-arrow-icon-size,25px);width:var(--news-card-arrow-icon-size,25px);}
+.articleList20260811 .news-card-link svg path{stroke-width:var(--news-card-arrow-stroke-width,1.3);}
+.articleList20260811 .news-preview-arrow{pointer-events:none;}
+.articleList20260811 .news-retry{background:transparent;border:1px solid var(--news-button-border,#fff);border-radius:999px;color:var(--news-button-text,#fff);cursor:pointer;font-size:var(--news-retry-size,14px);height:var(--news-retry-height,36px);margin-left:var(--news-retry-gap,12px);padding:0 var(--news-retry-padding-x,18px);}
+.articleList20260811 .news-skeleton{animation:newsPulse20260811 1.4s ease-in-out infinite;background:rgba(255,255,255,.12);border-radius:var(--news-card-radius,10px);flex:0 0 var(--news-card-width,calc((100% - 40px)/3));height:var(--news-card-height,513px);}
+.articleList20260811 .news-editor-preview-data[hidden]{display:none!important;}
+@keyframes newsPulse20260811{0%,100%{opacity:.48}50%{opacity:1}}
+@media (max-width:1024px){.articleList20260811 .news-inner{width:calc(100% - var(--news-tablet-side-padding,40px));}}
+@media (max-width:576px){.articleList20260811 .news-inner{padding-top:var(--news-mobile-padding-top,52px);width:calc(100% - var(--news-mobile-side-padding,28px));}.articleList20260811 .news-header{align-items:flex-start;gap:var(--news-mobile-header-gap-x,22px);margin-bottom:var(--news-mobile-header-gap,32px);}.articleList20260811 .news-heading{font-size:var(--news-mobile-heading-size,34px);}.articleList20260811 .news-actions{gap:var(--news-mobile-action-gap,8px);}.articleList20260811 .news-all-link{min-width:0;padding:0 var(--news-mobile-button-padding-x,12px);}}
+</style>
+
+<section class="articleList20260811"
+  aria-label="$[section_title]"
+  data-cat-ids="$[cat]"
+  data-module-type="$[cat.moduleType]"
+  data-article-type="$[cat.type]"
+  data-page-size="$[cat.pageSize]"
+  data-sort-by="$[cat.sortColumn]"
+  data-sort-direction="$[cat.sortDirection]"
+  data-fallback-image='$[fallback_image]'
+  data-show-all-news="$[show_all_news]"
+  data-show-arrows="$[show_arrows]"
+  data-show-thumbnail="$[show_thumbnail]"
+  data-show-abstract="$[show_abstract]"
+  data-show-date="$[show_date]"
+  data-show-card-arrow="$[show_card_arrow]"
+  data-editor-preview-enabled="$[editor_preview_enabled]"
+  style="--news-gradient-angle:$[gradient_angle]deg;--news-font-family:$[font_family];--news-bg-start:$[background_start];--news-bg-end:$[background_end];--news-section-height:$[section_min_height]px;--news-max-width:$[content_max_width]px;--news-side-padding:$[content_side_padding]px;--news-tablet-side-padding:$[tablet_side_padding]px;--news-mobile-side-padding:$[mobile_side_padding]px;--news-padding-top:$[padding_top]px;--news-padding-bottom:$[padding_bottom]px;--news-header-gap:$[header_margin_bottom]px;--news-action-gap:$[action_gap]px;--news-mobile-padding-top:$[mobile_padding_top]px;--news-mobile-heading-size:$[mobile_section_title_size]px;--news-mobile-header-gap:$[mobile_header_margin_bottom]px;--news-mobile-header-gap-x:$[mobile_header_gap]px;--news-mobile-action-gap:$[mobile_action_gap]px;--news-mobile-button-padding-x:$[mobile_button_padding_x]px;--news-columns:$[columns];--news-tablet-columns:$[tablet_columns];--news-mobile-columns:$[mobile_columns];--news-card-gap:$[card_gap]px;--news-card-height:$[card_height]px;--news-card-padding:$[card_padding]px;--news-card-radius:$[card_radius]px;--news-card-border-width:$[card_border_width]px;--news-image-width:$[image_width_percent]%;--news-image-height:$[image_height]px;--news-image-radius:$[image_radius]px;--news-image-fit:$[image_fit];--news-heading-size:$[section_title_size]px;--news-heading-weight:$[section_title_weight];--news-heading-line-height:$[section_title_line_height];--news-heading-letter-spacing:$[section_title_letter_spacing]em;--news-card-title-size:$[card_title_size]px;--news-card-title-weight:$[card_title_weight];--news-card-title-line-height:$[card_title_line_height];--news-card-title-lines:$[card_title_lines];--news-card-title-margin-top:$[card_title_margin_top]px;--news-abstract-size:$[abstract_size]px;--news-abstract-weight:$[abstract_weight];--news-abstract-line-height:$[abstract_line_height];--news-abstract-lines:$[abstract_lines];--news-abstract-margin-top:$[abstract_margin_top]px;--news-date-size:$[date_size]px;--news-date-line-height:$[date_line_height];--news-date-margin-top:$[date_margin_top]px;--news-status-size:$[status_font_size]px;--news-top-button-size:$[top_button_font_size]px;--news-top-button-weight:$[top_button_font_weight];--news-top-button-height:$[top_button_height]px;--news-top-button-min-width:$[top_button_min_width]px;--news-top-button-padding-x:$[top_button_padding_x]px;--news-top-button-border-width:$[top_button_border_width]px;--news-top-button-radius:$[top_button_radius]px;--news-top-arrow-size:$[top_arrow_size]px;--news-top-arrow-border-width:$[top_arrow_border_width]px;--news-top-arrow-icon-size:$[top_arrow_icon_size]px;--news-top-arrow-stroke-width:$[top_arrow_stroke_width];--news-card-arrow-size:$[card_arrow_size]px;--news-card-arrow-border-width:$[card_arrow_border_width]px;--news-card-arrow-icon-size:$[card_arrow_icon_size]px;--news-card-arrow-stroke-width:$[card_arrow_stroke_width];--news-retry-size:$[retry_font_size]px;--news-retry-height:$[retry_height]px;--news-retry-padding-x:$[retry_padding_x]px;--news-retry-gap:$[retry_gap]px;--news-title-color:$[section_title_color];--news-card-title-color:$[card_title_color];--news-abstract-color:$[abstract_color];--news-card-bg:$[card_background_color];--news-card-border:$[card_border_color];--news-button-border:$[button_border_color];--news-button-text:$[button_text_color];--news-image-bg:$[image_background_color];">
+  <div class="news-inner">
+    <header class="news-header">
+      <h2 class="news-heading">$[section_title]</h2>
+      <div class="news-actions">
+        <a class="news-all-link" href="$[all_news_link.href]" target="$[all_news_link.target]">$[all_news_text]</a>
+        <button class="news-nav news-prev" type="button" aria-label="$[previous_label]">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5 8 12l7 7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="news-nav news-next" type="button" aria-label="$[next_label]">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </header>
+    <div class="news-viewport" role="region" tabindex="0" aria-label="$[section_title]">
+      <div class="news-track" aria-live="polite"></div>
+    </div>
+    <div class="news-editor-preview-data" hidden aria-hidden="true">
+      <div data-preview-item data-preview-image='$[editor_preview_image_1]'><span data-preview-title>$[editor_preview_title_1]</span><span data-preview-abstract>$[editor_preview_abstract_1]</span></div>
+      <div data-preview-item data-preview-image='$[editor_preview_image_2]'><span data-preview-title>$[editor_preview_title_2]</span><span data-preview-abstract>$[editor_preview_abstract_2]</span></div>
+      <div data-preview-item data-preview-image='$[editor_preview_image_3]'><span data-preview-title>$[editor_preview_title_3]</span><span data-preview-abstract>$[editor_preview_abstract_3]</span></div>
+      <div data-preview-item data-preview-image='$[editor_preview_image_4]'><span data-preview-title>$[editor_preview_title_4]</span><span data-preview-abstract>$[editor_preview_abstract_4]</span></div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  const script = document.currentScript;
+  const hasRootClass = (node) => !!(node && node.classList && node.classList.contains('articleList20260811'));
+  const findHost = (node) => {
+    if (!node) return null;
+    if (typeof node.closest === 'function') return node.closest('.gw-browse-module');
+    let parent = node.parentElement;
+    while (parent) {
+      if (parent.classList && parent.classList.contains('gw-browse-module')) return parent;
+      parent = parent.parentElement;
+    }
+    return null;
+  };
+  const findSingleRoot = (container) => {
+    if (!container || typeof container.querySelectorAll !== 'function') return null;
+    const roots = container.querySelectorAll('.articleList20260811');
+    return roots.length === 1 ? roots[0] : null;
+  };
+  const locateRoot = () => {
+    if (!script) return null;
+    if (hasRootClass(script.previousElementSibling)) return script.previousElementSibling;
+    const hostRoot = findSingleRoot(findHost(script));
+    if (hostRoot) return hostRoot;
+    return findSingleRoot(script.parentNode);
+  };
+  const root = locateRoot();
+  if (!root || !root.classList || !root.classList.contains('articleList20260811')) return;
+
+  const track = root.querySelector('.news-track');
+  const previousButton = root.querySelector('.news-prev');
+  const nextButton = root.querySelector('.news-next');
+  const allNewsLink = root.querySelector('.news-all-link');
+  const previewData = root.querySelector('.news-editor-preview-data');
+  const viewport = root.querySelector('.news-viewport');
+  const state = { items: [], index: 0, requestSeq: 0, destroyed: false, categoryMap: new Map(), queryCatIds: [], touchStartX: null, touchMoved: false, touchResetTimer: null };
+  const fallbackText = { loading: '正在加载...', empty: '暂无新闻资讯', error: '加载失败，请稍后重试', retry: '重新加载', read_more: '查看详情' };
+
+  const raw = (name) => root.getAttribute(name) || '';
+  const isUnresolved = (value) => typeof value === 'string' && value.indexOf('$[') !== -1;
+  const parseSwitch = (value, fallback) => {
+    if (isUnresolved(value) || value === '' || value == null) return fallback;
+    if (value === true || value === 1 || value === '1' || value === 'true') return true;
+    if (value === false || value === 0 || value === '0' || value === 'false') return false;
+    return fallback;
+  };
+  const parseNumber = (value, fallback, min, max) => {
+    const number = Number(value);
+    if (isUnresolved(value) || !Number.isFinite(number)) return fallback;
+    return Math.min(max, Math.max(min, number));
+  };
+  const parseIds = (value) => isUnresolved(value) || !value ? [] : String(value).split(',').map((id) => id.trim()).filter(Boolean);
+  const parseJson = (value, fallback) => {
+    if (!value || isUnresolved(value)) return fallback;
+    if (typeof value === 'object') return value;
+    try { return JSON.parse(value); } catch (error) { return fallback; }
+  };
+  const normalizeImageConfig = (value) => {
+    let image = parseJson(value, value);
+    if (!image || isUnresolved(image)) return '';
+    if (typeof image === 'string') return image;
+    if (image.value && image.value !== image) image = image.value;
+    if (typeof image === 'string') return image;
+    if (!image || typeof image !== 'object') return '';
+    const file = image.file || {};
+    const nested = image.image || {};
+    return image.url || image.src || file.url || nested.url || '';
+  };
+  const safeUrl = (value, fallback) => {
+    const url = String(value || '').trim();
+    if (!url || isUnresolved(url) || /[\u0000-\u001F\u007F]/.test(url)) return fallback || '';
+    if (/^\/\//.test(url)) return fallback || '';
+    if (/^[A-Za-z][A-Za-z0-9+.-]*:/.test(url) && !/^https?:/i.test(url)) return fallback || '';
+    return url;
+  };
+  const normalizeLanguage = (value) => {
+    const map = { 'zh-cn': 'zh-cn', zh: 'zh', 'zh-tw': 'zh', 'zh-hk': 'zh', en: 'en', ko: 'kr', kr: 'kr', ru: 'ru', ja: 'jp', jp: 'jp' };
+    return map[String(value || '').toLowerCase()] || 'zh-cn';
+  };
+  const environmentUrls = (() => {
+    const urls = [];
+    const add = (value) => {
+      const url = String(value || '').trim();
+      if (url && urls.indexOf(url) === -1) urls.push(url);
+    };
+    const addContextLocation = (context) => {
+      try { add(context && context.location && context.location.href); return true; } catch (error) { return false; }
+    };
+    addContextLocation(window);
+    add(document.referrer);
+    if (window.parent && window.parent !== window) addContextLocation(window.parent);
+    if (window.top && window.top !== window && window.top !== window.parent) addContextLocation(window.top);
+    return urls;
+  })();
+  const readEnvironmentParam = (name) => {
+    const pattern = new RegExp('[?&#]' + name + '=([^&#]*)', 'i');
+    for (let index = 0; index < environmentUrls.length; index += 1) {
+      const match = environmentUrls[index].match(pattern);
+      if (!match) continue;
+      try { return decodeURIComponent(String(match[1] || '').replace(/\+/g, ' ')); } catch (error) { return String(match[1] || ''); }
+    }
+    return '';
+  };
+  const queryLanguage = () => {
+    const editorLanguage = readEnvironmentParam('editor_language_type');
+    if (editorLanguage) return editorLanguage;
+    try { return localStorage.getItem('lang') || 'zh-cn'; } catch (error) { return 'zh-cn'; }
+  };
+  const language = normalizeLanguage(queryLanguage());
+  const normalizeWebsiteId = (value) => {
+    const id = String(value == null ? '' : value).trim();
+    return /^\d+$/.test(id) ? id : '';
+  };
+  const readWebsiteId = () => {
+    const environmentWebsiteId = normalizeWebsiteId(readEnvironmentParam('website_id'));
+    if (environmentWebsiteId) return environmentWebsiteId;
+    const contexts = [window];
+    if (window.parent && window.parent !== window) contexts.push(window.parent);
+    if (window.top && contexts.indexOf(window.top) === -1) contexts.push(window.top);
+    for (let index = 0; index < contexts.length; index += 1) {
+      try {
+        const storageWebsiteId = normalizeWebsiteId(contexts[index].localStorage.getItem('websiteId'));
+        if (storageWebsiteId) return storageWebsiteId;
+      } catch (error) { continue; }
+    }
+    return '';
+  };
+  const websiteId = readWebsiteId();
+  const isFramedContext = window.parent && window.parent !== window;
+  const hasEditorUrlSignal = environmentUrls.some((url) => /\/admin\/visualeditor\/|[?&#]editor_language_type=/i.test(url));
+  const hasLTDFrameReferrer = isFramedContext && environmentUrls.some((url) => /^https?:\/\/wei\.ltd\.com(?:[\/?#]|$)/i.test(url));
+  const isEditorContext = hasEditorUrlSignal || hasLTDFrameReferrer;
+  const readRuntimeI18n = () => {
+    try {
+      const value = $[i18n];
+      if (value && typeof value === 'object' && !Array.isArray(value)) return value;
+      return typeof value === 'string' ? parseJson(value, {}) : {};
+    } catch (error) { return {}; }
+  };
+  const i18n = readRuntimeI18n();
+  const text = (key) => {
+    const current = i18n && i18n[language] && i18n[language][key];
+    const chinese = i18n && i18n['zh-cn'] && i18n['zh-cn'][key];
+    return String(current || chinese || fallbackText[key] || '');
+  };
+  const config = {
+    moduleType: isUnresolved(raw('data-module-type')) ? 'article' : raw('data-module-type'),
+    type: isUnresolved(raw('data-article-type')) ? '1' : raw('data-article-type'),
+    catIds: parseIds(raw('data-cat-ids')),
+    pageSize: parseNumber(raw('data-page-size'), 6, 1, 100),
+    sortBy: /^[A-Za-z_][A-Za-z0-9_]*(\.[A-Za-z_][A-Za-z0-9_]*)?$/.test(raw('data-sort-by')) ? raw('data-sort-by') : 'published_at',
+    sort: raw('data-sort-direction') === 'asc' ? 'asc' : 'desc',
+    showAllNews: parseSwitch(raw('data-show-all-news'), true),
+    showArrows: parseSwitch(raw('data-show-arrows'), true),
+    showThumbnail: parseSwitch(raw('data-show-thumbnail'), true),
+    showAbstract: parseSwitch(raw('data-show-abstract'), true),
+    showDate: parseSwitch(raw('data-show-date'), false),
+    showCardArrow: parseSwitch(raw('data-show-card-arrow'), true),
+    editorPreviewEnabled: parseSwitch(raw('data-editor-preview-enabled'), false),
+    fallbackImage: normalizeImageConfig(raw('data-fallback-image'))
+  };
+
+  const clear = (element) => { while (element && element.firstChild) element.removeChild(element.firstChild); };
+  const arrowSvg = () => '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  const detailUrl = (item) => safeUrl(item && item.pcDetailLink, '');
+  const getMediaUrl = (media) => {
+    if (!media || typeof media !== 'object') return '';
+    return safeUrl(media.url || media.thumbnail || '', '');
+  };
+  const getCover = (item) => getMediaUrl(item.thumbnail) || getMediaUrl(item.file) || safeUrl(config.fallbackImage, '');
+  const formatDate = (value) => {
+    if (!value) return '';
+    const date = new Date(value);
+    if (Number.isNaN(date.getTime())) return '';
+    const twoDigits = (number) => number < 10 ? '0' + number : String(number);
+    return date.getFullYear() + '-' + twoDigits(date.getMonth() + 1) + '-' + twoDigits(date.getDate());
+  };
+  const normalizeItem = (item) => ({
+    id: item && item.id != null ? String(item.id) : '',
+    title: item && item.title != null ? String(item.title) : '',
+    abstract: item && item.abstract != null ? String(item.abstract) : '',
+    cover: getCover(item || {}),
+    date: formatDate(item && (item.published_at || item.created_at || item.updated_at)),
+    pcDetailLink: item && item.pc_detail_link != null ? String(item.pc_detail_link) : '',
+    preview: false
+  });
+  const readEditorPreviewItems = () => {
+    if (!previewData) return [];
+    return Array.prototype.slice.call(previewData.querySelectorAll('[data-preview-item]')).map((node, index) => {
+      const titleNode = node.querySelector('[data-preview-title]');
+      const abstractNode = node.querySelector('[data-preview-abstract]');
+      const configuredCover = normalizeImageConfig(node.getAttribute('data-preview-image'));
+      return {
+        id: '',
+        title: titleNode ? String(titleNode.textContent || '').trim() : '',
+        abstract: abstractNode ? String(abstractNode.textContent || '').trim() : '',
+        cover: safeUrl(configuredCover, safeUrl(config.fallbackImage, '')),
+        date: '',
+        pcDetailLink: '',
+        preview: true,
+        previewIndex: index
+      };
+    }).filter((item) => item.title || item.abstract || item.cover);
+  };
+  const editorPreviewItems = readEditorPreviewItems();
+  const useEditorPreview = isEditorContext && config.editorPreviewEnabled && editorPreviewItems.length > 0;
+  const unwrapResponse = (response) => {
+    let current = response;
+    for (let depth = 0; depth < 3; depth += 1) {
+      if (!current || typeof current !== 'object' || Array.isArray(current) || current.code != null) break;
+      const nested = current.data;
+      if (!nested || typeof nested !== 'object' || Array.isArray(nested)) break;
+      if (nested.code == null && nested.msg == null && nested.data == null) break;
+      current = nested;
+    }
+    return current;
+  };
+  const normalizeListResponse = (response) => {
+    const normalized = unwrapResponse(response);
+    const outer = normalized && normalized.data != null ? normalized.data : {};
+    const items = Array.isArray(outer) ? outer : (Array.isArray(outer.data) ? outer.data : (Array.isArray(outer.list) ? outer.list : []));
+    return items.map(normalizeItem);
+  };
+  const resolveRequestBridge = () => {
+    const contexts = [window];
+    if (window.parent && window.parent !== window) contexts.push(window.parent);
+    if (window.top && contexts.indexOf(window.top) === -1) contexts.push(window.top);
+    for (let index = 0; index < contexts.length; index += 1) {
+      try {
+        if (typeof contexts[index].r === 'function') return { context: contexts[index], request: contexts[index].r };
+      } catch (error) { continue; }
+    }
+    return null;
+  };
+  const request = (url, data) => {
+    const requestData = {};
+    Object.keys(data || {}).forEach((key) => { requestData[key] = data[key]; });
+    if (websiteId) requestData.website_id = websiteId;
+    const bridge = resolveRequestBridge();
+    if (bridge) {
+      try {
+        const result = bridge.request.call(bridge.context, url, requestData, 'GET');
+        return Promise.resolve(result);
+      } catch (error) { return Promise.reject(error); }
+    }
+    const query = Object.keys(requestData).filter((key) => requestData[key] !== '' && requestData[key] != null).map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(requestData[key])).join('&');
+    if (typeof window.fetch !== 'function') return Promise.reject(new Error('Fetch unavailable'));
+    return window.fetch(url + (query ? '?' + query : ''), { credentials: 'same-origin' }).then((response) => {
+      if (!response.ok) throw new Error('HTTP ' + response.status);
+      return response.json();
+    });
+  };
+  const normalizeCategoryNodes = (response) => {
+    const normalized = unwrapResponse(response);
+    const data = normalized && normalized.data;
+    if (Array.isArray(data)) return data;
+    if (data && Array.isArray(data.data)) return data.data;
+    return [];
+  };
+  const indexCategories = (nodes) => {
+    const visit = (items) => (Array.isArray(items) ? items : []).forEach((item) => {
+      if (!item || item.id == null) return;
+      const id = String(item.id);
+      const children = Array.isArray(item.children) ? item.children : [];
+      state.categoryMap.set(id, { id: id, children: children });
+      visit(children);
+    });
+    visit(nodes);
+  };
+  const expandCategory = (id, output) => {
+    const key = String(id);
+    if (output.indexOf(key) !== -1) return;
+    output.push(key);
+    const node = state.categoryMap.get(key);
+    if (node) node.children.forEach((child) => { if (child && child.id != null) expandCategory(String(child.id), output); });
+  };
+  const loadCategories = () => {
+    if (!config.catIds.length) { state.queryCatIds = []; return Promise.resolve(); }
+    return request('/api/gatewayCms/articles/category', { mold_types: config.type, language_type: language }).then((response) => {
+      indexCategories(normalizeCategoryNodes(response));
+      const expanded = [];
+      config.catIds.forEach((id) => expandCategory(id, expanded));
+      state.queryCatIds = expanded;
+    }).catch(() => { state.queryCatIds = config.catIds.slice(); });
+  };
+  const renderLoading = () => {
+    clear(track);
+    for (let index = 0; index < Math.min(3, config.pageSize); index += 1) {
+      const skeleton = document.createElement('div');
+      skeleton.className = 'news-skeleton';
+      skeleton.setAttribute('aria-label', text('loading'));
+      track.appendChild(skeleton);
+    }
+  };
+  const renderMessage = (message, retry) => {
+    clear(track);
+    const status = document.createElement('div');
+    status.className = 'news-status';
+    status.textContent = message;
+    if (retry) {
+      const button = document.createElement('button');
+      button.className = 'news-retry';
+      button.type = 'button';
+      button.textContent = text('retry');
+      button.addEventListener('click', loadList);
+      status.appendChild(button);
+    }
+    track.appendChild(status);
+  };
+  const renderItems = (items) => {
+    clear(track);
+    const fragment = document.createDocumentFragment();
+    items.forEach((item) => {
+      const article = document.createElement('article');
+      article.className = 'news-card';
+      const href = detailUrl(item);
+      if (config.showThumbnail && item.cover) {
+        const media = document.createElement(href ? 'a' : 'div');
+        media.className = 'news-media';
+        if (href) media.href = href;
+        const image = document.createElement('img');
+        image.className = 'news-image';
+        image.src = safeUrl(item.cover, '');
+        image.alt = item.title;
+        image.loading = 'lazy';
+        media.appendChild(image);
+        article.appendChild(media);
+      }
+      const title = document.createElement('h3');
+      title.className = 'news-card-title';
+      const titleContent = document.createElement(href ? 'a' : 'span');
+      if (href) titleContent.href = href;
+      titleContent.textContent = item.title;
+      title.appendChild(titleContent);
+      article.appendChild(title);
+      if (config.showAbstract && item.abstract) {
+        const abstract = document.createElement('p');
+        abstract.className = 'news-abstract';
+        abstract.textContent = item.abstract;
+        article.appendChild(abstract);
+      }
+      if (config.showDate && item.date) {
+        const date = document.createElement('time');
+        date.className = 'news-date';
+        date.textContent = item.date;
+        article.appendChild(date);
+      }
+      if (config.showCardArrow && (href || item.preview)) {
+        const cardArrow = document.createElement(href ? 'a' : 'span');
+        cardArrow.className = 'news-card-link' + (item.preview ? ' news-preview-arrow' : '');
+        if (href) {
+          cardArrow.href = href;
+          cardArrow.setAttribute('aria-label', text('read_more') + '：' + item.title);
+        } else {
+          cardArrow.setAttribute('aria-hidden', 'true');
+        }
+        cardArrow.innerHTML = arrowSvg();
+        article.appendChild(cardArrow);
+      }
+      fragment.appendChild(article);
+    });
+    track.appendChild(fragment);
+  };
+  const visibleColumns = () => {
+    const width = root.getBoundingClientRect().width;
+    if (width <= 576) return parseNumber(getComputedStyle(root).getPropertyValue('--news-mobile-columns'), 1, 1, 2);
+    if (width <= 1024) return parseNumber(getComputedStyle(root).getPropertyValue('--news-tablet-columns'), 2, 1, 3);
+    return parseNumber(getComputedStyle(root).getPropertyValue('--news-columns'), 3, 1, 6);
+  };
+  const updateSlider = () => {
+    const cards = track.querySelectorAll('.news-card');
+    const columns = visibleColumns();
+    const gap = parseNumber(getComputedStyle(track).columnGap || getComputedStyle(track).gap, 20, 0, 200);
+    const viewportWidth = viewport ? viewport.getBoundingClientRect().width : 0;
+    const cardWidth = viewportWidth > 0 ? Math.max(0, (viewportWidth - gap * (columns - 1)) / columns) : 0;
+    if (cardWidth > 0) track.style.setProperty('--news-card-width', cardWidth + 'px');
+    const maxIndex = Math.max(0, cards.length - columns);
+    state.index = Math.max(0, Math.min(state.index, maxIndex));
+    let offset = 0;
+    if (cards.length && state.index > 0) {
+      const measuredWidth = cards[0].getBoundingClientRect().width;
+      offset = state.index * (measuredWidth + gap);
+    }
+    track.style.transform = 'translate3d(-' + offset + 'px,0,0)';
+    previousButton.disabled = state.index <= 0;
+    nextButton.disabled = state.index >= maxIndex;
+  };
+  const moveSlider = (direction) => {
+    state.index += direction;
+    updateSlider();
+  };
+  const onViewportKeydown = (event) => {
+    const key = event && (event.key || event.keyCode);
+    if (key === 'ArrowLeft' || key === 37) {
+      event.preventDefault();
+      moveSlider(-1);
+    } else if (key === 'ArrowRight' || key === 39) {
+      event.preventDefault();
+      moveSlider(1);
+    }
+  };
+  const onTouchStart = (event) => {
+    const touch = event && event.touches && event.touches[0];
+    state.touchStartX = touch ? touch.clientX : null;
+    state.touchMoved = false;
+  };
+  const onTouchMove = (event) => {
+    const touch = event && event.touches && event.touches[0];
+    if (!touch || state.touchStartX == null) return;
+    if (Math.abs(touch.clientX - state.touchStartX) > 10) state.touchMoved = true;
+  };
+  const onTouchEnd = (event) => {
+    const touch = event && event.changedTouches && event.changedTouches[0];
+    if (!touch || state.touchStartX == null) return;
+    const distance = touch.clientX - state.touchStartX;
+    state.touchStartX = null;
+    if (Math.abs(distance) >= 42) moveSlider(distance < 0 ? 1 : -1);
+    if (state.touchResetTimer) window.clearTimeout(state.touchResetTimer);
+    state.touchResetTimer = window.setTimeout(() => { state.touchMoved = false; }, 350);
+  };
+  const onSwipeClick = (event) => {
+    if (!state.touchMoved) return;
+    event.preventDefault();
+    event.stopPropagation();
+  };
+  const loadList = () => {
+    if (config.moduleType !== 'article' || !/^(1|2|12|19|11|10|6|5|7|8)$/.test(config.type)) {
+      renderMessage(text('error'), false);
+      return;
+    }
+    const requestId = ++state.requestSeq;
+    if (!useEditorPreview) renderLoading();
+    const data = { mold_types: config.type, page: 1, page_size: config.pageSize, sort_by: config.sortBy, sort: config.sort, language_type: language };
+    if (state.queryCatIds.length) data.cat_ids = state.queryCatIds.join(',');
+    request('/api/gatewayCms/articles/list', data).then((response) => {
+      if (state.destroyed || requestId !== state.requestSeq) return;
+      const normalizedResponse = unwrapResponse(response);
+      if (normalizedResponse && normalizedResponse.code != null && Number(normalizedResponse.code) !== 0) throw new Error('API');
+      const items = normalizeListResponse(normalizedResponse);
+      state.items = items;
+      state.index = 0;
+      if (!items.length) {
+        if (useEditorPreview) renderItems(editorPreviewItems); else renderMessage(text('empty'), false);
+      } else {
+        renderItems(items);
+      }
+      updateSlider();
+    }).catch(() => {
+      if (state.destroyed || requestId !== state.requestSeq) return;
+      if (useEditorPreview) renderItems(editorPreviewItems); else renderMessage(text('error'), true);
+      updateSlider();
+    });
+  };
+
+  allNewsLink.style.display = config.showAllNews ? '' : 'none';
+  if (!config.showArrows) { previousButton.style.display = 'none'; nextButton.style.display = 'none'; }
+  const configuredHref = safeUrl(allNewsLink.getAttribute('href'), '/news');
+  const configuredTarget = allNewsLink.getAttribute('target');
+  allNewsLink.href = configuredHref;
+  allNewsLink.target = configuredTarget === '_blank' ? '_blank' : '_self';
+  if (allNewsLink.target === '_blank') allNewsLink.rel = 'noopener noreferrer';
+  const stopJump = (event) => {
+    if (!event) return;
+    event.preventDefault();
+    event.stopPropagation();
+  };
+  previousButton.addEventListener('click', (event) => {
+    stopJump(event);
+    moveSlider(-1);
+  });
+  nextButton.addEventListener('click', (event) => {
+    stopJump(event);
+    moveSlider(1);
+  });
+  if (viewport) {
+    viewport.addEventListener('keydown', onViewportKeydown);
+    viewport.addEventListener('touchstart', onTouchStart, false);
+    viewport.addEventListener('touchmove', onTouchMove, false);
+    viewport.addEventListener('touchend', onTouchEnd, false);
+    viewport.addEventListener('click', onSwipeClick, true);
+  }
+  window.addEventListener('resize', updateSlider);
+  let removalObserver = null;
+  if (typeof MutationObserver === 'function') {
+    removalObserver = new MutationObserver(() => {
+      if (document.documentElement.contains(root)) return;
+      state.destroyed = true;
+      state.requestSeq += 1;
+      if (state.touchResetTimer) window.clearTimeout(state.touchResetTimer);
+      if (viewport) {
+        viewport.removeEventListener('keydown', onViewportKeydown);
+        viewport.removeEventListener('touchstart', onTouchStart, false);
+        viewport.removeEventListener('touchmove', onTouchMove, false);
+        viewport.removeEventListener('touchend', onTouchEnd, false);
+        viewport.removeEventListener('click', onSwipeClick, true);
+      }
+      window.removeEventListener('resize', updateSlider);
+      removalObserver.disconnect();
+    });
+    removalObserver.observe(document.documentElement, { childList: true, subtree: true });
+  }
+  if (useEditorPreview) {
+    renderItems(editorPreviewItems);
+    updateSlider();
+  } else {
+    renderLoading();
+  }
+  loadCategories().then(loadList);
+}());
+</script>

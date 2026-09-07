@@ -1,0 +1,4 @@
+interface:
+  display_name: "LTD 通用代码模块"
+  short_description: "创建文本、媒体、按钮、搜索、地图、公告和悬浮等通用模块"
+  default_prompt: "使用 $ltd-code-module-builder 创建一个 LTD 通用前端代码模块，并同步生成可直接导入的配置 JSON。"

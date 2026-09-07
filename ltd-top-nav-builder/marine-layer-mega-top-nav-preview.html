@@ -1,0 +1,2252 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>透明悬浮图片文字 Mega 导航预览</title>
+  <style>
+    *{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:"Segoe UI","PingFang SC",sans-serif}.gw-browse-module{width:100%}.gw-browse-module .code-html-content{width:100%}.preview-banner{min-height:720px;padding:180px 8vw 80px;color:#fff;background:linear-gradient(90deg,rgba(12,21,35,.58),rgba(12,21,35,.18)),url("https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=2000&q=86") center/cover no-repeat}.preview-banner h1{max-width:680px;margin:0 0 20px;font-size:clamp(42px,7vw,88px);line-height:.98;letter-spacing:-.04em}.preview-banner p{max-width:520px;font-size:18px;line-height:1.7}.preview-content{min-height:900px;padding:100px 8vw;color:#172033;background:#f4f1eb}.preview-content h2{font-size:42px}.preview-note{position:fixed;right:14px;bottom:14px;z-index:20000;padding:8px 11px;color:#fff;background:rgba(23,32,51,.86);border-radius:4px;font-size:12px}
+  </style>
+</head>
+<body>
+  <div class="gw-browse-module" name="顶部导航"><div class="gw-browse-module-content"><div class="gw-browse-component"><div class="code-html-content"><!-- @dsCard group="LTD 顶部导航" name="透明悬浮图片文字 Mega 导航" subtitle="参考 Marine Layer / PC Mega Menu / 移动端双层图片菜单 / 搜索 / 登录 / 语言 / 吸顶" -->
+<style data-nav-initial>
+  .gw-browse-module[name="顶部导航"],
+  .gw-browse-module.top-nav-host-20260821 {
+    --nav-h: 72px;
+    height: auto !important;
+    overflow: visible !important;
+    position: relative;
+    z-index: 9999 !important;
+  }
+
+  .gw-browse-module[name="顶部导航"] .code-html-content,
+  .gw-browse-module.top-nav-host-20260821 .code-html-content {
+    height: var(--nav-h, 72px) !important;
+    min-height: var(--nav-h, 72px) !important;
+  }
+
+  .gw-browse-module[name="顶部导航"] .gw-browse-module-content,
+  .gw-browse-module[name="顶部导航"] .gw-browse-component,
+  .gw-browse-module.top-nav-host-20260821 .gw-browse-module-content,
+  .gw-browse-module.top-nav-host-20260821 .gw-browse-component {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+  }
+
+  .gw-browse-module.top-nav-host-20260821.top-nav-host-floating .code-html-content,
+  .gw-browse-module[name="顶部导航"].top-nav-host-floating .code-html-content {
+    height: 0 !important;
+    min-height: 0 !important;
+  }
+
+  .gw-browse-module.top-nav-host-20260821.top-nav-host-floating,
+  .gw-browse-module[name="顶部导航"].top-nav-host-floating {
+    height: var(--nav-h, 72px) !important;
+    margin-bottom: calc(-1 * var(--nav-h, 72px));
+    position: relative;
+    position: -webkit-sticky;
+    position: sticky;
+    top: var(--nav-sticky-top-offset, 0px);
+    z-index: 10000 !important;
+  }
+
+  .gw-browse-module[name="顶部导航"].code-component.gw-editor-component,
+  .gw-browse-module.code-component.gw-editor-component.top-nav-host-20260821 {
+    margin-bottom: 0 !important;
+  }
+
+  .gw-browse-module[name="顶部导航"].code-component.gw-editor-component .code-html-content,
+  .gw-browse-module.code-component.gw-editor-component.top-nav-host-20260821 .code-html-content {
+    height: var(--nav-h, 72px) !important;
+    min-height: var(--nav-h, 72px) !important;
+  }
+
+  .topNav20260821 {
+    --nav-h: 72px;
+    --nav-mb-h: 60px;
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    min-height: var(--nav-h, 72px);
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0);
+  }
+
+  .topNav20260821 .nav-header-pc {
+    display: block;
+    height: var(--nav-h, 72px);
+  }
+
+  .topNav20260821 .nav-header-mb,
+  .topNav20260821 .nav-mb-menu,
+  .topNav20260821 .nav-mb-backdrop,
+  .topNav20260821 .nav-mb-search-panel,
+  .topNav20260821 .nav-mb-search-backdrop {
+    display: none;
+  }
+
+  @media (min-width: 1025px) {
+    .topNav20260821 .nav-header-mb,
+    .topNav20260821 .nav-mb-menu,
+    .topNav20260821 .nav-mb-backdrop,
+    .topNav20260821 .nav-mb-search-panel,
+    .topNav20260821 .nav-mb-search-backdrop {
+      display: none !important;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .gw-browse-module[name="顶部导航"],
+    .gw-browse-module.top-nav-host-20260821 {
+      --nav-h: 60px;
+    }
+
+    .topNav20260821 {
+      min-height: var(--nav-mb-h, 60px);
+    }
+
+    .topNav20260821 .nav-header-pc,
+    .topNav20260821 .nav-search-pc {
+      display: none !important;
+    }
+
+    .topNav20260821 .nav-header-mb {
+      display: flex;
+      height: var(--nav-mb-h, 60px);
+    }
+  }
+</style>
+
+<style data-nav-styles>
+.topNav20260821 {
+  --nav-h: 72px;
+  --nav-mb-h: 60px;
+  --nav-bg: rgba(255, 255, 255, 0);
+  --nav-text: #ffffff;
+  --theme: #d4573b;
+  --nav-blur: 0px;
+  --nav-border: rgba(255, 255, 255, 0.32);
+  --nav-dropdown-top: 72px;
+  --company-name-color: #ffffff;
+  --mobile-menu-company-name-color: #172033;
+  width: 100%;
+  font-family: "Avenir Next", Avenir, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: var(--nav-text);
+  background: var(--nav-bg);
+  border-bottom: 1px solid var(--nav-border);
+  transition: background-color 0.28s ease, color 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+}
+
+.topNav20260821.nav-sticky-skin {
+  --nav-border: rgba(23, 32, 51, 0.12);
+  box-shadow: 0 5px 18px rgba(23, 32, 51, 0.08);
+}
+
+.topNav20260821 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.topNav20260821 ul,
+.topNav20260821 ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.topNav20260821 button,
+.topNav20260821 input {
+  font: inherit;
+}
+
+.topNav20260821 button {
+  padding: 0;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.topNav20260821 img {
+  display: block;
+  max-width: 100%;
+}
+
+.topNav20260821 .nav-header-pc {
+  height: var(--nav-h);
+  -webkit-backdrop-filter: blur(var(--nav-blur));
+  backdrop-filter: blur(var(--nav-blur));
+}
+
+.topNav20260821 .nav-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 5.5vw;
+  box-sizing: border-box;
+}
+
+.topNav20260821 .nav-list-pc {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  height: 100%;
+  min-width: 0;
+}
+
+.topNav20260821 .nav-item {
+  display: flex;
+  align-items: stretch;
+  height: 100%;
+}
+
+.topNav20260821 .nav-item > .nav-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 17px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.topNav20260821 .nav-item > .nav-link::after {
+  content: "";
+  position: absolute;
+  right: 17px;
+  bottom: 16px;
+  left: 17px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0;
+  transform: scaleX(0.35);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.topNav20260821 .nav-item > .nav-link:hover::after,
+.topNav20260821 .nav-item > .nav-link:focus-visible::after,
+.topNav20260821 .nav-item > .nav-link.active::after,
+.topNav20260821 .nav-item.nav-mega-open > .nav-link::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.topNav20260821 .nav-brand {
+  grid-column: 2;
+  display: flex;
+  justify-content: center;
+  min-width: 0;
+  height: 100%;
+}
+
+.topNav20260821 .nav-brand-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+}
+
+.topNav20260821 .nav-brand-image {
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+}
+
+.topNav20260821 .nav-company-name {
+  color: var(--company-name-color);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.075em;
+  white-space: nowrap;
+}
+
+.topNav20260821 .nav-actions {
+  grid-column: 3;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  height: 100%;
+}
+
+.topNav20260821 .nav-action-button,
+.topNav20260821 .nav-login,
+.topNav20260821 .nav-lang-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 38px;
+  height: 38px;
+  padding: 0 10px;
+  border-radius: 999px;
+  box-sizing: border-box;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.topNav20260821 .nav-action-button:hover,
+.topNav20260821 .nav-login:hover,
+.topNav20260821 .nav-lang-toggle:hover {
+  color: var(--theme);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.topNav20260821.nav-sticky-skin .nav-action-button:hover,
+.topNav20260821.nav-sticky-skin .nav-login:hover,
+.topNav20260821.nav-sticky-skin .nav-lang-toggle:hover {
+  background: rgba(23, 32, 51, 0.06);
+}
+
+.topNav20260821 .nav-login {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.topNav20260821 .nav-lang {
+  position: relative;
+}
+
+.topNav20260821 .nav-lang-toggle {
+  gap: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.topNav20260821 .nav-lang-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 150px;
+  padding: 7px;
+  color: #172033;
+  background: #ffffff;
+  border: 1px solid rgba(23, 32, 51, 0.12);
+  border-radius: 4px;
+  box-shadow: 0 14px 35px rgba(23, 32, 51, 0.14);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: opacity 0.18s ease, visibility 0.18s ease, transform 0.18s ease;
+  z-index: 1010;
+}
+
+.topNav20260821 .nav-lang:hover .nav-lang-dropdown,
+.topNav20260821 .nav-lang:focus-within .nav-lang-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.topNav20260821 .nav-lang-dropdown a {
+  display: block;
+  padding: 9px 11px;
+  font-size: 13px;
+  border-radius: 3px;
+}
+
+.topNav20260821 .nav-lang-dropdown a:hover,
+.topNav20260821 .nav-lang-dropdown a.active {
+  color: var(--theme);
+  background: #f4f1eb;
+}
+
+.topNav20260821 .nav-dropdown {
+  position: fixed;
+  top: var(--nav-dropdown-top);
+  right: 0;
+  left: 0;
+  width: 100%;
+  max-height: calc(100vh - var(--nav-dropdown-top) - 16px);
+  padding: 38px 5.5vw 42px;
+  color: #172033;
+  background: #ffffff;
+  border-top: 1px solid rgba(23, 32, 51, 0.12);
+  box-shadow: 0 18px 30px rgba(23, 32, 51, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  transform: translateY(-12px) scaleY(0.985);
+  transform-origin: top center;
+  transition: opacity 0.28s ease, visibility 0.28s ease, transform 0.28s ease;
+  pointer-events: none;
+  box-sizing: border-box;
+  z-index: 1005;
+}
+
+.topNav20260821 .nav-item.nav-mega-open > .nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.topNav20260821 .nav-pc-overlay {
+  position: fixed;
+  top: var(--nav-dropdown-top);
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(10, 16, 28, 0.32);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.28s ease, visibility 0.28s ease;
+  pointer-events: none;
+  z-index: 1004;
+}
+
+.topNav20260821.nav-pc-mega-open .nav-pc-overlay,
+.topNav20260821.nav-pc-search-open .nav-pc-overlay {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.topNav20260821 .nav-mega-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 30px 24px;
+  width: 100%;
+  max-width: 1650px;
+  margin: 0 auto;
+}
+
+.topNav20260821 .nav-mega-grid > * {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.34s ease, transform 0.34s ease;
+}
+
+.topNav20260821 .nav-item.nav-mega-open .nav-mega-grid > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.topNav20260821 .nav-item.nav-mega-open .nav-mega-grid > *:nth-child(2) { transition-delay: 0.04s; }
+.topNav20260821 .nav-item.nav-mega-open .nav-mega-grid > *:nth-child(3) { transition-delay: 0.08s; }
+.topNav20260821 .nav-item.nav-mega-open .nav-mega-grid > *:nth-child(4) { transition-delay: 0.12s; }
+.topNav20260821 .nav-item.nav-mega-open .nav-mega-grid > *:nth-child(5) { transition-delay: 0.16s; }
+
+.topNav20260821 .nav-mega-group-title,
+.topNav20260821 .nav-mega-link-title {
+  display: inline-block;
+  margin-bottom: 13px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.topNav20260821 .nav-mega-group-title:hover,
+.topNav20260821 .nav-mega-link-title:hover,
+.topNav20260821 .nav-mega-group-title.active,
+.topNav20260821 .nav-mega-link-title.active {
+  color: var(--theme);
+}
+
+.topNav20260821 .nav-mega-sublist a {
+  display: block;
+  padding: 5px 0;
+  color: #33405a;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.topNav20260821 .nav-mega-sublist a:hover,
+.topNav20260821 .nav-mega-sublist a.active {
+  color: var(--theme);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.topNav20260821 .nav-mega-card {
+  display: block;
+  min-width: 0;
+}
+
+.topNav20260821 .nav-mega-card-media {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-top: 62%;
+  overflow: hidden;
+  background: #eeeae2;
+  border: 1px solid rgba(23, 32, 51, 0.16);
+}
+
+.topNav20260821 .nav-mega-card-media img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.topNav20260821 .nav-mega-card:hover .nav-mega-card-media img,
+.topNav20260821 .nav-mega-card:focus-visible .nav-mega-card-media img {
+  transform: scale(1.035);
+}
+
+.topNav20260821 .nav-mega-card-title {
+  display: block;
+  margin-top: 12px;
+  font-size: 15px;
+  font-weight: 650;
+  line-height: 1.35;
+}
+
+.topNav20260821 .nav-mega-card:hover .nav-mega-card-title,
+.topNav20260821 .nav-mega-card:focus-visible .nav-mega-card-title,
+.topNav20260821 .nav-mega-card.active .nav-mega-card-title {
+  color: var(--theme);
+}
+
+.topNav20260821 .nav-mega-card-remark,
+.topNav20260821 .nav-mega-link-remark {
+  display: block;
+  margin-top: 4px;
+  color: #5c667a;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.topNav20260821 .nav-search-pc {
+  position: fixed;
+  top: var(--nav-dropdown-top);
+  right: 5.5vw;
+  display: none;
+  width: 380px;
+  max-width: calc(100% - 32px);
+  padding: 18px;
+  color: #172033;
+  background: #ffffff;
+  border: 1px solid rgba(23, 32, 51, 0.12);
+  box-shadow: 0 18px 30px rgba(23, 32, 51, 0.12);
+  box-sizing: border-box;
+  z-index: 1010;
+  transform-origin: top right;
+}
+
+.topNav20260821 .nav-search-pc.open {
+  display: block;
+  animation: navSearchPcIn20260821 0.28s ease both;
+}
+
+@keyframes navSearchPcIn20260821 {
+  from { opacity: 0; transform: translateY(-10px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.topNav20260821 .nav-search-form,
+.topNav20260821 .nav-mb-search-form {
+  display: flex;
+  gap: 8px;
+}
+
+.topNav20260821 .nav-search-form input,
+.topNav20260821 .nav-mb-search-form input {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 42px;
+  padding: 0 13px;
+  color: #172033;
+  background: #ffffff;
+  border: 1px solid rgba(23, 32, 51, 0.24);
+  border-radius: 3px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.topNav20260821 .nav-search-form input:focus,
+.topNav20260821 .nav-mb-search-form input:focus {
+  border-color: var(--theme);
+  box-shadow: 0 0 0 2px rgba(212, 87, 59, 0.13);
+}
+
+.topNav20260821 .nav-search-submit {
+  height: 42px;
+  padding: 0 16px;
+  color: #ffffff;
+  background: #172033;
+  border-radius: 3px;
+}
+
+.topNav20260821 .nav-header-mb {
+  position: relative;
+  z-index: 1030;
+  height: var(--nav-mb-h);
+  -webkit-backdrop-filter: blur(var(--nav-blur));
+  backdrop-filter: blur(var(--nav-blur));
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.topNav20260821 .nav-header-mb .nav-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 143px) minmax(0, 1fr);
+  padding: 0 20px 0 21px;
+}
+
+.topNav20260821 .nav-mb-brand {
+  grid-column: 2;
+  display: flex;
+  justify-content: center;
+  min-width: 0;
+  height: 100%;
+}
+
+.topNav20260821 .nav-mb-brand .nav-brand-link {
+  min-width: 0;
+}
+
+.topNav20260821 .nav-mb-brand .nav-company-name {
+  max-width: 143px;
+  overflow: hidden;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-overflow: ellipsis;
+}
+
+.topNav20260821 .nav-mb-actions {
+  grid-column: 3;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 3px;
+}
+
+.topNav20260821 .nav-hamburger {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 6px;
+  width: 34px;
+  height: 38px;
+  padding: 0 3px;
+}
+
+.topNav20260821 .nav-hamburger span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 2px;
+  transform-origin: center;
+  transition: transform 0.3s ease, opacity 0.2s ease;
+}
+
+.topNav20260821.nav-open .nav-hamburger span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.topNav20260821.nav-open .nav-hamburger span:nth-child(2) {
+  opacity: 0;
+}
+
+.topNav20260821.nav-open .nav-hamburger span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.topNav20260821 .nav-mb-search-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  background: rgba(10, 16, 28, 0.48);
+  z-index: 1015;
+}
+
+.topNav20260821 .nav-mb-backdrop {
+  display: none;
+}
+
+.topNav20260821 .nav-mb-menu {
+  position: fixed;
+  top: var(--nav-dropdown-top);
+  right: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  max-width: none;
+  height: calc(100vh - var(--nav-dropdown-top));
+  color: #172033;
+  background: #ffffff;
+  border-top: 1px solid #e0e4e4;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  pointer-events: none;
+  z-index: 1020;
+}
+
+.topNav20260821.nav-open .nav-mb-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.topNav20260821.nav-open .nav-header-mb {
+  color: #172033;
+  background: #ffffff;
+  border-bottom-color: #e0e4e4;
+}
+
+.topNav20260821.nav-search-open .nav-mb-search-backdrop,
+.topNav20260821.nav-search-open .nav-mb-search-panel {
+  display: block;
+}
+
+.topNav20260821 .nav-mb-menu-stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.topNav20260821 .nav-mb-view {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+  padding: 21px 19px 40px 20px;
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(34px);
+  transition: opacity 0.42s ease-in-out, transform 0.42s ease-in-out, visibility 0.42s ease-in-out;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+.topNav20260821 .nav-mb-view.nav-mb-view-active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.topNav20260821 .nav-mb-view.nav-mb-view-exit-left {
+  opacity: 0;
+  transform: translateX(-34px);
+}
+
+.topNav20260821 .nav-mb-root-content {
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+}
+
+.topNav20260821 .nav-mb-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.topNav20260821 .nav-mb-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  min-width: 0;
+  color: #172033;
+}
+
+.topNav20260821 .nav-mb-card-media {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-top: 125.15%;
+  overflow: hidden;
+  background: #ebe9e3;
+}
+
+.topNav20260821 .nav-mb-card-media img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.42s ease;
+}
+
+.topNav20260821 .nav-mb-card:active .nav-mb-card-media img {
+  transform: scale(1.035);
+}
+
+.topNav20260821 .nav-mb-card-label,
+.topNav20260821 .nav-mb-feature-link,
+.topNav20260821 .nav-mb-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #172033;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.35;
+  text-align: left;
+}
+
+.topNav20260821 .nav-mb-card-arrow,
+.topNav20260821 .nav-mb-link-arrow {
+  position: relative;
+  flex: 0 0 auto;
+  width: 7px;
+  height: 12px;
+  transition: transform 0.2s ease;
+}
+
+.topNav20260821 .nav-mb-card-arrow::after,
+.topNav20260821 .nav-mb-link-arrow::after {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-top: 1.5px solid currentColor;
+  border-right: 1.5px solid currentColor;
+  transform: rotate(45deg);
+  content: "";
+}
+
+.topNav20260821 .nav-mb-card:hover .nav-mb-card-arrow,
+.topNav20260821 .nav-mb-feature-link:hover .nav-mb-link-arrow {
+  transform: translateX(3px);
+}
+
+.topNav20260821 .nav-mb-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.topNav20260821 .nav-mb-section-title {
+  margin: 0;
+  color: #a4a9b0;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.topNav20260821 .nav-mb-feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.topNav20260821 .nav-mb-feature-link {
+  width: max-content;
+  max-width: 100%;
+}
+
+.topNav20260821 .nav-mb-back {
+  width: max-content;
+  max-width: 100%;
+  font-size: 17px;
+}
+
+.topNav20260821 .nav-mb-back .nav-mb-link-arrow {
+  transform: rotate(180deg);
+}
+
+.topNav20260821 .nav-mb-submenu-content {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.topNav20260821 .nav-mb-promo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 10px;
+}
+
+.topNav20260821 .nav-mb-promo-card {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+}
+
+.topNav20260821 .nav-mb-promo-media {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-top: 125.15%;
+  overflow: hidden;
+  background: #ebe9e3;
+}
+
+.topNav20260821 .nav-mb-promo-media img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.42s ease;
+}
+
+.topNav20260821 .nav-mb-promo-card:hover .nav-mb-promo-media img {
+  transform: scale(1.035);
+}
+
+.topNav20260821 .nav-mb-promo-title {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.topNav20260821 .nav-mb-promo-remark {
+  color: #5c667a;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.topNav20260821 .nav-mb-text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.topNav20260821 .nav-mb-group-title {
+  color: #a4a9b0;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.topNav20260821 .nav-mb-group-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.topNav20260821 .nav-mb-group-links a {
+  color: #172033;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.topNav20260821 .nav-mb-group-links a:hover,
+.topNav20260821 .nav-mb-group-links a.active {
+  color: var(--theme);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.topNav20260821 .nav-mb-utility {
+  margin-top: auto;
+  padding-top: 22px;
+  border-top: 1px solid #e0e4e4;
+}
+
+.topNav20260821 .nav-mb-login {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+  color: #172033;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.topNav20260821 .nav-mb-lang {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin-bottom: 14px;
+}
+
+.topNav20260821 .nav-mb-lang a {
+  color: #5c667a;
+  font-size: 13px;
+}
+
+.topNav20260821 .nav-mb-lang a.active,
+.topNav20260821 .nav-mb-lang a:hover {
+  color: var(--theme);
+}
+
+.topNav20260821 .nav-mb-contact {
+  color: #5c667a;
+  font-size: 12px;
+  font-style: normal;
+  line-height: 1.75;
+}
+
+.topNav20260821 .nav-mb-search-panel {
+  position: fixed;
+  top: var(--nav-dropdown-top);
+  right: 0;
+  left: 0;
+  display: none;
+  padding: 16px;
+  color: #172033;
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(10, 16, 28, 0.14);
+  z-index: 1020;
+  animation: navMobileSearchIn20260821 0.32s ease both;
+}
+
+.topNav20260821 .nav-mb-search-close {
+  height: 42px;
+  padding: 0 10px;
+  color: #5c667a;
+}
+
+@keyframes navMobileSearchIn20260821 {
+  from { opacity: 0; transform: translateY(-12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 1280px) and (min-width: 1025px) {
+  .topNav20260821 .nav-container {
+    padding-right: 28px;
+    padding-left: 28px;
+  }
+
+  .topNav20260821 .nav-item > .nav-link {
+    padding-right: 11px;
+    padding-left: 11px;
+    font-size: 14px;
+  }
+
+  .topNav20260821 .nav-item > .nav-link::after {
+    right: 11px;
+    left: 11px;
+  }
+
+  .topNav20260821 .nav-company-name {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .topNav20260821 .nav-header-pc,
+  .topNav20260821 .nav-search-pc,
+  .topNav20260821 .nav-pc-overlay {
+    display: none !important;
+  }
+
+  .topNav20260821 .nav-header-mb {
+    display: flex;
+  }
+}
+</style>
+
+<section class="topNav20260821" aria-label="顶部导航">
+  <header class="nav-header-pc">
+    <div class="nav-container">
+      <nav class="nav-list-pc" aria-label="主导航"></nav>
+      <div class="nav-brand" aria-label="网站标识">
+        <a class="nav-brand-link" href="/">
+          <img class="nav-brand-image" src="" alt="">
+          <span class="nav-company-name"></span>
+        </a>
+      </div>
+      <div class="nav-actions" aria-label="导航操作">
+        <button class="nav-action-button nav-search-trigger" type="button" aria-label="搜索" aria-expanded="false">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>
+        </button>
+        <a class="nav-login" href="/login" aria-label="登录">
+          <svg width="19" height="19" viewBox="0 0 23 23" fill="none" aria-hidden="true"><path d="M20.5 6.1H2.1C1.5 6.1 1 6.6 1 7.2v13.3c0 .6.5 1.1 1.1 1.1h18.4c.6 0 1.1-.5 1.1-1.1V7.2c0-.6-.5-1.1-1.1-1.1Z" stroke="currentColor" stroke-width="1.8"></path><path d="M7 9.6V6.2A4.2 4.2 0 0 1 11.2 2a4.2 4.2 0 0 1 4.2 4.2v3.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg>
+        </a>
+        <div class="nav-lang" aria-label="语言切换"></div>
+      </div>
+    </div>
+  </header>
+
+  <button class="nav-pc-overlay" type="button" aria-label="关闭下拉导航"></button>
+
+  <div class="nav-search-pc" aria-hidden="true">
+    <form class="nav-search-form" role="search">
+      <input type="search" name="keywords" placeholder="搜索" autocomplete="off">
+      <button class="nav-search-submit" type="submit">搜索</button>
+    </form>
+  </div>
+
+  <header class="nav-header-mb">
+    <div class="nav-container">
+      <button class="nav-hamburger" type="button" aria-label="打开菜单" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-mb-brand" aria-label="网站标识">
+        <a class="nav-brand-link" href="/">
+          <img class="nav-brand-image" src="" alt="">
+          <span class="nav-company-name"></span>
+        </a>
+      </div>
+      <div class="nav-mb-actions">
+        <button class="nav-action-button nav-search-trigger-mb" type="button" aria-label="搜索" aria-expanded="false">
+          <svg width="15" height="15" viewBox="0 0 21 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="9" cy="9" r="7.5"></circle><path d="m15 15 4.5 4.5"></path></svg>
+        </button>
+        <a class="nav-action-button nav-login-mb" href="/login" aria-label="登录">
+          <svg width="19" height="19" viewBox="0 0 23 23" fill="none" aria-hidden="true"><path d="M20.5 6.1H2.1C1.5 6.1 1 6.6 1 7.2v13.3c0 .6.5 1.1 1.1 1.1h18.4c.6 0 1.1-.5 1.1-1.1V7.2c0-.6-.5-1.1-1.1-1.1Z" stroke="currentColor" stroke-width="1.8"></path><path d="M7 9.6V6.2A4.2 4.2 0 0 1 11.2 2a4.2 4.2 0 0 1 4.2 4.2v3.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-mb-search-backdrop"></div>
+  <section class="nav-mb-search-panel" aria-label="移动端搜索" aria-hidden="true">
+    <form class="nav-mb-search-form" role="search">
+      <input type="search" name="keywords" placeholder="搜索" autocomplete="off">
+      <button class="nav-search-submit" type="submit">搜索</button>
+      <button class="nav-mb-search-close" type="button">取消</button>
+    </form>
+  </section>
+
+  <div class="nav-mb-backdrop"></div>
+  <aside class="nav-mb-menu" aria-label="移动端导航菜单" aria-hidden="true">
+    <div class="nav-mb-menu-stage">
+      <div class="nav-mb-view nav-mb-view-root nav-mb-view-active" data-nav-mb-view="root">
+        <div class="nav-mb-root-content"></div>
+        <div class="nav-mb-utility">
+          <a class="nav-mb-login" href="/login"></a>
+          <div class="nav-mb-lang" aria-label="移动端语言切换"></div>
+          <address class="nav-mb-contact"></address>
+        </div>
+      </div>
+      <div class="nav-mb-subviews"></div>
+    </div>
+  </aside>
+</section>
+
+<script>
+(function () {
+  "use strict";
+
+  var TIMESTAMP = "20260821";
+  var ROOT_CLASS = "topNav" + TIMESTAMP;
+  var HOST_CLASS = "top-nav-host-" + TIMESTAMP;
+  var HOST_FLOATING_CLASS = "top-nav-host-floating";
+
+  function matchesElement(element, selector) {
+    if (!element || element.nodeType !== 1) return false;
+    var matches = element.matches || element.webkitMatchesSelector || element.msMatchesSelector;
+    return matches ? matches.call(element, selector) : false;
+  }
+
+  function closestElement(element, selector) {
+    var current = element && element.nodeType === 1 ? element : element && element.parentElement;
+    while (current) {
+      if (matchesElement(current, selector)) return current;
+      current = current.parentElement;
+    }
+    return null;
+  }
+
+  function clearElement(element) {
+    if (!element) return;
+    while (element.firstChild) element.removeChild(element.firstChild);
+  }
+
+  function findScriptContainer() {
+    var scriptElement = document.currentScript;
+    if (!scriptElement) return null;
+    var previous = scriptElement.previousElementSibling;
+    while (previous) {
+      if (matchesElement(previous, "." + ROOT_CLASS)) return previous;
+      if (previous.querySelectorAll) {
+        var nested = previous.querySelectorAll("." + ROOT_CLASS);
+        if (nested.length) return nested[nested.length - 1];
+      }
+      previous = previous.previousElementSibling;
+    }
+    return closestElement(scriptElement, "." + ROOT_CLASS);
+  }
+
+  function findPendingContainer() {
+    var candidates = document.querySelectorAll("." + ROOT_CLASS);
+    var index;
+    for (index = 0; index < candidates.length; index += 1) {
+      if (candidates[index].getAttribute("data-top-nav-initialized") !== "1") return candidates[index];
+    }
+    return null;
+  }
+
+  var container = findScriptContainer() || findPendingContainer();
+  if (!container) return;
+  container.setAttribute("data-top-nav-initialized", "1");
+
+  var moduleElement = closestElement(container, ".gw-browse-module");
+  if (moduleElement) moduleElement.classList.add(HOST_CLASS);
+  var instanceId = ROOT_CLASS + "_" + Math.random().toString(36).slice(2, 9);
+
+  function qs(selector) { return container.querySelector(selector); }
+  function qsa(selector) { return container.querySelectorAll(selector); }
+  function nextFrame(callback) {
+    if (window.requestAnimationFrame) return window.requestAnimationFrame(callback);
+    return window.setTimeout(callback, 16);
+  }
+
+  function isUnresolved(value, key) {
+    return typeof value === "string" && value === "$[" + key + "]";
+  }
+
+  function parseText(value, key, fallback) {
+    if (isUnresolved(value, key) || value === null || value === undefined || value === "") return fallback;
+    return String(value);
+  }
+
+  function parseSwitch(value, key, fallback) {
+    if (isUnresolved(value, key) || value === null || value === undefined || value === "") return fallback;
+    return value === true || value === 1 || value === "1" || value === "true";
+  }
+
+  function parseNumber(value, key, fallback) {
+    if (isUnresolved(value, key) || value === null || value === undefined || value === "") return fallback;
+    var number = Number(value);
+    return isFinite(number) ? number : fallback;
+  }
+
+  function parseObject(value, key, fallback) {
+    if (isUnresolved(value, key) || value === null || value === undefined || value === "") return fallback;
+    if (typeof value !== "string") return value || fallback;
+    try { return JSON.parse(value) || fallback; } catch (error) { return fallback; }
+  }
+
+  function parseArray(value, key, fallback) {
+    var parsed = parseObject(value, key, fallback);
+    return Array.isArray(parsed) ? parsed : fallback;
+  }
+
+  function normalizeImage(image, fallback) {
+    if (!image) return fallback;
+    if (typeof image === "string") return { url: image, alt: "", objectFit: "contain", objectPosition: "center center" };
+    if (typeof image !== "object") return fallback;
+    if (image.value && image.value !== image) return normalizeImage(image.value, fallback);
+    return {
+      url: image.url || image.src || (image.file && image.file.url) || (image.image && image.image.url) || "",
+      alt: image.alt || image.name || "",
+      objectFit: image.objectFit || "contain",
+      objectPosition: image.objectPosition || "center center"
+    };
+  }
+
+  function parseImage(value, key, fallback) {
+    if (isUnresolved(value, key) || value === null || value === undefined || value === "") return fallback;
+    if (typeof value !== "string") return normalizeImage(value, fallback);
+    if (value.trim().charAt(0) !== "{") return normalizeImage(value, fallback);
+    try { return normalizeImage(JSON.parse(value), fallback); } catch (error) { return fallback; }
+  }
+
+  function parseJump(value, key, fallback) {
+    var parsed = parseObject(value, key, null);
+    if (!parsed || typeof parsed !== "object") return fallback;
+    return {
+      href: parsed.href || parsed.url || fallback.href,
+      target: parsed.target || fallback.target,
+      type: parsed.type || fallback.type
+    };
+  }
+
+  var FALLBACK_NAV = [
+    { id: "home", title: "首页", jump: { href: "/", target: "_self" }, children: [] },
+    { id: "products", title: "产品系列", jump: { href: "/products", target: "_self" }, children: [
+      { id: "new", title: "新品推荐", jump: { href: "/products", target: "_self" }, children: [], remark: "浏览本季重点产品" },
+      { id: "category", title: "产品分类", jump: { href: "/products", target: "_self" }, children: [
+        { id: "category-a", title: "分类一", jump: { href: "/products", target: "_self" }, children: [] },
+        { id: "category-b", title: "分类二", jump: { href: "/products", target: "_self" }, children: [] }
+      ] }
+    ] },
+    { id: "about", title: "关于我们", jump: { href: "/about", target: "_self" }, children: [] },
+    { id: "contact", title: "联系我们", jump: { href: "/contact", target: "_self" }, children: [] }
+  ];
+
+  var I18N_FALLBACK = {
+    "zh-cn": { searchPlaceholder: "搜索", loginText: "登录", loginUserName: "用户中心", searchLabel: "搜索", closeSearch: "取消", openMenu: "打开菜单", closeMenu: "关闭菜单", expandSubmenu: "展开子菜单", featuredTitle: "精选推荐", moreLinksTitle: "更多", phoneLabel: "电话", emailLabel: "邮箱", addressLabel: "地址" },
+    "en": { searchPlaceholder: "Search", loginText: "Login", loginUserName: "Account", searchLabel: "Search", closeSearch: "Cancel", openMenu: "Open menu", closeMenu: "Close menu", expandSubmenu: "Expand submenu", featuredTitle: "Featured", moreLinksTitle: "More", phoneLabel: "Phone", emailLabel: "Email", addressLabel: "Address" }
+  };
+
+  var CONFIG = {
+    nav: parseArray("[{\"id\":\"home\",\"title\":\"首页\",\"jump\":{\"type\":\"web\",\"href\":\"/\",\"target\":\"_self\"},\"children\":[],\"remark\":\"\",\"icon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hoverIcon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hidden\":false,\"isBackend\":false},{\"id\":\"products\",\"title\":\"产品系列\",\"jump\":{\"type\":\"web\",\"href\":\"/products\",\"target\":\"_self\"},\"children\":[{\"id\":\"featured\",\"title\":\"精选推荐\",\"jump\":{\"type\":\"web\",\"href\":\"/products\",\"target\":\"_self\"},\"children\":[{\"id\":\"new-arrivals\",\"title\":\"当季新品\",\"jump\":{\"type\":\"web\",\"href\":\"/products?sort=new\",\"target\":\"_self\"},\"children\":[],\"hidden\":false},{\"id\":\"best-sellers\",\"title\":\"人气精选\",\"jump\":{\"type\":\"web\",\"href\":\"/products?sort=hot\",\"target\":\"_self\"},\"children\":[],\"hidden\":false},{\"id\":\"limited\",\"title\":\"限量系列\",\"jump\":{\"type\":\"web\",\"href\":\"/products?tag=limited\",\"target\":\"_self\"},\"children\":[],\"hidden\":false}],\"remark\":\"\",\"icon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hoverIcon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hidden\":false},{\"id\":\"categories\",\"title\":\"产品分类\",\"jump\":{\"type\":\"web\",\"href\":\"/products\",\"target\":\"_self\"},\"children\":[{\"id\":\"category-a\",\"title\":\"分类一\",\"jump\":{\"type\":\"web\",\"href\":\"/products/category-a\",\"target\":\"_self\"},\"children\":[],\"hidden\":false},{\"id\":\"category-b\",\"title\":\"分类二\",\"jump\":{\"type\":\"web\",\"href\":\"/products/category-b\",\"target\":\"_self\"},\"children\":[],\"hidden\":false},{\"id\":\"category-c\",\"title\":\"分类三\",\"jump\":{\"type\":\"web\",\"href\":\"/products/category-c\",\"target\":\"_self\"},\"children\":[],\"hidden\":false}],\"remark\":\"\",\"icon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hoverIcon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hidden\":false},{\"id\":\"product-promo-one\",\"title\":\"当季灵感\",\"jump\":{\"type\":\"web\",\"href\":\"/products?tag=season\",\"target\":\"_self\"},\"children\":[],\"remark\":\"轻盈质感，为日常注入松弛气息。\",\"icon\":{\"type\":\"image\",\"value\":\"https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=900&q=82\",\"name\":\"当季灵感\"},\"hoverIcon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hidden\":false},{\"id\":\"product-promo-two\",\"title\":\"经典系列\",\"jump\":{\"type\":\"web\",\"href\":\"/products?tag=classic\",\"target\":\"_self\"},\"children\":[],\"remark\":\"值得反复穿用的舒适单品。\",\"icon\":{\"type\":\"image\",\"value\":\"https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=82\",\"name\":\"经典系列\"},\"hoverIcon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hidden\":false}],\"remark\":\"\",\"icon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hoverIcon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hidden\":false,\"isBackend\":false},{\"id\":\"story\",\"title\":\"品牌故事\",\"jump\":{\"type\":\"web\",\"href\":\"/about\",\"target\":\"_self\"},\"children\":[{\"id\":\"our-story\",\"title\":\"我们的故事\",\"jump\":{\"type\":\"web\",\"href\":\"/about\",\"target\":\"_self\"},\"children\":[],\"remark\":\"从一个简单想法开始，持续做好每一个细节。\",\"icon\":{\"type\":\"image\",\"value\":\"https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=82\",\"name\":\"我们的故事\"},\"hoverIcon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hidden\":false},{\"id\":\"sustainability\",\"title\":\"可持续理念\",\"jump\":{\"type\":\"web\",\"href\":\"/sustainability\",\"target\":\"_self\"},\"children\":[],\"remark\":\"选择更负责任的材料与生产方式。\",\"icon\":{\"type\":\"image\",\"value\":\"https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=900&q=82\",\"name\":\"可持续理念\"},\"hoverIcon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hidden\":false},{\"id\":\"stores\",\"title\":\"线下空间\",\"jump\":{\"type\":\"web\",\"href\":\"/stores\",\"target\":\"_self\"},\"children\":[],\"remark\":\"到访我们的空间，近距离感受产品。\",\"icon\":{\"type\":\"image\",\"value\":\"https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=82\",\"name\":\"线下空间\"},\"hoverIcon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hidden\":false}],\"remark\":\"\",\"icon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hoverIcon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hidden\":false,\"isBackend\":false},{\"id\":\"contact\",\"title\":\"联系我们\",\"jump\":{\"type\":\"web\",\"href\":\"/contact\",\"target\":\"_self\"},\"children\":[],\"remark\":\"\",\"icon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hoverIcon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hidden\":false,\"isBackend\":false}]", "nav", []),
+    useCustomLanguageJump: parseSwitch("1", "use_custom_language_jump", false),
+    languageNav: parseArray("[{\"id\":\"zh-cn\",\"title\":\"简体中文\",\"jump\":{\"type\":\"web\",\"href\":\"/\",\"target\":\"_self\"},\"children\":[],\"hidden\":false},{\"id\":\"en\",\"title\":\"English\",\"jump\":{\"type\":\"web\",\"href\":\"/en\",\"target\":\"_self\"},\"children\":[],\"hidden\":false}]", "language_nav", []),
+    logo: parseImage("", "logo", { url: "", alt: "网站 Logo", objectFit: "contain", objectPosition: "center center" }),
+    stickyLogo: parseImage("", "stickyLogo", { url: "", alt: "", objectFit: "contain", objectPosition: "center center" }),
+    logoLink: parseJump("{\"type\":\"web\",\"href\":\"/\",\"target\":\"_self\"}", "logo_link", { type: "web", href: "/", target: "_self" }),
+    phone: parseText("400-000-0000", "phone", ""),
+    email: parseText("hello@example.com", "email", ""),
+    address: parseText("请在后台填写企业地址", "address", ""),
+    stickyEnabled: parseSwitch("1", "sticky_mode", true),
+    stickyScrollDistance: parseNumber("12", "sticky_scroll_distance", 12),
+    themeColor: parseText("#d4573b", "theme_color", "#d4573b"),
+    navBackground: parseText("rgba(255,255,255,0.00)", "nav_background_color", "rgba(255,255,255,0)"),
+    navBlur: parseNumber("0", "nav_blur", 0),
+    navTextColor: parseText("#ffffff", "nav_text_color", "#ffffff"),
+    i18n: parseObject("{\"zh-cn\":{\"searchPlaceholder\":\"搜索\",\"loginText\":\"登录\",\"loginUserName\":\"用户中心\",\"searchLabel\":\"搜索\",\"closeSearch\":\"取消\",\"openMenu\":\"打开菜单\",\"closeMenu\":\"关闭菜单\",\"expandSubmenu\":\"展开子菜单\",\"featuredTitle\":\"精选推荐\",\"moreLinksTitle\":\"更多\",\"phoneLabel\":\"电话\",\"emailLabel\":\"邮箱\",\"addressLabel\":\"地址\"},\"en\":{\"searchPlaceholder\":\"Search\",\"loginText\":\"Login\",\"loginUserName\":\"Account\",\"searchLabel\":\"Search\",\"closeSearch\":\"Cancel\",\"openMenu\":\"Open menu\",\"closeMenu\":\"Close menu\",\"expandSubmenu\":\"Expand submenu\",\"featuredTitle\":\"Featured\",\"moreLinksTitle\":\"More\",\"phoneLabel\":\"Phone\",\"emailLabel\":\"Email\",\"addressLabel\":\"Address\"}}", "i18n", I18N_FALLBACK),
+    showSearch: parseSwitch("1", "show_search", true),
+    searchLink: parseJump("{\"type\":\"web\",\"href\":\"/search\",\"target\":\"_self\"}", "search_link", { type: "web", href: "/search", target: "_self" }),
+    showLogin: parseSwitch("1", "show_login", true),
+    stickyNavBackground: parseText("#ffffff", "sticky_nav_background_color", "#ffffff"),
+    stickyNavTextColor: parseText("#172033", "sticky_nav_text_color", "#172033"),
+    logoHeightPercent: parseNumber("48", "logo_height_percent", 50),
+    companyName: parseText("YOUR BRAND", "company_name", "YOUR BRAND"),
+    companyNameColor: parseText("#ffffff", "company_name_color", "#ffffff"),
+    stickyCompanyNameColor: parseText("#172033", "sticky_company_name_color", "#172033"),
+    mobileMenuCompanyNameColor: parseText("#172033", "mobile_menu_company_name_color", "#172033")
+  };
+
+  var previousBodyOverflow = null;
+  var currentStickySkin = null;
+  var layoutFrame = 0;
+  var searchControls = null;
+  var menuControls = null;
+  var mobileViewController = null;
+
+  function getStored(key, fallback) {
+    try { return localStorage.getItem(key) || fallback; } catch (error) { return fallback; }
+  }
+
+  function setStored(key, value) {
+    try { localStorage.setItem(key, value); } catch (error) { return; }
+  }
+
+  function getI18nText(key, fallback) {
+    var language = getStored("lang", "zh-cn");
+    var shortLanguage = language.split("-")[0];
+    var messages = CONFIG.i18n[language] || CONFIG.i18n[shortLanguage] || CONFIG.i18n["zh-cn"] || I18N_FALLBACK["zh-cn"];
+    return messages[key] || fallback;
+  }
+
+  function sanitizeNavHref(href) {
+    var value = String(href || "").trim();
+    if (!value) return "javascript:void(0);";
+    if (/^(?:javascript|data|vbscript):/i.test(value) && value !== "javascript:void(0);") return "javascript:void(0);";
+    return value;
+  }
+
+  function sanitizeImageSrc(src) {
+    var value = String(src || "").trim();
+    if (!value) return "";
+    if (/^(?:javascript|vbscript):/i.test(value)) return "";
+    if (/^data:/i.test(value) && !/^data:image\//i.test(value)) return "";
+    return value;
+  }
+
+  function getNavField(item) {
+    var index;
+    for (index = 1; index < arguments.length; index += 1) {
+      var key = arguments[index];
+      if (item && item[key] !== undefined && item[key] !== null) return item[key];
+    }
+    return "";
+  }
+
+  function getNavName(item) { return getNavField(item, "title", "name", "label"); }
+  function getNavRemark(item) { return getNavField(item, "remark", "description", "subtitle"); }
+  function isTruthyFlag(value) { return value === true || value === 1 || value === "1" || value === "true"; }
+  function isNavHidden(item) { return isTruthyFlag(item && item.hidden) || (item && (item.status === 0 || item.status === "0")); }
+  function getNavChildren(item) { return item && (item.children || item.subNav || item.subMenus) || []; }
+  function getVisibleNavItems(items) {
+    return (Array.isArray(items) ? items : []).filter(function (item) { return !isNavHidden(item); });
+  }
+  function getVisibleNavChildren(item) { return getVisibleNavItems(getNavChildren(item)); }
+
+  function getNavLink(item) {
+    if (item && item.jump) {
+      if (typeof item.jump === "string") return item.jump;
+      return item.jump.href || item.jump.url || "javascript:void(0);";
+    }
+    return getNavField(item, "link", "href", "url") || "javascript:void(0);";
+  }
+
+  function getNavTarget(item) {
+    if (item && item.jump && typeof item.jump === "object") return item.jump.target || "_self";
+    return item && item.target || (/^https?:\/\//i.test(getNavLink(item)) ? "_blank" : "_self");
+  }
+
+  function getNavIcon(item, selected) {
+    return selected ? getNavField(item, "hoverIcon", "select_icon", "activeIcon") : getNavField(item, "icon", "default_icon");
+  }
+
+  function getIconUrl(icon) {
+    if (!icon) return "";
+    if (typeof icon === "string") return sanitizeImageSrc(icon);
+    if (icon.value) return getIconUrl(icon.value);
+    return sanitizeImageSrc(icon.url || icon.src || (icon.file && icon.file.url) || (icon.image && icon.image.url) || "");
+  }
+
+  function applyAnchorBasics(anchor, item) {
+    anchor.href = sanitizeNavHref(getNavLink(item));
+    anchor.target = getNavTarget(item) === "_blank" ? "_blank" : "_self";
+    if (anchor.target === "_blank") anchor.rel = "noopener noreferrer";
+    var remark = getNavRemark(item);
+    if (remark) anchor.title = String(remark);
+  }
+
+  function appendTextAnchor(anchor, item) {
+    applyAnchorBasics(anchor, item);
+    anchor.appendChild(document.createTextNode(String(getNavName(item))));
+  }
+
+  function normalizedPath(href) {
+    var value = String(href || "");
+    if (!value || value === "javascript:void(0);") return "";
+    var parser = document.createElement("a");
+    parser.href = value;
+    var path = parser.pathname || "/";
+    return path.replace(/\/$/, "") || "/";
+  }
+
+  function isActive(item) {
+    var target = normalizedPath(getNavLink(item));
+    if (!target) return false;
+    var current = (location.pathname || "/").replace(/\/$/, "") || "/";
+    return current === target || (target !== "/" && current.indexOf(target + "/") === 0);
+  }
+
+  function hasActiveChild(item) {
+    if (isActive(item)) return true;
+    return getVisibleNavChildren(item).some(function (child) { return hasActiveChild(child); });
+  }
+
+  function closeAllMega(exceptItem) {
+    var items = qsa(".nav-item.nav-mega-open");
+    var index;
+    for (index = 0; index < items.length; index += 1) {
+      if (items[index] !== exceptItem) {
+        items[index].classList.remove("nav-mega-open");
+        var trigger = items[index].querySelector(".nav-link");
+        if (trigger) trigger.setAttribute("aria-expanded", "false");
+      }
+    }
+    container.classList.toggle("nav-pc-mega-open", Boolean(qs(".nav-item.nav-mega-open")));
+    applyInteractiveSkin();
+  }
+
+  function syncOverlayTop() {
+    var rect = container.getBoundingClientRect();
+    var top = Math.max(0, Math.round(rect.bottom));
+    container.style.setProperty("--nav-dropdown-top", top + "px");
+  }
+
+  function scheduleLayout() {
+    if (layoutFrame) return;
+    layoutFrame = nextFrame(function () {
+      layoutFrame = 0;
+      syncOverlayTop();
+    });
+  }
+
+  function bindMegaItem(itemElement, trigger) {
+    var closeTimer = 0;
+    function openMega() {
+      if (closeTimer) window.clearTimeout(closeTimer);
+      closeAllMega(itemElement);
+      scheduleLayout();
+      itemElement.classList.add("nav-mega-open");
+      container.classList.add("nav-pc-mega-open");
+      trigger.setAttribute("aria-expanded", "true");
+      applyInteractiveSkin();
+    }
+    function closeMegaSoon() {
+      if (closeTimer) window.clearTimeout(closeTimer);
+      closeTimer = window.setTimeout(function () {
+        if (!itemElement.contains(document.activeElement)) {
+          itemElement.classList.remove("nav-mega-open");
+          trigger.setAttribute("aria-expanded", "false");
+          container.classList.toggle("nav-pc-mega-open", Boolean(qs(".nav-item.nav-mega-open")));
+          applyInteractiveSkin();
+        }
+      }, 90);
+    }
+    itemElement.addEventListener("mouseenter", openMega);
+    itemElement.addEventListener("mouseleave", closeMegaSoon);
+    itemElement.addEventListener("focusin", openMega);
+    itemElement.addEventListener("focusout", closeMegaSoon);
+  }
+
+  function createMegaCard(item) {
+    var anchor = document.createElement("a");
+    anchor.className = "nav-mega-card" + (hasActiveChild(item) ? " active" : "");
+    applyAnchorBasics(anchor, item);
+    var media = document.createElement("span");
+    media.className = "nav-mega-card-media";
+    var image = document.createElement("img");
+    image.src = getIconUrl(getNavIcon(item));
+    image.alt = String(getNavName(item));
+    image.loading = "lazy";
+    media.appendChild(image);
+    anchor.appendChild(media);
+    var title = document.createElement("span");
+    title.className = "nav-mega-card-title";
+    title.textContent = String(getNavName(item));
+    anchor.appendChild(title);
+    var remarkText = getNavRemark(item);
+    if (remarkText) {
+      var remark = document.createElement("span");
+      remark.className = "nav-mega-card-remark";
+      remark.textContent = String(remarkText);
+      anchor.appendChild(remark);
+    }
+    return anchor;
+  }
+
+  function createMegaGroup(item, children) {
+    var group = document.createElement("div");
+    group.className = "nav-mega-group";
+    var title = document.createElement("a");
+    title.className = "nav-mega-group-title" + (isActive(item) ? " active" : "");
+    appendTextAnchor(title, item);
+    group.appendChild(title);
+    var list = document.createElement("div");
+    list.className = "nav-mega-sublist";
+    children.forEach(function (child) {
+      var link = document.createElement("a");
+      link.className = isActive(child) ? "active" : "";
+      appendTextAnchor(link, child);
+      list.appendChild(link);
+    });
+    group.appendChild(list);
+    return group;
+  }
+
+  function createMegaTextLink(item) {
+    var wrapper = document.createElement("div");
+    wrapper.className = "nav-mega-link";
+    var link = document.createElement("a");
+    link.className = "nav-mega-link-title" + (isActive(item) ? " active" : "");
+    appendTextAnchor(link, item);
+    wrapper.appendChild(link);
+    var remarkText = getNavRemark(item);
+    if (remarkText) {
+      var remark = document.createElement("span");
+      remark.className = "nav-mega-link-remark";
+      remark.textContent = String(remarkText);
+      wrapper.appendChild(remark);
+    }
+    return wrapper;
+  }
+
+  function renderPcNav(data) {
+    var list = qs(".nav-list-pc");
+    if (!list) return;
+    clearElement(list);
+    getVisibleNavItems(data).forEach(function (item) {
+      var children = getVisibleNavChildren(item);
+      var itemElement = document.createElement("div");
+      itemElement.className = "nav-item" + (hasActiveChild(item) ? " active" : "");
+      var trigger = document.createElement("a");
+      trigger.className = "nav-link" + (hasActiveChild(item) ? " active" : "");
+      appendTextAnchor(trigger, item);
+      itemElement.appendChild(trigger);
+      if (children.length) {
+        trigger.setAttribute("aria-haspopup", "true");
+        trigger.setAttribute("aria-expanded", "false");
+        var dropdown = document.createElement("div");
+        dropdown.className = "nav-dropdown";
+        var grid = document.createElement("div");
+        grid.className = "nav-mega-grid";
+        children.forEach(function (child) {
+          var grandchildren = getVisibleNavChildren(child);
+          if (grandchildren.length) grid.appendChild(createMegaGroup(child, grandchildren));
+          else if (getIconUrl(getNavIcon(child))) grid.appendChild(createMegaCard(child));
+          else grid.appendChild(createMegaTextLink(child));
+        });
+        dropdown.appendChild(grid);
+        itemElement.appendChild(dropdown);
+        bindMegaItem(itemElement, trigger);
+      }
+      list.appendChild(itemElement);
+    });
+    scheduleLayout();
+  }
+
+  function renderMobileNav(data) {
+    var rootContent = qs(".nav-mb-root-content");
+    var rootView = qs('.nav-mb-view[data-nav-mb-view="root"]');
+    var subviews = qs(".nav-mb-subviews");
+    if (!rootContent || !rootView || !subviews) return;
+    clearElement(rootContent);
+    clearElement(subviews);
+    rootView.classList.remove("nav-mb-view-exit-left");
+    rootView.classList.add("nav-mb-view-active");
+    rootView.setAttribute("aria-hidden", "false");
+
+    function createArrow(className) {
+      var arrow = document.createElement("span");
+      arrow.className = className;
+      arrow.setAttribute("aria-hidden", "true");
+      return arrow;
+    }
+
+    function findCover(item) {
+      var direct = getIconUrl(getNavIcon(item));
+      if (direct) return direct;
+      var descendants = getVisibleNavChildren(item);
+      var index;
+      for (index = 0; index < descendants.length; index += 1) {
+        var nested = findCover(descendants[index]);
+        if (nested) return nested;
+      }
+      return "";
+    }
+
+    function showView(viewId) {
+      var views = qsa(".nav-mb-view");
+      var target = null;
+      var active = null;
+      var index;
+      for (index = 0; index < views.length; index += 1) {
+        if (views[index].classList.contains("nav-mb-view-active")) active = views[index];
+        if (views[index].getAttribute("data-nav-mb-view") === viewId) target = views[index];
+      }
+      if (!target || target === active) return;
+      if (active) {
+        active.classList.remove("nav-mb-view-active");
+        active.classList.toggle("nav-mb-view-exit-left", viewId !== "root");
+        active.setAttribute("aria-hidden", "true");
+      }
+      target.classList.remove("nav-mb-view-exit-left");
+      target.classList.add("nav-mb-view-active");
+      target.setAttribute("aria-hidden", "false");
+      target.scrollTop = 0;
+    }
+
+    function createRootCard(item, viewId) {
+      var children = getVisibleNavChildren(item);
+      var element = document.createElement(children.length ? "button" : "a");
+      element.className = "nav-mb-card" + (hasActiveChild(item) ? " active" : "");
+      if (children.length) {
+        element.type = "button";
+        element.setAttribute("aria-label", String(getNavName(item)));
+        element.addEventListener("click", function () { showView(viewId); });
+      } else {
+        applyAnchorBasics(element, item);
+      }
+      var media = document.createElement("span");
+      media.className = "nav-mb-card-media";
+      var image = document.createElement("img");
+      image.src = findCover(item);
+      image.alt = String(getNavName(item));
+      image.loading = "lazy";
+      media.appendChild(image);
+      element.appendChild(media);
+      var label = document.createElement("span");
+      label.className = "nav-mb-card-label";
+      label.appendChild(document.createTextNode(String(getNavName(item))));
+      label.appendChild(createArrow("nav-mb-card-arrow"));
+      element.appendChild(label);
+      return element;
+    }
+
+    function createFeatureLink(item, viewId) {
+      var children = getVisibleNavChildren(item);
+      var element = document.createElement(children.length ? "button" : "a");
+      element.className = "nav-mb-feature-link" + (hasActiveChild(item) ? " active" : "");
+      if (children.length) {
+        element.type = "button";
+        element.addEventListener("click", function () { showView(viewId); });
+      } else {
+        applyAnchorBasics(element, item);
+      }
+      element.appendChild(document.createTextNode(String(getNavName(item))));
+      element.appendChild(createArrow("nav-mb-link-arrow"));
+      return element;
+    }
+
+    function createPromoCard(item) {
+      var card = document.createElement("a");
+      card.className = "nav-mb-promo-card" + (isActive(item) ? " active" : "");
+      applyAnchorBasics(card, item);
+      var media = document.createElement("span");
+      media.className = "nav-mb-promo-media";
+      var image = document.createElement("img");
+      image.src = getIconUrl(getNavIcon(item));
+      image.alt = String(getNavName(item));
+      image.loading = "lazy";
+      media.appendChild(image);
+      card.appendChild(media);
+      var title = document.createElement("span");
+      title.className = "nav-mb-promo-title";
+      title.textContent = String(getNavName(item));
+      card.appendChild(title);
+      var remarkText = getNavRemark(item);
+      if (remarkText) {
+        var remark = document.createElement("span");
+        remark.className = "nav-mb-promo-remark";
+        remark.textContent = String(remarkText);
+        card.appendChild(remark);
+      }
+      return card;
+    }
+
+    function createTextGroup(titleItem, items, fallbackTitle) {
+      var group = document.createElement("section");
+      group.className = "nav-mb-text-group";
+      var title = document.createElement(titleItem ? "a" : "h3");
+      title.className = "nav-mb-group-title";
+      if (titleItem) appendTextAnchor(title, titleItem);
+      else title.textContent = fallbackTitle;
+      group.appendChild(title);
+      var links = document.createElement("div");
+      links.className = "nav-mb-group-links";
+      items.forEach(function (item) {
+        var link = document.createElement("a");
+        link.className = isActive(item) ? "active" : "";
+        appendTextAnchor(link, item);
+        links.appendChild(link);
+      });
+      group.appendChild(links);
+      return group;
+    }
+
+    function buildSubview(item, viewId) {
+      var view = document.createElement("section");
+      view.className = "nav-mb-view";
+      view.setAttribute("data-nav-mb-view", viewId);
+      view.setAttribute("aria-hidden", "true");
+      var back = document.createElement("button");
+      back.className = "nav-mb-back";
+      back.type = "button";
+      back.appendChild(createArrow("nav-mb-link-arrow"));
+      back.appendChild(document.createTextNode(String(getNavName(item))));
+      back.addEventListener("click", function () { showView("root"); });
+      view.appendChild(back);
+
+      var content = document.createElement("div");
+      content.className = "nav-mb-submenu-content";
+      var promo = document.createElement("div");
+      promo.className = "nav-mb-promo-grid";
+      var plainItems = [];
+      getVisibleNavChildren(item).forEach(function (child) {
+        var grandchildren = getVisibleNavChildren(child);
+        if (grandchildren.length) {
+          content.appendChild(createTextGroup(child, grandchildren, ""));
+        } else if (getIconUrl(getNavIcon(child))) {
+          promo.appendChild(createPromoCard(child));
+        } else {
+          plainItems.push(child);
+        }
+      });
+      if (promo.childNodes.length) content.insertBefore(promo, content.firstChild);
+      if (plainItems.length) content.appendChild(createTextGroup(null, plainItems, getI18nText("moreLinksTitle", "更多")));
+      view.appendChild(content);
+      subviews.appendChild(view);
+    }
+
+    var visualItems = [];
+    var featureItems = [];
+    getVisibleNavItems(data).forEach(function (item, index) {
+      var viewId = "menu-" + index;
+      if (getVisibleNavChildren(item).length) buildSubview(item, viewId);
+      if (findCover(item)) visualItems.push({ item: item, viewId: viewId });
+      else featureItems.push({ item: item, viewId: viewId });
+    });
+
+    if (visualItems.length) {
+      var cards = document.createElement("div");
+      cards.className = "nav-mb-card-grid";
+      visualItems.forEach(function (entry) { cards.appendChild(createRootCard(entry.item, entry.viewId)); });
+      rootContent.appendChild(cards);
+    }
+    if (featureItems.length) {
+      var featured = document.createElement("section");
+      featured.className = "nav-mb-section";
+      var featuredTitle = document.createElement("h2");
+      featuredTitle.className = "nav-mb-section-title";
+      featuredTitle.textContent = getI18nText("featuredTitle", "精选推荐");
+      featured.appendChild(featuredTitle);
+      var featuredList = document.createElement("div");
+      featuredList.className = "nav-mb-feature-list";
+      featureItems.forEach(function (entry) { featuredList.appendChild(createFeatureLink(entry.item, entry.viewId)); });
+      featured.appendChild(featuredList);
+      rootContent.appendChild(featured);
+    }
+    mobileViewController = { showRoot: function () { showView("root"); } };
+  }
+
+  function syncBodyScrollLock() {
+    var shouldLock = container.classList.contains("nav-open") || container.classList.contains("nav-search-open");
+    if (shouldLock && previousBodyOverflow === null) {
+      previousBodyOverflow = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
+    } else if (!shouldLock && previousBodyOverflow !== null) {
+      document.body.style.overflow = previousBodyOverflow;
+      previousBodyOverflow = null;
+    }
+  }
+
+  function setupMobileMenu() {
+    var trigger = qs(".nav-hamburger");
+    var menu = qs(".nav-mb-menu");
+    if (!trigger || !menu) return { closeMenu: function () {} };
+    menu.id = instanceId + "_menu";
+    trigger.setAttribute("aria-controls", menu.id);
+    function openMenu() {
+      if (searchControls) searchControls.closeMobile();
+      container.classList.add("nav-open");
+      trigger.setAttribute("aria-expanded", "true");
+      trigger.setAttribute("aria-label", getI18nText("closeMenu", "关闭菜单"));
+      menu.setAttribute("aria-hidden", "false");
+      applyInteractiveSkin();
+      syncBodyScrollLock();
+    }
+    function closeMenu() {
+      container.classList.remove("nav-open");
+      trigger.setAttribute("aria-expanded", "false");
+      trigger.setAttribute("aria-label", getI18nText("openMenu", "打开菜单"));
+      menu.setAttribute("aria-hidden", "true");
+      applyInteractiveSkin();
+      syncBodyScrollLock();
+      window.setTimeout(function () {
+        if (!container.classList.contains("nav-open") && mobileViewController) mobileViewController.showRoot();
+      }, 500);
+    }
+    trigger.addEventListener("click", function () {
+      if (container.classList.contains("nav-open")) closeMenu(); else openMenu();
+    });
+    return { closeMenu: closeMenu, openMenu: openMenu };
+  }
+
+  function setupSearch() {
+    var pcTrigger = qs(".nav-search-trigger");
+    var pcPanel = qs(".nav-search-pc");
+    var mobileTrigger = qs(".nav-search-trigger-mb");
+    var mobilePanel = qs(".nav-mb-search-panel");
+    var mobileClose = qs(".nav-mb-search-close");
+    var mobileBackdrop = qs(".nav-mb-search-backdrop");
+
+    if (!CONFIG.showSearch) {
+      if (pcTrigger) pcTrigger.style.display = "none";
+      if (mobileTrigger) mobileTrigger.style.display = "none";
+    }
+
+    function closePc() {
+      if (!pcPanel) return;
+      pcPanel.classList.remove("open");
+      container.classList.remove("nav-pc-search-open");
+      pcPanel.setAttribute("aria-hidden", "true");
+      if (pcTrigger) pcTrigger.setAttribute("aria-expanded", "false");
+      applyInteractiveSkin();
+    }
+
+    function openPc() {
+      if (!pcPanel || !CONFIG.showSearch) return;
+      closeAllMega(null);
+      scheduleLayout();
+      pcPanel.classList.add("open");
+      container.classList.add("nav-pc-search-open");
+      pcPanel.setAttribute("aria-hidden", "false");
+      if (pcTrigger) pcTrigger.setAttribute("aria-expanded", "true");
+      applyInteractiveSkin();
+      var input = pcPanel.querySelector("input");
+      if (input) input.focus();
+    }
+
+    function closeMobile() {
+      if (!mobilePanel) return;
+      container.classList.remove("nav-search-open");
+      mobilePanel.setAttribute("aria-hidden", "true");
+      if (mobileTrigger) mobileTrigger.setAttribute("aria-expanded", "false");
+      applyInteractiveSkin();
+      syncBodyScrollLock();
+    }
+
+    function openMobile() {
+      if (!mobilePanel || !CONFIG.showSearch) return;
+      if (menuControls) menuControls.closeMenu();
+      container.classList.add("nav-search-open");
+      mobilePanel.setAttribute("aria-hidden", "false");
+      if (mobileTrigger) mobileTrigger.setAttribute("aria-expanded", "true");
+      applyInteractiveSkin();
+      syncBodyScrollLock();
+      var input = mobilePanel.querySelector("input");
+      if (input) input.focus();
+    }
+
+    function submitSearch(form) {
+      var input = form.querySelector('input[name="keywords"]');
+      var keyword = input ? String(input.value || "").trim() : "";
+      if (!keyword) { if (input) input.focus(); return; }
+      var base = sanitizeNavHref(CONFIG.searchLink.href || "/search");
+      if (base === "javascript:void(0);") return;
+      var href = base + (base.indexOf("?") >= 0 ? "&" : "?") + "keywords=" + encodeURIComponent(keyword);
+      if (CONFIG.searchLink.target === "_blank") window.open(href, "_blank", "noopener,noreferrer");
+      else location.href = href;
+    }
+
+    if (pcTrigger) pcTrigger.addEventListener("click", function () {
+      if (pcPanel && pcPanel.classList.contains("open")) closePc(); else openPc();
+    });
+    if (mobileTrigger) mobileTrigger.addEventListener("click", openMobile);
+    if (mobileClose) mobileClose.addEventListener("click", closeMobile);
+    if (mobileBackdrop) mobileBackdrop.addEventListener("click", closeMobile);
+
+    var forms = qsa(".nav-search-form, .nav-mb-search-form");
+    var index;
+    for (index = 0; index < forms.length; index += 1) {
+      forms[index].addEventListener("submit", function (event) {
+        event.preventDefault();
+        submitSearch(event.currentTarget);
+      });
+    }
+
+    container.addEventListener("click", function (event) {
+      if (pcPanel && pcTrigger && !pcPanel.contains(event.target) && !pcTrigger.contains(event.target)) closePc();
+    });
+    var pcOverlay = qs(".nav-pc-overlay");
+    if (pcOverlay) pcOverlay.addEventListener("click", function () {
+      closeAllMega(null);
+      closePc();
+    });
+    return { closePc: closePc, closeMobile: closeMobile };
+  }
+
+  function switchLanguage(code, href, target) {
+    setStored("lang", code);
+    var safeHref = sanitizeNavHref(href);
+    if (safeHref === "javascript:void(0);") return;
+    if (target === "_blank") window.open(safeHref, "_blank", "noopener,noreferrer");
+    else location.href = safeHref;
+  }
+
+  function normalizeCustomLanguages(items) {
+    return getVisibleNavItems(items).map(function (item) {
+      var jump = item && item.jump;
+      var jumpObject = jump && typeof jump === "object" ? jump : {};
+      return {
+        value: String(getNavField(item, "id", "value", "language_type") || ""),
+        label: String(getNavName(item) || ""),
+        href: sanitizeNavHref(typeof jump === "string" ? jump : getNavField(jumpObject, "href", "url")),
+        target: getNavField(jumpObject, "target") || "_self"
+      };
+    }).filter(function (item) { return item.value && item.label; });
+  }
+
+  function renderLanguages(languages) {
+    var pc = qs(".nav-lang");
+    var mobile = qs(".nav-mb-lang");
+    if (!languages || languages.length < 2) {
+      if (pc) pc.style.display = "none";
+      if (mobile) mobile.style.display = "none";
+      return;
+    }
+    var current = getStored("lang", "zh-cn");
+    if (pc) {
+      clearElement(pc);
+      var toggle = document.createElement("button");
+      toggle.className = "nav-lang-toggle";
+      toggle.type = "button";
+      toggle.textContent = current.split("-")[0];
+      toggle.setAttribute("aria-haspopup", "true");
+      pc.appendChild(toggle);
+      var dropdown = document.createElement("div");
+      dropdown.className = "nav-lang-dropdown";
+      languages.forEach(function (language) {
+        var link = document.createElement("a");
+        link.href = sanitizeNavHref(language.href || "/");
+        link.target = language.target === "_blank" ? "_blank" : "_self";
+        if (link.target === "_blank") link.rel = "noopener noreferrer";
+        link.className = language.value === current ? "active" : "";
+        link.textContent = language.label || language.value;
+        link.addEventListener("click", function (event) {
+          event.preventDefault();
+          switchLanguage(language.value, link.href, link.target);
+        });
+        dropdown.appendChild(link);
+      });
+      pc.appendChild(dropdown);
+    }
+    if (mobile) {
+      clearElement(mobile);
+      languages.forEach(function (language) {
+        var link = document.createElement("a");
+        link.href = sanitizeNavHref(language.href || "/");
+        link.target = language.target === "_blank" ? "_blank" : "_self";
+        if (link.target === "_blank") link.rel = "noopener noreferrer";
+        link.className = language.value === current ? "active" : "";
+        link.textContent = language.label || language.value;
+        link.addEventListener("click", function (event) {
+          event.preventDefault();
+          switchLanguage(language.value, link.href, link.target);
+        });
+        mobile.appendChild(link);
+      });
+    }
+  }
+
+  function fetchPlatformLanguages() {
+    if (typeof r !== "function") return Promise.resolve(null);
+    return r({
+      url: "/shop/frontend/languageList",
+      data: { website_id: getStored("websiteId", "") }
+    }).then(function (response) {
+      return response && response.code === 0 && Array.isArray(response.data) ? response.data : null;
+    });
+  }
+
+  function initLanguages() {
+    if (CONFIG.useCustomLanguageJump) {
+      renderLanguages(normalizeCustomLanguages(CONFIG.languageNav));
+      return;
+    }
+    fetchPlatformLanguages().then(function (items) {
+      if (!items) { renderLanguages([]); return; }
+      renderLanguages(items.map(function (item) {
+        return {
+          value: item.value || item.language_type || item.code || "",
+          label: item.label || item.language_name || item.name || "",
+          href: item.href || item.url || "/",
+          target: item.target || "_self"
+        };
+      }));
+    }).catch(function () { renderLanguages([]); });
+  }
+
+  function renderContact() {
+    var contact = qs(".nav-mb-contact");
+    if (!contact) return;
+    clearElement(contact);
+    var parts = [];
+    if (CONFIG.phone) parts.push(getI18nText("phoneLabel", "电话") + "：" + CONFIG.phone);
+    if (CONFIG.email) parts.push(getI18nText("emailLabel", "邮箱") + "：" + CONFIG.email);
+    if (CONFIG.address) parts.push(getI18nText("addressLabel", "地址") + "：" + CONFIG.address);
+    parts.forEach(function (part, index) {
+      if (index) contact.appendChild(document.createElement("br"));
+      contact.appendChild(document.createTextNode(part));
+    });
+  }
+
+  function applyLogoSkin(sticky) {
+    var selected = sticky && CONFIG.stickyLogo.url ? CONFIG.stickyLogo : CONFIG.logo;
+    var images = qsa(".nav-brand-image");
+    var index;
+    for (index = 0; index < images.length; index += 1) {
+      var safeSrc = sanitizeImageSrc(selected.url);
+      if (safeSrc) {
+        images[index].src = safeSrc;
+        images[index].style.display = "block";
+      } else {
+        images[index].removeAttribute("src");
+        images[index].style.display = "none";
+      }
+      images[index].alt = selected.alt || CONFIG.companyName || "Logo";
+      images[index].style.objectFit = selected.objectFit || "contain";
+      images[index].style.objectPosition = selected.objectPosition || "center center";
+      images[index].style.height = Math.max(1, Math.min(100, CONFIG.logoHeightPercent)) + "%";
+    }
+  }
+
+  function setupBrand() {
+    var links = qsa(".nav-brand-link");
+    var names = qsa(".nav-company-name");
+    var index;
+    for (index = 0; index < links.length; index += 1) {
+      links[index].href = sanitizeNavHref(CONFIG.logoLink.href || "/");
+      links[index].target = CONFIG.logoLink.target === "_blank" ? "_blank" : "_self";
+      if (links[index].target === "_blank") links[index].rel = "noopener noreferrer";
+    }
+    for (index = 0; index < names.length; index += 1) names[index].textContent = CONFIG.companyName;
+    applyLogoSkin(false);
+  }
+
+  function setupLogin() {
+    var logins = qsa(".nav-login, .nav-login-mb, .nav-mb-login");
+    if (!logins.length) return;
+    var loggedIn = Boolean(getStored("GwShopUserToken", ""));
+    var label = loggedIn ? getI18nText("loginUserName", "用户中心") : getI18nText("loginText", "登录");
+    var index;
+    for (index = 0; index < logins.length; index += 1) {
+      if (!CONFIG.showLogin) {
+        logins[index].style.display = "none";
+      } else {
+        logins[index].href = loggedIn ? "/member" : "/login";
+        logins[index].target = "_self";
+        logins[index].setAttribute("aria-label", label);
+        if (logins[index].classList.contains("nav-mb-login")) logins[index].textContent = label;
+      }
+    }
+  }
+
+  function applyI18nUi() {
+    var searchButtons = qsa(".nav-search-trigger, .nav-search-trigger-mb");
+    var searchInputs = qsa('input[name="keywords"]');
+    var searchSubmit = qsa(".nav-search-submit");
+    var index;
+    for (index = 0; index < searchButtons.length; index += 1) searchButtons[index].setAttribute("aria-label", getI18nText("searchLabel", "搜索"));
+    for (index = 0; index < searchInputs.length; index += 1) searchInputs[index].placeholder = getI18nText("searchPlaceholder", "搜索");
+    for (index = 0; index < searchSubmit.length; index += 1) searchSubmit[index].textContent = getI18nText("searchLabel", "搜索");
+    var hamburger = qs(".nav-hamburger");
+    var searchClose = qs(".nav-mb-search-close");
+    if (hamburger) hamburger.setAttribute("aria-label", getI18nText("openMenu", "打开菜单"));
+    if (searchClose) searchClose.textContent = getI18nText("closeSearch", "取消");
+  }
+
+  function syncHostHeight() {
+    if (!moduleElement) return;
+    moduleElement.style.setProperty("--nav-h", (window.innerWidth <= 1024 ? 60 : 72) + "px");
+  }
+
+  function applyStickyOffset() {
+    var warning = document.querySelector(".editor-warning-saaas-host-only");
+    var offset = 0;
+    if (warning) {
+      var style = window.getComputedStyle(warning);
+      if (style.display !== "none" && style.visibility !== "hidden") offset = Math.max(0, Math.round(warning.getBoundingClientRect().height || warning.offsetHeight || 0));
+    }
+    var value = offset + "px";
+    container.style.setProperty("--nav-sticky-top-offset", value);
+    if (moduleElement) moduleElement.style.setProperty("--nav-sticky-top-offset", value);
+    scheduleLayout();
+  }
+
+  function initStickyOffset() {
+    applyStickyOffset();
+    var warning = document.querySelector(".editor-warning-saaas-host-only");
+    if (warning && window.ResizeObserver) {
+      var resizeObserver = new window.ResizeObserver(applyStickyOffset);
+      resizeObserver.observe(warning);
+    }
+    var inEditor = Boolean(moduleElement && matchesElement(moduleElement, ".code-component.gw-editor-component"));
+    if (inEditor && window.MutationObserver) {
+      var mutationObserver = new window.MutationObserver(applyStickyOffset);
+      mutationObserver.observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ["class", "style"] });
+    }
+  }
+
+  function injectTheme() {
+    var supportsBlur = Boolean(window.CSS && typeof window.CSS.supports === "function" && (window.CSS.supports("backdrop-filter", "blur(1px)") || window.CSS.supports("-webkit-backdrop-filter", "blur(1px)")));
+    container.style.setProperty("--theme", CONFIG.themeColor);
+    container.style.setProperty("--nav-bg", CONFIG.navBackground);
+    container.style.setProperty("--nav-text", CONFIG.navTextColor);
+    container.style.setProperty("--company-name-color", CONFIG.companyNameColor);
+    container.style.setProperty("--mobile-menu-company-name-color", CONFIG.mobileMenuCompanyNameColor);
+    container.style.setProperty("--nav-blur", supportsBlur ? Math.max(0, CONFIG.navBlur) + "px" : "0px");
+    syncHostHeight();
+  }
+
+  function setFloatingState(floating) {
+    container.classList.toggle("nav-floating", floating);
+    container.classList.toggle("nav-static", !floating);
+    if (moduleElement) moduleElement.classList.toggle(HOST_FLOATING_CLASS, floating);
+  }
+
+  function setNavSkin(sticky, force) {
+    if (currentStickySkin === sticky && !force) return;
+    currentStickySkin = sticky;
+    container.classList.toggle("nav-sticky-skin", sticky);
+    container.style.setProperty("--nav-bg", sticky ? CONFIG.stickyNavBackground : CONFIG.navBackground);
+    container.style.setProperty("--nav-text", sticky ? CONFIG.stickyNavTextColor : CONFIG.navTextColor);
+    container.style.setProperty("--company-name-color", sticky ? CONFIG.stickyCompanyNameColor : CONFIG.companyNameColor);
+    applyLogoSkin(sticky);
+  }
+
+  function applyInteractiveSkin() {
+    var desktopInteractive = container.classList.contains("nav-pc-mega-open") || container.classList.contains("nav-pc-search-open");
+    var mobileInteractive = container.classList.contains("nav-open") || container.classList.contains("nav-search-open");
+    if ((desktopInteractive && window.innerWidth > 1024) || (mobileInteractive && window.innerWidth <= 1024)) {
+      container.style.setProperty("--nav-bg", CONFIG.stickyNavBackground);
+      container.style.setProperty("--nav-text", CONFIG.stickyNavTextColor);
+      container.style.setProperty("--company-name-color", mobileInteractive ? CONFIG.mobileMenuCompanyNameColor : CONFIG.stickyCompanyNameColor);
+      applyLogoSkin(true);
+      return;
+    }
+    setNavSkin(Boolean(currentStickySkin), true);
+  }
+
+  function setupSticky() {
+    setFloatingState(CONFIG.stickyEnabled);
+    function update() {
+      setNavSkin(CONFIG.stickyEnabled && window.pageYOffset >= Math.max(0, CONFIG.stickyScrollDistance));
+      scheduleLayout();
+    }
+    window.addEventListener("scroll", update, false);
+    update();
+  }
+
+  function fetchTopNav() {
+    if (typeof r !== "function") return Promise.resolve(null);
+    return r({
+      url: "/api/navCat",
+      data: {
+        website_id: getStored("websiteId", ""),
+        position: 1,
+        language_type: getStored("lang", "zh-cn")
+      }
+    }).then(function (response) {
+      return response && response.code === 0 && Array.isArray(response.data) ? response.data : null;
+    });
+  }
+
+  function renderNavigation(data) {
+    renderPcNav(data);
+    renderMobileNav(data);
+  }
+
+  function init() {
+    injectTheme();
+    initStickyOffset();
+    applyI18nUi();
+    setupBrand();
+    setupLogin();
+    renderContact();
+    setupSticky();
+    searchControls = setupSearch();
+    menuControls = setupMobileMenu();
+    initLanguages();
+
+    if (CONFIG.nav.length) {
+      renderNavigation(CONFIG.nav);
+    } else {
+      renderNavigation(FALLBACK_NAV);
+      fetchTopNav().then(function (data) {
+        if (data && data.length) renderNavigation(data);
+      }).catch(function () { return; });
+    }
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key !== "Escape" && event.keyCode !== 27) return;
+      closeAllMega(null);
+      if (searchControls) { searchControls.closePc(); searchControls.closeMobile(); }
+      if (menuControls) menuControls.closeMenu();
+    });
+
+    window.addEventListener("resize", function () {
+      syncHostHeight();
+      applyStickyOffset();
+      if (window.innerWidth > 1024) {
+        if (searchControls) searchControls.closeMobile();
+        if (menuControls) menuControls.closeMenu();
+      } else {
+        closeAllMega(null);
+        if (searchControls) searchControls.closePc();
+      }
+      scheduleLayout();
+    }, false);
+  }
+
+  init();
+})();
+</script>
+</div></div></div></div>
+  <section class="preview-banner"><h1>Soft essentials,<br>made to live in.</h1><p>导航透明悬浮在 Banner 上方；向下滚动后切换为白色吸顶状态。</p></section>
+  <section class="preview-content"><h2>继续向下滚动</h2><p>用于检查滚动态颜色、Logo 与吸顶行为。</p></section>
+  <div class="preview-note">桌面端悬停“产品系列 / 品牌故事”；移动端请缩窄窗口。</div>
+</body>
+</html>

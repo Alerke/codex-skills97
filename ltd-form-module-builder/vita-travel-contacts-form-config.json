@@ -1,0 +1,44 @@
+[
+  {
+    "key": "fitForm",
+    "label": "表单（导入后请选择 ID 136511：联系我们）",
+    "value": "",
+    "default_value": "",
+    "input_type": "form"
+  },
+  {
+    "key": "eyebrow",
+    "label": "眉题文字",
+    "value": "Contacts",
+    "default_value": "Contacts",
+    "input_type": "text"
+  },
+  {
+    "key": "title",
+    "label": "主标题",
+    "value": "Get in touch",
+    "default_value": "Get in touch",
+    "input_type": "text"
+  },
+  {
+    "key": "description",
+    "label": "说明文字",
+    "value": "Contact the Vita Travel team today!",
+    "default_value": "Contact the Vita Travel team today!",
+    "input_type": "textarea"
+  },
+  {
+    "key": "submit_text",
+    "label": "提交按钮文字",
+    "value": "提交",
+    "default_value": "提交",
+    "input_type": "text"
+  },
+  {
+    "key": "contact_image",
+    "label": "左侧联系表单插画",
+    "value": "https://cdn.prod.website-files.com/696eeb61714a6c90a5f18c9e/6989df5258a6f0a8174626f3_illustration-contact.webp",
+    "default_value": "https://cdn.prod.website-files.com/696eeb61714a6c90a5f18c9e/6989df5258a6f0a8174626f3_illustration-contact.webp",
+    "input_type": "image"
+  }
+]

@@ -1,0 +1,79 @@
+[
+  {
+    "key": "brand_name",
+    "label": "品牌名称",
+    "value": "iGel",
+    "default_value": "iGel",
+    "input_type": "text"
+  },
+  {
+    "key": "logo",
+    "label": "左侧 Logo 图片",
+    "value": "",
+    "default_value": "",
+    "input_type": "image"
+  },
+  {
+    "key": "follow_us",
+    "label": "社媒标题文案",
+    "value": "关注我们",
+    "default_value": "关注我们",
+    "input_type": "text"
+  },
+  {
+    "key": "nav_list",
+    "label": "页脚导航（栏目与二级链接）",
+    "value": "[{\"id\":\"company\",\"title\":\"公司\",\"remark\":\"\",\"hidden\":false,\"jump\":{\"type\":\"none\",\"href\":\"\",\"target\":\"_self\"},\"children\":[{\"id\":\"home\",\"title\":\"首页\",\"hidden\":false,\"jump\":{\"type\":\"web\",\"href\":\"/\",\"target\":\"_self\"},\"children\":[]},{\"id\":\"innovations\",\"title\":\"创新成果\",\"hidden\":false,\"jump\":{\"type\":\"web\",\"href\":\"/innovations\",\"target\":\"_self\"},\"children\":[]},{\"id\":\"product\",\"title\":\"产品中心\",\"hidden\":false,\"jump\":{\"type\":\"web\",\"href\":\"/product\",\"target\":\"_self\"},\"children\":[]},{\"id\":\"news\",\"title\":\"新闻资讯\",\"hidden\":false,\"jump\":{\"type\":\"web\",\"href\":\"/news\",\"target\":\"_self\"},\"children\":[]},{\"id\":\"about\",\"title\":\"关于我们\",\"hidden\":false,\"jump\":{\"type\":\"web\",\"href\":\"/about\",\"target\":\"_self\"},\"children\":[]},{\"id\":\"contacts\",\"title\":\"联系我们\",\"hidden\":false,\"jump\":{\"type\":\"web\",\"href\":\"/contacts\",\"target\":\"_self\"},\"children\":[]}]},{\"id\":\"product\",\"title\":\"产品\",\"remark\":\"\",\"hidden\":false,\"jump\":{\"type\":\"none\",\"href\":\"\",\"target\":\"_self\"},\"children\":[{\"id\":\"washing-gels\",\"title\":\"洗衣凝珠\",\"hidden\":false,\"jump\":{\"type\":\"web\",\"href\":\"/washing-gels\",\"target\":\"_self\"},\"children\":[]},{\"id\":\"dishwashing-gels\",\"title\":\"洗洁精\",\"hidden\":false,\"jump\":{\"type\":\"web\",\"href\":\"/dishwashing-gels\",\"target\":\"_self\"},\"children\":[]},{\"id\":\"floor-cleaning-products\",\"title\":\"地板清洁用品\",\"hidden\":false,\"jump\":{\"type\":\"web\",\"href\":\"/floor-cleaning-products\",\"target\":\"_self\"},\"children\":[]},{\"id\":\"cleaning-products\",\"title\":\"通用清洁用品\",\"hidden\":false,\"jump\":{\"type\":\"web\",\"href\":\"/cleaning-products\",\"target\":\"_self\"},\"children\":[]},{\"id\":\"toilet-bowl-cleaners\",\"title\":\"洁厕用品\",\"hidden\":false,\"jump\":{\"type\":\"web\",\"href\":\"/toilet-bowl-cleaners\",\"target\":\"_self\"},\"children\":[]},{\"id\":\"conditioners-and-rinses\",\"title\":\"柔顺剂与漂洗剂\",\"hidden\":false,\"jump\":{\"type\":\"web\",\"href\":\"/conditioners-and-rinses\",\"target\":\"_self\"},\"children\":[]}]}]",
+    "default_value": "[{\"id\":\"company\",\"title\":\"公司\",\"children\":[]},{\"id\":\"product\",\"title\":\"产品\",\"children\":[]}]",
+    "input_type": "navList"
+  },
+  {
+    "key": "instagram_link",
+    "label": "Instagram 跳转链接",
+    "value": "{\"type\":\"url\",\"href\":\"https://www.instagram.com/\",\"target\":\"_blank\"}",
+    "default_value": "{\"type\":\"url\",\"href\":\"https://www.instagram.com/\",\"target\":\"_blank\"}",
+    "input_type": "jump"
+  },
+  {
+    "key": "facebook_link",
+    "label": "Facebook 跳转链接",
+    "value": "{\"type\":\"url\",\"href\":\"https://www.facebook.com/\",\"target\":\"_blank\"}",
+    "default_value": "{\"type\":\"url\",\"href\":\"https://www.facebook.com/\",\"target\":\"_blank\"}",
+    "input_type": "jump"
+  },
+  {
+    "key": "tiktok_link",
+    "label": "TikTok 跳转链接",
+    "value": "{\"type\":\"url\",\"href\":\"https://www.tiktok.com/\",\"target\":\"_blank\"}",
+    "default_value": "{\"type\":\"url\",\"href\":\"https://www.tiktok.com/\",\"target\":\"_blank\"}",
+    "input_type": "jump"
+  },
+  {
+    "key": "threads_link",
+    "label": "Threads 跳转链接",
+    "value": "{\"type\":\"url\",\"href\":\"https://www.threads.net/\",\"target\":\"_blank\"}",
+    "default_value": "{\"type\":\"url\",\"href\":\"https://www.threads.net/\",\"target\":\"_blank\"}",
+    "input_type": "jump"
+  },
+  {
+    "key": "copyright",
+    "label": "版权文案",
+    "value": "© 2026 iGel. 保留所有权利。",
+    "default_value": "© 2026 iGel. 保留所有权利。",
+    "input_type": "text"
+  },
+  {
+    "key": "credit",
+    "label": "右下角署名",
+    "value": "由 Doba Digital 制作",
+    "default_value": "由 Doba Digital 制作",
+    "input_type": "text"
+  },
+  {
+    "key": "footer_nav_label",
+    "label": "页脚导航无障碍标签",
+    "value": "页脚导航",
+    "default_value": "页脚导航",
+    "input_type": "text"
+  }
+]

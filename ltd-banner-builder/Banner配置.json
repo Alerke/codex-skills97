@@ -1,0 +1,128 @@
+[
+  {
+    "key": "media_type",
+    "label": "Banner 内容类型（image/video）",
+    "value": "image",
+    "default_value": "image",
+    "input_type": "text"
+  },
+  {
+    "key": "slides",
+    "label": "轮播内容列表",
+    "value": "[{\"url\":\"https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80\",\"name\":\"办公空间\",\"title\":\"专业企业建站平台\",\"subtitle\":\"快速搭建高颜值、高性能的品牌官网\",\"jump\":{\"type\":\"none\",\"href\":\"\",\"target\":\"_self\"},\"filepath_thumb\":\"https://images.unsplash.com/photo-1497366216548-37526070297c?w=720&q=80\"},{\"url\":\"https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=1920&q=80\",\"name\":\"现代办公室\",\"title\":\"可视化编辑体验\",\"subtitle\":\"拖拽式操作，让建站像做PPT一样简单\",\"jump\":{\"type\":\"none\",\"href\":\"\",\"target\":\"_self\"},\"filepath_thumb\":\"https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=720&q=80\"},{\"url\":\"https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1920&q=80\",\"name\":\"商务会议\",\"title\":\"全渠道营销赋能\",\"subtitle\":\"SEO、社交、广告，一站式增长解决方案\",\"jump\":{\"type\":\"none\",\"href\":\"\",\"target\":\"_self\"},\"filepath_thumb\":\"https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=720&q=80\"}]",
+    "default_value": "[{\"url\":\"https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80\",\"name\":\"办公空间\",\"title\":\"专业企业建站平台\",\"subtitle\":\"快速搭建高颜值、高性能的品牌官网\",\"jump\":{\"type\":\"none\",\"href\":\"\",\"target\":\"_self\"},\"filepath_thumb\":\"https://images.unsplash.com/photo-1497366216548-37526070297c?w=720&q=80\"},{\"url\":\"https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=1920&q=80\",\"name\":\"现代办公室\",\"title\":\"可视化编辑体验\",\"subtitle\":\"拖拽式操作，让建站像做PPT一样简单\",\"jump\":{\"type\":\"none\",\"href\":\"\",\"target\":\"_self\"},\"filepath_thumb\":\"https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=720&q=80\"},{\"url\":\"https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1920&q=80\",\"name\":\"商务会议\",\"title\":\"全渠道营销赋能\",\"subtitle\":\"SEO、社交、广告，一站式增长解决方案\",\"jump\":{\"type\":\"none\",\"href\":\"\",\"target\":\"_self\"},\"filepath_thumb\":\"https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=720&q=80\"}]",
+    "input_type": "imageList"
+  },
+  {
+    "key": "video_slides",
+    "label": "Banner 视频列表",
+    "value": "[]",
+    "default_value": "[]",
+    "input_type": "videoList"
+  },
+  {
+    "key": "autoplay",
+    "label": "自动轮播",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "switch"
+  },
+  {
+    "key": "autoplay_delay",
+    "label": "轮播间隔（毫秒）",
+    "value": "6000",
+    "default_value": "6000",
+    "input_type": "number"
+  },
+  {
+    "key": "title_font_size",
+    "label": "标题字号（px）",
+    "value": "48",
+    "default_value": "48",
+    "input_type": "number"
+  },
+  {
+    "key": "subtitle_font_size",
+    "label": "副标题字号（px）",
+    "value": "16",
+    "default_value": "16",
+    "input_type": "number"
+  },
+  {
+    "key": "title_font_weight",
+    "label": "标题字重",
+    "value": "500",
+    "default_value": "500",
+    "input_type": "number"
+  },
+  {
+    "key": "text_color",
+    "label": "标题颜色",
+    "value": "#ffffff",
+    "default_value": "#ffffff",
+    "input_type": "color"
+  },
+  {
+    "key": "subtitle_color",
+    "label": "副标题颜色",
+    "value": "#a1a1a1",
+    "default_value": "#a1a1a1",
+    "input_type": "color"
+  },
+  {
+    "key": "overlay_opacity",
+    "label": "遮罩透明度",
+    "value": "0.7",
+    "default_value": "0.7",
+    "input_type": "number"
+  },
+  {
+    "key": "content_bottom",
+    "label": "内容距底距离（px）",
+    "value": "100",
+    "default_value": "100",
+    "input_type": "number"
+  },
+  {
+    "key": "content_left",
+    "label": "内容距左距离（px）",
+    "value": "60",
+    "default_value": "60",
+    "input_type": "number"
+  },
+  {
+    "key": "mobile_ratio_mode",
+    "label": "移动端按比例显示",
+    "value": "0",
+    "default_value": "0",
+    "input_type": "switch"
+  },
+  {
+    "key": "mobile_aspect_ratio",
+    "label": "移动端宽高比例",
+    "value": "16/9",
+    "default_value": "16/9",
+    "input_type": "text"
+  },
+  {
+    "key": "pc_ratio_mode",
+    "label": "PC端按比例显示",
+    "value": "0",
+    "default_value": "0",
+    "input_type": "switch"
+  },
+  {
+    "key": "pc_aspect_ratio",
+    "label": "PC端宽高比例",
+    "value": "16/9",
+    "default_value": "16/9",
+    "input_type": "text"
+  },
+  {
+    "key": "show_overlay",
+    "label": "显示阴影遮罩",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "switch"
+  }
+]

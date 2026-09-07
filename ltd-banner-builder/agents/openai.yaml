@@ -1,0 +1,4 @@
+interface:
+  display_name: "LTD Banner 模块"
+  short_description: "创建与排查可配置的 LTD 图片或视频 Banner"
+  default_prompt: "使用 $ltd-banner-builder 创建或排查 LTD 图片/视频 Banner；新建三张营销 Banner 时默认交付原生 HTML、三张独立中文文案、可配置 CTA/悬浮色/跳转、分段指示器和 32 项可导入 JSON，并验证变量注入与空白页风险。"

@@ -1,0 +1,58 @@
+[
+  {
+    "key": "title",
+    "label": "标题",
+    "value": "模块标题",
+    "default_value": "模块标题",
+    "input_type": "text"
+  },
+  {
+    "key": "description",
+    "label": "说明",
+    "value": "",
+    "default_value": "",
+    "input_type": "textarea"
+  },
+  {
+    "key": "media",
+    "label": "媒体",
+    "value": "",
+    "default_value": "",
+    "input_type": "media"
+  },
+  {
+    "key": "action",
+    "label": "点击操作",
+    "value": "{\"type\":\"none\",\"href\":\"\",\"target\":\"_self\"}",
+    "default_value": "{\"type\":\"none\",\"href\":\"\",\"target\":\"_self\"}",
+    "input_type": "jump"
+  },
+  {
+    "key": "show_action",
+    "label": "显示操作按钮",
+    "value": "0",
+    "default_value": "0",
+    "input_type": "switch"
+  },
+  {
+    "key": "theme_color",
+    "label": "主题色",
+    "value": "#111111",
+    "default_value": "#111111",
+    "input_type": "color"
+  },
+  {
+    "key": "background_color",
+    "label": "背景颜色",
+    "value": "#ffffff",
+    "default_value": "#ffffff",
+    "input_type": "color"
+  },
+  {
+    "key": "i18n",
+    "label": "多语言文案",
+    "value": "{\"zh-cn\":{\"action\":\"查看详情\"},\"zh\":{\"action\":\"查看詳情\"},\"en\":{\"action\":\"View details\"},\"kr\":{\"action\":\"자세히 보기\"},\"ru\":{\"action\":\"Подробнее\"},\"jp\":{\"action\":\"詳細を見る\"}}",
+    "default_value": "{\"zh-cn\":{\"action\":\"查看详情\"},\"zh\":{\"action\":\"查看詳情\"},\"en\":{\"action\":\"View details\"},\"kr\":{\"action\":\"자세히 보기\"},\"ru\":{\"action\":\"Подробнее\"},\"jp\":{\"action\":\"詳細を見る\"}}",
+    "input_type": "i18n"
+  }
+]

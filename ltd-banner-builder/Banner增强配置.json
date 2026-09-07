@@ -1,0 +1,226 @@
+[
+  {
+    "key": "media_type",
+    "label": "Banner 内容类型（image/video）",
+    "value": "image",
+    "default_value": "image",
+    "input_type": "text"
+  },
+  {
+    "key": "slides",
+    "label": "Banner 图片列表",
+    "value": "[]",
+    "default_value": "[]",
+    "input_type": "imageList"
+  },
+  {
+    "key": "video_slides",
+    "label": "Banner 视频列表",
+    "value": "[]",
+    "default_value": "[]",
+    "input_type": "videoList"
+  },
+  {
+    "key": "autoplay",
+    "label": "自动轮播",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "switch"
+  },
+  {
+    "key": "autoplay_delay",
+    "label": "轮播间隔（毫秒）",
+    "value": "6000",
+    "default_value": "6000",
+    "input_type": "number"
+  },
+  {
+    "key": "title_font_size",
+    "label": "标题字号（px）",
+    "value": "64",
+    "default_value": "64",
+    "input_type": "number"
+  },
+  {
+    "key": "subtitle_font_size",
+    "label": "副标题字号（px）",
+    "value": "17",
+    "default_value": "17",
+    "input_type": "number"
+  },
+  {
+    "key": "title_font_weight",
+    "label": "标题字重",
+    "value": "500",
+    "default_value": "500",
+    "input_type": "number"
+  },
+  {
+    "key": "text_color",
+    "label": "标题颜色",
+    "value": "#ffffff",
+    "default_value": "#ffffff",
+    "input_type": "color"
+  },
+  {
+    "key": "subtitle_color",
+    "label": "副标题颜色",
+    "value": "#ffffff",
+    "default_value": "#ffffff",
+    "input_type": "color"
+  },
+  {
+    "key": "overlay_opacity",
+    "label": "渐变遮罩强度",
+    "value": "0.55",
+    "default_value": "0.55",
+    "input_type": "number"
+  },
+  {
+    "key": "content_bottom",
+    "label": "内容距底距离（px）",
+    "value": "80",
+    "default_value": "80",
+    "input_type": "number"
+  },
+  {
+    "key": "content_left",
+    "label": "内容距左距离（px）",
+    "value": "60",
+    "default_value": "60",
+    "input_type": "number"
+  },
+  {
+    "key": "mobile_ratio_mode",
+    "label": "移动端按比例显示",
+    "value": "0",
+    "default_value": "0",
+    "input_type": "switch"
+  },
+  {
+    "key": "mobile_aspect_ratio",
+    "label": "移动端宽高比例",
+    "value": "4/5",
+    "default_value": "4/5",
+    "input_type": "text"
+  },
+  {
+    "key": "pc_ratio_mode",
+    "label": "PC 端按比例显示",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "switch"
+  },
+  {
+    "key": "pc_aspect_ratio",
+    "label": "PC 端宽高比例",
+    "value": "21/9",
+    "default_value": "21/9",
+    "input_type": "text"
+  },
+  {
+    "key": "show_overlay",
+    "label": "显示渐变遮罩",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "switch"
+  },
+  {
+    "key": "slide_1_title",
+    "label": "第 1 张主标题",
+    "value": "第一张主标题",
+    "default_value": "第一张主标题",
+    "input_type": "text"
+  },
+  {
+    "key": "slide_1_subtitle",
+    "label": "第 1 张副标题",
+    "value": "第一张副标题文案",
+    "default_value": "第一张副标题文案",
+    "input_type": "text"
+  },
+  {
+    "key": "slide_2_title",
+    "label": "第 2 张主标题",
+    "value": "第二张主标题",
+    "default_value": "第二张主标题",
+    "input_type": "text"
+  },
+  {
+    "key": "slide_2_subtitle",
+    "label": "第 2 张副标题",
+    "value": "第二张副标题文案",
+    "default_value": "第二张副标题文案",
+    "input_type": "text"
+  },
+  {
+    "key": "slide_3_title",
+    "label": "第 3 张主标题",
+    "value": "第三张主标题",
+    "default_value": "第三张主标题",
+    "input_type": "text"
+  },
+  {
+    "key": "slide_3_subtitle",
+    "label": "第 3 张副标题",
+    "value": "第三张副标题文案",
+    "default_value": "第三张副标题文案",
+    "input_type": "text"
+  },
+  {
+    "key": "button_text",
+    "label": "按钮文字",
+    "value": "立即探索",
+    "default_value": "立即探索",
+    "input_type": "text"
+  },
+  {
+    "key": "button_link",
+    "label": "按钮跳转",
+    "value": "{\"type\":\"none\",\"href\":\"\",\"target\":\"_self\"}",
+    "default_value": "{\"type\":\"none\",\"href\":\"\",\"target\":\"_self\"}",
+    "input_type": "jump"
+  },
+  {
+    "key": "button_background_color",
+    "label": "按钮背景颜色",
+    "value": "#ffffff",
+    "default_value": "#ffffff",
+    "input_type": "color"
+  },
+  {
+    "key": "button_text_color",
+    "label": "按钮文字颜色",
+    "value": "#1a1a1a",
+    "default_value": "#1a1a1a",
+    "input_type": "color"
+  },
+  {
+    "key": "button_hover_background_color",
+    "label": "按钮悬浮背景颜色",
+    "value": "#1a1a1a",
+    "default_value": "#1a1a1a",
+    "input_type": "color"
+  },
+  {
+    "key": "button_hover_text_color",
+    "label": "按钮悬浮文字颜色",
+    "value": "#ffffff",
+    "default_value": "#ffffff",
+    "input_type": "color"
+  },
+  {
+    "key": "indicator_color",
+    "label": "轮播分段线颜色",
+    "value": "#9a9a9a",
+    "default_value": "#9a9a9a",
+    "input_type": "color"
+  },
+  {
+    "key": "indicator_active_color",
+    "label": "当前分段颜色",
+    "value": "#ffffff",
+    "default_value": "#ffffff",
+    "input_type": "color"
+  }
+]

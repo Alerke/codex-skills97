@@ -1,0 +1,149 @@
+[
+  {
+    "key": "cat_id",
+    "label": "产品商品分类",
+    "value": "{\"moduleType\":\"product\",\"type\":\"1\",\"ids\":\"\",\"names\":[],\"pageSize\":12,\"sortColumn\":\"sort\",\"sortDirection\":\"asc\",\"sortColumnVersion\":2}",
+    "default_value": "{\"moduleType\":\"product\",\"type\":\"\",\"ids\":\"\",\"names\":[],\"pageSize\":12,\"sortColumn\":\"sort\",\"sortDirection\":\"asc\"}",
+    "input_type": "category"
+  },
+  {
+    "key": "i18n",
+    "label": "多语言文案",
+    "value": "{\"zh-cn\":{\"product_title\":\"产品列表\",\"goods_title\":\"商品列表\",\"search_placeholder\":\"搜索产品或商品\",\"all\":\"全部\",\"loading\":\"正在加载...\",\"empty\":\"暂无数据\",\"error\":\"加载失败，请稍后重试\",\"retry\":\"重新加载\",\"previous\":\"上一页\",\"next\":\"下一页\"},\"zh\":{\"product_title\":\"產品列表\",\"goods_title\":\"商品列表\",\"search_placeholder\":\"搜尋產品或商品\",\"all\":\"全部\",\"loading\":\"正在載入...\",\"empty\":\"暫無資料\",\"error\":\"載入失敗，請稍後重試\",\"retry\":\"重新載入\",\"previous\":\"上一頁\",\"next\":\"下一頁\"},\"en\":{\"product_title\":\"Products\",\"goods_title\":\"Goods\",\"search_placeholder\":\"Search products or goods\",\"all\":\"All\",\"loading\":\"Loading...\",\"empty\":\"No data\",\"error\":\"Failed to load\",\"retry\":\"Retry\",\"previous\":\"Previous\",\"next\":\"Next\"},\"kr\":{\"product_title\":\"제품 목록\",\"goods_title\":\"상품 목록\",\"search_placeholder\":\"제품 또는 상품 검색\",\"all\":\"전체\",\"loading\":\"불러오는 중...\",\"empty\":\"데이터가 없습니다\",\"error\":\"불러오지 못했습니다\",\"retry\":\"다시 시도\",\"previous\":\"이전\",\"next\":\"다음\"},\"ru\":{\"product_title\":\"Продукты\",\"goods_title\":\"Товары\",\"search_placeholder\":\"Поиск продуктов или товаров\",\"all\":\"Все\",\"loading\":\"Загрузка...\",\"empty\":\"Нет данных\",\"error\":\"Не удалось загрузить\",\"retry\":\"Повторить\",\"previous\":\"Назад\",\"next\":\"Далее\"},\"jp\":{\"product_title\":\"製品一覧\",\"goods_title\":\"商品一覧\",\"search_placeholder\":\"製品または商品を検索\",\"all\":\"すべて\",\"loading\":\"読み込み中...\",\"empty\":\"データがありません\",\"error\":\"読み込めませんでした\",\"retry\":\"再読み込み\",\"previous\":\"前へ\",\"next\":\"次へ\"}}",
+    "default_value": "{\"zh-cn\":{\"product_title\":\"产品列表\",\"goods_title\":\"商品列表\",\"search_placeholder\":\"搜索产品或商品\",\"all\":\"全部\",\"loading\":\"正在加载...\",\"empty\":\"暂无数据\",\"error\":\"加载失败，请稍后重试\",\"retry\":\"重新加载\",\"previous\":\"上一页\",\"next\":\"下一页\"},\"zh\":{\"product_title\":\"產品列表\",\"goods_title\":\"商品列表\",\"search_placeholder\":\"搜尋產品或商品\",\"all\":\"全部\",\"loading\":\"正在載入...\",\"empty\":\"暫無資料\",\"error\":\"載入失敗，請稍後重試\",\"retry\":\"重新載入\",\"previous\":\"上一頁\",\"next\":\"下一頁\"},\"en\":{\"product_title\":\"Products\",\"goods_title\":\"Goods\",\"search_placeholder\":\"Search products or goods\",\"all\":\"All\",\"loading\":\"Loading...\",\"empty\":\"No data\",\"error\":\"Failed to load\",\"retry\":\"Retry\",\"previous\":\"Previous\",\"next\":\"Next\"},\"kr\":{\"product_title\":\"제품 목록\",\"goods_title\":\"상품 목록\",\"search_placeholder\":\"제품 또는 상품 검색\",\"all\":\"전체\",\"loading\":\"불러오는 중...\",\"empty\":\"데이터가 없습니다\",\"error\":\"불러오지 못했습니다\",\"retry\":\"다시 시도\",\"previous\":\"이전\",\"next\":\"다음\"},\"ru\":{\"product_title\":\"Продукты\",\"goods_title\":\"Товары\",\"search_placeholder\":\"Поиск продуктов или товаров\",\"all\":\"Все\",\"loading\":\"Загрузка...\",\"empty\":\"Нет данных\",\"error\":\"Не удалось загрузить\",\"retry\":\"Повторить\",\"previous\":\"Назад\",\"next\":\"Далее\"},\"jp\":{\"product_title\":\"製品一覧\",\"goods_title\":\"商品一覧\",\"search_placeholder\":\"製品または商品を検索\",\"all\":\"すべて\",\"loading\":\"読み込み中...\",\"empty\":\"データがありません\",\"error\":\"読み込めませんでした\",\"retry\":\"再読み込み\",\"previous\":\"前へ\",\"next\":\"次へ\"}}",
+    "input_type": "i18n"
+  },
+  {
+    "key": "show_sidebar",
+    "label": "显示分类区域",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "switch"
+  },
+  {
+    "key": "show_all_button",
+    "label": "显示全部选项",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "switch"
+  },
+  {
+    "key": "show_description",
+    "label": "显示描述",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "switch"
+  },
+  {
+    "key": "enable_list_mode",
+    "label": "启用列表布局切换",
+    "value": "0",
+    "default_value": "0",
+    "input_type": "switch"
+  },
+  {
+    "key": "show_title",
+    "label": "显示模块标题",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "switch"
+  },
+  {
+    "key": "show_count",
+    "label": "显示结果数量",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "switch"
+  },
+  {
+    "key": "open_in_current",
+    "label": "当前页打开",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "switch"
+  },
+  {
+    "key": "show_search",
+    "label": "显示搜索",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "switch"
+  },
+  {
+    "key": "show_sort",
+    "label": "显示排序",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "switch"
+  },
+  {
+    "key": "show_price",
+    "label": "显示价格",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "switch"
+  },
+  {
+    "key": "show_pagination",
+    "label": "显示分页",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "switch"
+  },
+  {
+    "key": "columns_pc",
+    "label": "PC 每行数量",
+    "value": "4",
+    "default_value": "4",
+    "input_type": "number"
+  },
+  {
+    "key": "columns_tablet",
+    "label": "平板每行数量",
+    "value": "3",
+    "default_value": "3",
+    "input_type": "number"
+  },
+  {
+    "key": "columns_mobile",
+    "label": "手机每行数量",
+    "value": "2",
+    "default_value": "2",
+    "input_type": "number"
+  },
+  {
+    "key": "image_ratio",
+    "label": "图片宽高比例",
+    "value": "4 / 3",
+    "default_value": "4 / 3",
+    "input_type": "text"
+  },
+  {
+    "key": "theme_color",
+    "label": "主题色",
+    "value": "#111111",
+    "default_value": "#111111",
+    "input_type": "color"
+  },
+  {
+    "key": "card_background",
+    "label": "卡片背景色",
+    "value": "#ffffff",
+    "default_value": "#ffffff",
+    "input_type": "color"
+  },
+  {
+    "key": "text_color",
+    "label": "文字颜色",
+    "value": "#111111",
+    "default_value": "#111111",
+    "input_type": "color"
+  },
+  {
+    "key": "muted_color",
+    "label": "辅助文字颜色",
+    "value": "#777777",
+    "default_value": "#777777",
+    "input_type": "color"
+  }
+]

@@ -1,0 +1,7 @@
+interface:
+  display_name: "枢纽云客户案例写作"
+  short_description: "基于官网与项目资料撰写可批量复用的枢纽云客户案例文章"
+  default_prompt: "使用 $ltd-customer-case-writer，根据客户官网与项目资料撰写一篇枢纽云客户案例。"
+
+policy:
+  allow_implicit_invocation: true

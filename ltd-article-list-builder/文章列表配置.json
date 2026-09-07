@@ -1,0 +1,128 @@
+[
+  {
+    "key": "cat",
+    "label": "文章分类",
+    "value": "{\"moduleType\":\"article\",\"type\":\"1\",\"ids\":\"\",\"names\":[],\"pageSize\":12,\"sortColumn\":\"published_at\",\"sortDirection\":\"desc\",\"sortColumnVersion\":2}",
+    "default_value": "{\"moduleType\":\"article\",\"type\":\"1\",\"ids\":\"\",\"names\":[],\"pageSize\":12,\"sortColumn\":\"published_at\",\"sortDirection\":\"desc\",\"sortColumnVersion\":2}",
+    "input_type": "category"
+  },
+  {
+    "key": "i18n",
+    "label": "多语言文案",
+    "value": "{\"zh-cn\":{\"title\":\"文章列表\",\"search_placeholder\":\"搜索文章\",\"all\":\"全部\",\"loading\":\"正在加载...\",\"empty\":\"暂无文章\",\"error\":\"加载失败，请稍后重试\",\"retry\":\"重新加载\",\"previous\":\"上一页\",\"next\":\"下一页\"},\"zh\":{\"title\":\"文章列表\",\"search_placeholder\":\"搜尋文章\",\"all\":\"全部\",\"loading\":\"正在載入...\",\"empty\":\"暫無文章\",\"error\":\"載入失敗，請稍後重試\",\"retry\":\"重新載入\",\"previous\":\"上一頁\",\"next\":\"下一頁\"},\"en\":{\"title\":\"Articles\",\"search_placeholder\":\"Search articles\",\"all\":\"All\",\"loading\":\"Loading...\",\"empty\":\"No articles\",\"error\":\"Failed to load articles\",\"retry\":\"Retry\",\"previous\":\"Previous\",\"next\":\"Next\"},\"kr\":{\"title\":\"게시물\",\"search_placeholder\":\"게시물 검색\",\"all\":\"전체\",\"loading\":\"불러오는 중...\",\"empty\":\"게시물이 없습니다\",\"error\":\"불러오지 못했습니다\",\"retry\":\"다시 시도\",\"previous\":\"이전\",\"next\":\"다음\"},\"ru\":{\"title\":\"Статьи\",\"search_placeholder\":\"Поиск статей\",\"all\":\"Все\",\"loading\":\"Загрузка...\",\"empty\":\"Статей пока нет\",\"error\":\"Не удалось загрузить статьи\",\"retry\":\"Повторить\",\"previous\":\"Назад\",\"next\":\"Далее\"},\"jp\":{\"title\":\"記事一覧\",\"search_placeholder\":\"記事を検索\",\"all\":\"すべて\",\"loading\":\"読み込み中...\",\"empty\":\"記事がありません\",\"error\":\"記事を読み込めませんでした\",\"retry\":\"再読み込み\",\"previous\":\"前へ\",\"next\":\"次へ\"}}",
+    "default_value": "{\"zh-cn\":{\"title\":\"文章列表\",\"search_placeholder\":\"搜索文章\",\"all\":\"全部\",\"loading\":\"正在加载...\",\"empty\":\"暂无文章\",\"error\":\"加载失败，请稍后重试\",\"retry\":\"重新加载\",\"previous\":\"上一页\",\"next\":\"下一页\"},\"zh\":{\"title\":\"文章列表\",\"search_placeholder\":\"搜尋文章\",\"all\":\"全部\",\"loading\":\"正在載入...\",\"empty\":\"暫無文章\",\"error\":\"載入失敗，請稍後重試\",\"retry\":\"重新載入\",\"previous\":\"上一頁\",\"next\":\"下一頁\"},\"en\":{\"title\":\"Articles\",\"search_placeholder\":\"Search articles\",\"all\":\"All\",\"loading\":\"Loading...\",\"empty\":\"No articles\",\"error\":\"Failed to load articles\",\"retry\":\"Retry\",\"previous\":\"Previous\",\"next\":\"Next\"},\"kr\":{\"title\":\"게시물\",\"search_placeholder\":\"게시물 검색\",\"all\":\"전체\",\"loading\":\"불러오는 중...\",\"empty\":\"게시물이 없습니다\",\"error\":\"불러오지 못했습니다\",\"retry\":\"다시 시도\",\"previous\":\"이전\",\"next\":\"다음\"},\"ru\":{\"title\":\"Статьи\",\"search_placeholder\":\"Поиск статей\",\"all\":\"Все\",\"loading\":\"Загрузка...\",\"empty\":\"Статей пока нет\",\"error\":\"Не удалось загрузить статьи\",\"retry\":\"Повторить\",\"previous\":\"Назад\",\"next\":\"Далее\"},\"jp\":{\"title\":\"記事一覧\",\"search_placeholder\":\"記事を検索\",\"all\":\"すべて\",\"loading\":\"読み込み中...\",\"empty\":\"記事がありません\",\"error\":\"記事を読み込めませんでした\",\"retry\":\"再読み込み\",\"previous\":\"前へ\",\"next\":\"次へ\"}}",
+    "input_type": "i18n"
+  },
+  {
+    "key": "show_category_filter",
+    "label": "显示分类筛选",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "switch"
+  },
+  {
+    "key": "show_all_button",
+    "label": "显示全部选项",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "switch"
+  },
+  {
+    "key": "show_search",
+    "label": "显示搜索",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "switch"
+  },
+  {
+    "key": "show_thumbnail",
+    "label": "显示封面",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "switch"
+  },
+  {
+    "key": "show_abstract",
+    "label": "显示摘要",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "switch"
+  },
+  {
+    "key": "show_date",
+    "label": "显示发布时间",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "switch"
+  },
+  {
+    "key": "show_category_name",
+    "label": "显示分类名称",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "switch"
+  },
+  {
+    "key": "show_author",
+    "label": "显示作者",
+    "value": "0",
+    "default_value": "0",
+    "input_type": "switch"
+  },
+  {
+    "key": "show_views",
+    "label": "显示浏览量",
+    "value": "0",
+    "default_value": "0",
+    "input_type": "switch"
+  },
+  {
+    "key": "show_pagination",
+    "label": "显示分页",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "switch"
+  },
+  {
+    "key": "columns",
+    "label": "桌面每行数量",
+    "value": "3",
+    "default_value": "3",
+    "input_type": "number"
+  },
+  {
+    "key": "image_aspect_ratio",
+    "label": "封面宽高比例",
+    "value": "4/3",
+    "default_value": "4/3",
+    "input_type": "text"
+  },
+  {
+    "key": "theme_color",
+    "label": "主题色",
+    "value": "#111111",
+    "default_value": "#111111",
+    "input_type": "color"
+  },
+  {
+    "key": "text_color",
+    "label": "文字颜色",
+    "value": "#111111",
+    "default_value": "#111111",
+    "input_type": "color"
+  },
+  {
+    "key": "muted_color",
+    "label": "辅助文字颜色",
+    "value": "#777777",
+    "default_value": "#777777",
+    "input_type": "color"
+  },
+  {
+    "key": "background_color",
+    "label": "背景颜色",
+    "value": "#ffffff",
+    "default_value": "#ffffff",
+    "input_type": "color"
+  }
+]

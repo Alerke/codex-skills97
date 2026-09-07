@@ -1,0 +1,24 @@
+LTD 案例列表模块 Skill
+
+创建、重构或审查 LTD 案例列表时，必须遵守：
+
+1. 分类 moduleType 固定为 case，input_type 固定为 category。
+2. 分类接口使用 /api/gatewayCms/case/category。
+3. 列表接口使用 /api/gatewayCms/case/list。
+4. 列表主结构优先读取 response.data.data.data，分页读取 response.data.data.total/page_size/current_page。
+5. 分类配置为空时省略 cat_id，获取全部案例。
+6. 父分类包含自身和全部层级后代；“全部”只查询后台允许范围。
+7. show_all_button 只控制按钮显隐，不得自动选择第一分类。
+8. 列表参数使用 cat_id、page、page_size 和 JSON 字符串 order。
+9. 图片只按 URL 有效性判断，不因 thumbnail.id 为 0 直接隐藏。
+10. 详情优先使用安全 detail_link，其次 defined_link，最后 /case/{完整字符串 id}。
+11. 至少实现加载、成功、空数据、错误重试四种状态。
+12. 搜索、分类和排序变化重置到第 1 页，最后一次请求必须生效。
+13. 使用原生 CSS，不使用 Less；根类为 .caseListYYYYMMDD。
+14. 使用 document.currentScript 定位实例，查询和事件限制在当前模块。
+15. 使用成熟 ES6、const/let、箭头函数和模板字面量；未确认时避免 ES2017+。
+16. 动态文本、属性和 URL 必须先转义或校验。
+17. 多语言 key/input_type 均使用 i18n，语言按 URL、本地语言、zh-cn 回退。
+18. 同一轮交付完整 HTML 和覆盖全部占位符的可导入 JSON。
+
+默认配置见同目录“案例列表配置.json”。

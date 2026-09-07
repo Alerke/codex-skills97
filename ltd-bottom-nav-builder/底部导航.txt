@@ -1,0 +1,16 @@
+你正在创建、重构、审查或排查 LTD 建站平台的页脚/底部导航代码模块。
+
+请先完整读取同目录 SKILL.md，并按其要求读取 navigation.md 与 references/bottom-nav.md。
+
+核心要求：
+
+1. 这里的底部导航是 Footer 栏目和页脚链接区，不是移动端固定 Tab。
+2. 默认接口使用 /api/navCat，固定 position=2、code===0，并携带 website_id 与 language_type。
+3. 后台配置使用 nav_list，input_type 固定为 navList；多语言使用 key/input_type 均为 i18n。
+4. 每一级递归过滤 hidden/status，危险协议必须拦截，_blank 补 rel="noopener noreferrer"。
+5. PC 多列，移动端可折叠；标题使用 button 并同步 aria-expanded。
+6. 使用 document.currentScript 定位实例，查询、事件与状态限制在当前模块内。
+7. 初始状态和业务样式都使用原生 CSS，不使用 Less 或运行时样式编译器。
+8. JavaScript 使用成熟 ES6、箭头函数和模板字面量，同时避免未确认环境中的可选链、async/await 等高版本能力。
+9. 单项配置错误只回退该项，API 或配置失败时保留 Footer 品牌、版权和 fallback。
+10. 新建任务同时交付完整模块 HTML 和可直接导入配置 JSON，不创建 Python、后端或数据库内容。

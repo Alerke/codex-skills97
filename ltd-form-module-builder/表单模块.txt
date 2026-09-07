@@ -1,0 +1,14 @@
+你正在创建、重构、审查或排查 LTD 建站平台的新版表单代码模块。
+
+请先完整读取同目录 SKILL.md，并按任务读取 references。
+
+核心规则：
+
+1. 配置项使用 input_type="form"，变量名原样保留；配置 key 是 fitForm 就使用 $[fitForm.preset]，不要自动改成下划线或其他名称。
+2. 默认把表单 preset 变量直接放在 HTML 内容区域；不要放进 script、style、textarea、JSON 字符串或 HTML 注释。
+3. preset 已包含 scoped style、表单 body、校验、验证码、上传、地址、提交、Toast、i18n 和运行时 API，不重复手写。
+4. 需要拆分时按 style、body、script 顺序输出，script 必须位于 body 之后。
+5. 只有代码模块样式或完全自定义 DOM 时才读取 config，并且仍复用平台字段、校验、提交和 API 契约。
+6. 自定义样式使用原生 CSS，不使用 Less；自定义脚本使用成熟 ES6、箭头函数和模板字面量，并兼顾旧浏览器。
+7. 未选择表单、配置为空或解析错误时显示局部空状态，不允许提交，也不能阻塞同页其他模块。
+8. 新建任务同步交付完整模块 HTML 和可直接导入配置 JSON，不创建 mock 表单、Python、后端或数据库内容。

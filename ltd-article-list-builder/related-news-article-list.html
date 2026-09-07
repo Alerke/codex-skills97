@@ -1,0 +1,686 @@
+<style data-article-list-initial>
+.articleNewsList20260812Bextro{background:var(--news-bg,#f7f7f6);color:var(--news-text,#00152b);font-family:var(--news-font,Arial,"Microsoft YaHei",sans-serif);overflow:hidden;width:100%;}
+.articleNewsList20260812Bextro *{box-sizing:border-box;}
+.articleNewsList20260812Bextro .news-shell{margin:0 auto;max-width:var(--news-max-width,1326px);padding:var(--news-padding-top,64px) var(--news-side-padding,0px) var(--news-padding-bottom,42px);width:calc(100% - 48px);}
+.articleNewsList20260812Bextro .news-grid{display:grid;gap:var(--news-column-gap,27px);grid-template-columns:repeat(var(--news-columns,4),minmax(0,1fr));}
+.articleNewsList20260812Bextro .news-status{align-items:center;display:flex;grid-column:1/-1;justify-content:center;min-height:340px;text-align:center;}
+.articleNewsList20260812Bextro .news-skeleton{animation:articleNewsPulse20260812Bextro 1.35s ease-in-out infinite;background:rgba(0,21,43,.08);border-radius:var(--news-image-radius,4px);height:var(--news-image-short-height,336px);}
+@keyframes articleNewsPulse20260812Bextro{0%,100%{opacity:.42}50%{opacity:1}}
+</style>
+
+<style data-article-list-styles>
+.articleNewsList20260812Bextro .news-intro{align-items:start;display:grid;grid-template-columns:220px minmax(0,440px) 1fr;column-gap:30px;}
+.articleNewsList20260812Bextro .news-eyebrow{color:var(--news-accent,#d65120);font-size:var(--news-eyebrow-size,11px);font-weight:700;letter-spacing:.02em;line-height:1.3;margin:0;padding-top:3px;text-transform:uppercase;}
+.articleNewsList20260812Bextro .news-heading{color:var(--news-text,#00152b);font-size:var(--news-title-size,42px);font-weight:600;letter-spacing:-.045em;line-height:1.02;margin:0;}
+.articleNewsList20260812Bextro .news-description{color:var(--news-text,#00152b);font-size:var(--news-description-size,16px);font-weight:400;line-height:1.45;margin:18px 0 0;max-width:430px;}
+.articleNewsList20260812Bextro .news-toolbar{align-items:center;display:flex;gap:22px;justify-content:space-between;margin:var(--news-toolbar-margin,34px) 0 var(--news-grid-margin,38px);min-height:40px;}
+.articleNewsList20260812Bextro .news-categories{display:flex;flex:1 1 auto;flex-wrap:wrap;gap:8px;min-width:0;}
+.articleNewsList20260812Bextro .news-category-button{background:transparent;border:1px solid var(--news-border,#d9dde0);border-radius:999px;color:var(--news-text,#00152b);cursor:pointer;font:inherit;font-size:13px;line-height:1;padding:10px 15px;transition:background-color .2s ease,border-color .2s ease,color .2s ease;}
+.articleNewsList20260812Bextro .news-category-button:hover,.articleNewsList20260812Bextro .news-category-button:focus,.articleNewsList20260812Bextro .news-category-button.is-active{background:var(--news-text,#00152b);border-color:var(--news-text,#00152b);color:#fff;outline:none;}
+.articleNewsList20260812Bextro .news-search{align-items:center;border-bottom:1px solid var(--news-text,#00152b);display:flex;flex:0 1 var(--news-search-width,290px);min-width:210px;}
+.articleNewsList20260812Bextro .news-search-input{background:transparent;border:0;color:var(--news-text,#00152b);font:inherit;font-size:14px;height:40px;min-width:0;outline:0;padding:0 8px 0 0;width:100%;}
+.articleNewsList20260812Bextro .news-search-input::placeholder{color:var(--news-muted,#65707b);opacity:1;}
+.articleNewsList20260812Bextro .news-search-button{align-items:center;background:transparent;border:0;color:var(--news-text,#00152b);cursor:pointer;display:flex;height:40px;justify-content:center;padding:0;width:36px;}
+.articleNewsList20260812Bextro .news-search-button svg{height:18px;width:18px;}
+.articleNewsList20260812Bextro .news-card{display:flex;flex-direction:column;min-width:0;}
+.articleNewsList20260812Bextro .news-media{background:var(--news-image-bg,#e8e9e7);border-radius:var(--news-image-radius,4px);display:block;height:var(--news-image-short-height,336px);overflow:hidden;position:relative;text-decoration:none;width:100%;}
+.articleNewsList20260812Bextro .news-card:nth-child(4n+1) .news-media,.articleNewsList20260812Bextro .news-card:nth-child(4n+3) .news-media{height:var(--news-image-tall-height,390px);}
+.articleNewsList20260812Bextro .news-image{display:block;height:100%;object-fit:var(--news-image-fit,cover);transition:transform .45s ease;width:100%;}
+.articleNewsList20260812Bextro .news-card:hover .news-image{transform:scale(1.035);}
+.articleNewsList20260812Bextro .news-image-placeholder{align-items:center;color:var(--news-muted,#65707b);display:flex;justify-content:center;}
+.articleNewsList20260812Bextro .news-image-placeholder svg{height:38px;opacity:.55;width:38px;}
+.articleNewsList20260812Bextro .news-meta{align-items:center;color:var(--news-muted,#65707b);display:flex;font-size:var(--news-meta-size,11px);font-weight:600;gap:10px;justify-content:space-between;letter-spacing:.01em;line-height:1.35;margin-top:20px;min-height:15px;text-transform:uppercase;}
+.articleNewsList20260812Bextro .news-category{color:var(--news-accent,#d65120);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.articleNewsList20260812Bextro .news-date{color:inherit;flex:0 0 auto;}
+.articleNewsList20260812Bextro .news-card-title{color:var(--news-text,#00152b);display:-webkit-box;font-size:var(--news-card-title-size,16px);font-weight:500;line-height:1.45;margin:12px 0 0;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:var(--news-title-lines,3);}
+.articleNewsList20260812Bextro .news-card-title a,.articleNewsList20260812Bextro .news-card-title span{color:inherit;text-decoration:none;}
+.articleNewsList20260812Bextro .news-card-title a:hover,.articleNewsList20260812Bextro .news-card-title a:focus{color:var(--news-accent,#d65120);outline:none;}
+.articleNewsList20260812Bextro .news-pagination{align-items:center;display:flex;gap:7px;justify-content:center;margin-top:48px;}
+.articleNewsList20260812Bextro .news-page-button{align-items:center;background:transparent;border:1px solid var(--news-border,#d9dde0);border-radius:50%;color:var(--news-text,#00152b);cursor:pointer;display:inline-flex;font:inherit;font-size:13px;height:38px;justify-content:center;padding:0;width:38px;}
+.articleNewsList20260812Bextro .news-page-button:hover,.articleNewsList20260812Bextro .news-page-button:focus,.articleNewsList20260812Bextro .news-page-button.is-current{background:var(--news-text,#00152b);border-color:var(--news-text,#00152b);color:#fff;outline:none;}
+.articleNewsList20260812Bextro .news-page-button:disabled{cursor:default;opacity:.35;}
+.articleNewsList20260812Bextro .news-page-ellipsis{color:var(--news-muted,#65707b);padding:0 3px;}
+.articleNewsList20260812Bextro .news-retry{background:var(--news-text,#00152b);border:0;border-radius:999px;color:#fff;cursor:pointer;font:inherit;font-size:13px;margin-left:12px;padding:10px 17px;}
+.articleNewsList20260812Bextro .news-pagination[hidden],.articleNewsList20260812Bextro .news-toolbar[hidden],.articleNewsList20260812Bextro .news-categories[hidden],.articleNewsList20260812Bextro .news-search[hidden]{display:none!important;}
+@media (max-width:1024px){
+  .articleNewsList20260812Bextro .news-shell{width:calc(100% - 40px);}
+  .articleNewsList20260812Bextro .news-intro{grid-template-columns:170px minmax(0,440px) 1fr;}
+  .articleNewsList20260812Bextro .news-grid{grid-template-columns:repeat(var(--news-tablet-columns,2),minmax(0,1fr));}
+  .articleNewsList20260812Bextro .news-card:nth-child(n) .news-media{height:var(--news-image-short-height,336px);}
+  .articleNewsList20260812Bextro .news-card:nth-child(2n+1) .news-media{height:var(--news-image-tall-height,390px);}
+}
+@media (max-width:768px){
+  .articleNewsList20260812Bextro .news-intro{display:block;}
+  .articleNewsList20260812Bextro .news-eyebrow{margin-bottom:14px;}
+  .articleNewsList20260812Bextro .news-toolbar{align-items:stretch;flex-direction:column;}
+  .articleNewsList20260812Bextro .news-search{flex-basis:auto;max-width:none;width:100%;}
+}
+@media (max-width:576px){
+  .articleNewsList20260812Bextro .news-shell{padding-top:var(--news-mobile-padding-top,42px);width:calc(100% - 28px);}
+  .articleNewsList20260812Bextro .news-heading{font-size:var(--news-mobile-title-size,34px);}
+  .articleNewsList20260812Bextro .news-grid{grid-template-columns:repeat(var(--news-mobile-columns,1),minmax(0,1fr));row-gap:34px;}
+  .articleNewsList20260812Bextro .news-card:nth-child(n) .news-media{height:var(--news-mobile-image-height,340px);}
+  .articleNewsList20260812Bextro .news-toolbar{margin-bottom:28px;}
+  .articleNewsList20260812Bextro .news-pagination{margin-top:38px;}
+}
+</style>
+
+<section class="articleNewsList20260812Bextro"
+  aria-label="$[section_title]"
+  data-cat-ids="$[cat]"
+  data-module-type="$[cat.moduleType]"
+  data-article-type="$[cat.type]"
+  data-category-page-size="$[cat.pageSize]"
+  data-sort-by="$[cat.sortColumn]"
+  data-sort-direction="$[cat.sortDirection]"
+  data-rows="$[rows]"
+  data-columns="$[columns]"
+  data-show-category-filter="$[show_category_filter]"
+  data-show-search="$[show_search]"
+  data-show-pagination="$[show_pagination]"
+  data-show-category="$[show_category]"
+  data-show-date="$[show_date]"
+  data-fallback-image='$[fallback_image]'
+  style="--news-bg:$[background_color];--news-text:$[text_color];--news-muted:$[muted_color];--news-accent:$[accent_color];--news-border:$[border_color];--news-image-bg:$[image_background_color];--news-font:$[font_family];--news-max-width:$[content_max_width]px;--news-padding-top:$[padding_top]px;--news-padding-bottom:$[padding_bottom]px;--news-side-padding:$[side_padding]px;--news-mobile-padding-top:$[mobile_padding_top]px;--news-column-gap:$[column_gap]px;--news-columns:$[columns];--news-tablet-columns:$[tablet_columns];--news-mobile-columns:$[mobile_columns];--news-title-size:$[title_size]px;--news-mobile-title-size:$[mobile_title_size]px;--news-eyebrow-size:$[eyebrow_size]px;--news-description-size:$[description_size]px;--news-toolbar-margin:$[toolbar_margin_top]px;--news-grid-margin:$[grid_margin_top]px;--news-search-width:$[search_width]px;--news-image-tall-height:$[image_tall_height]px;--news-image-short-height:$[image_short_height]px;--news-mobile-image-height:$[mobile_image_height]px;--news-image-radius:$[image_radius]px;--news-image-fit:$[image_fit];--news-meta-size:$[meta_size]px;--news-card-title-size:$[card_title_size]px;--news-title-lines:$[title_lines];">
+  <div class="news-shell">
+    <header class="news-intro">
+      <p class="news-eyebrow">$[eyebrow_text]</p>
+      <div class="news-intro-copy">
+        <h2 class="news-heading">$[section_title]</h2>
+        <p class="news-description">$[section_description]</p>
+      </div>
+    </header>
+
+    <div class="news-toolbar">
+      <div class="news-categories" aria-label="新闻分类"></div>
+      <form class="news-search" role="search">
+        <input class="news-search-input" type="search" autocomplete="off">
+        <button class="news-search-button" type="submit">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m16 16 4 4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.7"/></svg>
+        </button>
+      </form>
+    </div>
+
+    <div class="news-grid" aria-live="polite"></div>
+    <nav class="news-pagination" aria-label="新闻分页" hidden></nav>
+  </div>
+</section>
+
+<script>
+(function () {
+  const script = document.currentScript;
+  const rootClass = 'articleNewsList20260812Bextro';
+  const hasRootClass = (node) => !!(node && node.classList && node.classList.contains(rootClass));
+  const findHost = (node) => {
+    let current = node && node.parentElement;
+    while (current) {
+      if (current.classList && current.classList.contains('gw-browse-module')) return current;
+      current = current.parentElement;
+    }
+    return null;
+  };
+  const findSingleRoot = (container) => {
+    if (!container || typeof container.querySelectorAll !== 'function') return null;
+    const roots = container.querySelectorAll('.' + rootClass);
+    return roots.length === 1 ? roots[0] : null;
+  };
+  const locateRoot = () => {
+    if (!script) return null;
+    if (hasRootClass(script.previousElementSibling)) return script.previousElementSibling;
+    const hostRoot = findSingleRoot(findHost(script));
+    return hostRoot || findSingleRoot(script.parentNode);
+  };
+  const root = locateRoot();
+  if (!root) return;
+  if (root.getAttribute('data-news-list-mounted') === '1') return;
+  root.setAttribute('data-news-list-mounted', '1');
+
+  const grid = root.querySelector('.news-grid');
+  const toolbar = root.querySelector('.news-toolbar');
+  const categoryBar = root.querySelector('.news-categories');
+  const searchForm = root.querySelector('.news-search');
+  const searchInput = root.querySelector('.news-search-input');
+  const searchButton = root.querySelector('.news-search-button');
+  const pagination = root.querySelector('.news-pagination');
+  const raw = (name) => root.getAttribute(name) || '';
+  const isUnresolved = (value) => typeof value === 'string' && value.indexOf('$[') !== -1;
+  const parseSwitch = (value, fallback) => {
+    if (isUnresolved(value) || value === '' || value == null) return fallback;
+    if (value === true || value === 1 || value === '1' || value === 'true') return true;
+    if (value === false || value === 0 || value === '0' || value === 'false') return false;
+    return fallback;
+  };
+  const parseInteger = (value, fallback, min, max) => {
+    const number = Number(value);
+    if (isUnresolved(value) || !Number.isFinite(number)) return fallback;
+    return Math.min(max, Math.max(min, Math.round(number)));
+  };
+  const parseIds = (value) => isUnresolved(value) || !value ? [] : String(value).split(',').map((id) => id.trim()).filter(Boolean);
+  const parseJson = (value, fallback) => {
+    if (!value || isUnresolved(value)) return fallback;
+    if (typeof value === 'object') return value;
+    try { return JSON.parse(value); } catch (error) { return fallback; }
+  };
+  const normalizeImageConfig = (value) => {
+    let image = parseJson(value, value);
+    if (!image || isUnresolved(image)) return '';
+    if (typeof image === 'string') return image;
+    if (image.value && image.value !== image) image = image.value;
+    if (typeof image === 'string') return image;
+    if (!image || typeof image !== 'object') return '';
+    const file = image.file || {};
+    const nested = image.image || {};
+    return image.url || image.src || file.url || nested.url || '';
+  };
+  const safeUrl = (value, fallback) => {
+    const url = String(value || '').trim();
+    if (!url || isUnresolved(url) || /[\u0000-\u001F\u007F]/.test(url)) return fallback || '';
+    if (/^\/\//.test(url)) return fallback || '';
+    if (/^[A-Za-z][A-Za-z0-9+.-]*:/.test(url) && !/^https?:/i.test(url)) return fallback || '';
+    return url;
+  };
+  const normalizeLanguage = (value) => {
+    const map = { 'zh-cn': 'zh-cn', zh: 'zh', 'zh-tw': 'zh', 'zh-hk': 'zh', en: 'en', ko: 'kr', kr: 'kr', ru: 'ru', ja: 'jp', jp: 'jp' };
+    return map[String(value || '').toLowerCase()] || 'zh-cn';
+  };
+  const environmentUrls = (() => {
+    const urls = [];
+    const add = (value) => {
+      const url = String(value || '').trim();
+      if (url && urls.indexOf(url) === -1) urls.push(url);
+    };
+    const addContextLocation = (context) => {
+      try { add(context && context.location && context.location.href); } catch (error) { return; }
+    };
+    addContextLocation(window);
+    add(document.referrer);
+    if (window.parent && window.parent !== window) addContextLocation(window.parent);
+    if (window.top && window.top !== window && window.top !== window.parent) addContextLocation(window.top);
+    return urls;
+  })();
+  const readEnvironmentParam = (name) => {
+    const pattern = new RegExp('[?&#]' + name + '=([^&#]*)', 'i');
+    for (let index = 0; index < environmentUrls.length; index += 1) {
+      const match = environmentUrls[index].match(pattern);
+      if (!match) continue;
+      try { return decodeURIComponent(String(match[1] || '').replace(/\+/g, ' ')); } catch (error) { return String(match[1] || ''); }
+    }
+    return '';
+  };
+  const readStorageValue = (key) => {
+    const contexts = [window];
+    if (window.parent && window.parent !== window) contexts.push(window.parent);
+    if (window.top && contexts.indexOf(window.top) === -1) contexts.push(window.top);
+    for (let index = 0; index < contexts.length; index += 1) {
+      try {
+        const value = contexts[index].localStorage.getItem(key);
+        if (value) return value;
+      } catch (error) { continue; }
+    }
+    return '';
+  };
+  const language = normalizeLanguage(readEnvironmentParam('editor_language_type') || readStorageValue('lang') || 'zh-cn');
+  const isEditorContext = environmentUrls.some((url) => /\/admin\/visualeditor\/|[?&#]editor_language_type=/i.test(url));
+  const normalizeWebsiteId = (value) => {
+    const id = String(value == null ? '' : value).trim();
+    return /^\d+$/.test(id) ? id : '';
+  };
+  const readWebsiteId = () => {
+    const queryId = normalizeWebsiteId(readEnvironmentParam('website_id') || readEnvironmentParam('websiteId'));
+    if (queryId) return queryId;
+    const contexts = [window];
+    if (window.parent && window.parent !== window) contexts.push(window.parent);
+    if (window.top && contexts.indexOf(window.top) === -1) contexts.push(window.top);
+    for (let index = 0; index < contexts.length; index += 1) {
+      try {
+        const context = contexts[index];
+        const globalId = normalizeWebsiteId(context.websiteId || context.website_id);
+        if (globalId) return globalId;
+        const storageId = normalizeWebsiteId(context.localStorage.getItem('websiteId') || context.localStorage.getItem('website_id'));
+        if (storageId) return storageId;
+      } catch (error) { continue; }
+    }
+    return '';
+  };
+  const readRuntimeI18n = () => {
+    try {
+      const value = $[i18n];
+      if (value && typeof value === 'object' && !Array.isArray(value)) return value;
+      return typeof value === 'string' ? parseJson(value, {}) : {};
+    } catch (error) { return {}; }
+  };
+  const fallbackText = {
+    all: '全部', search_placeholder: '搜索新闻', search_label: '搜索新闻', loading: '正在加载...', empty: '暂无新闻', error: '加载失败，请稍后重试', retry: '重新加载', previous: '上一页', next: '下一页', pagination: '新闻分页'
+  };
+  const i18n = readRuntimeI18n();
+  const text = (key) => {
+    const current = i18n && i18n[language] && i18n[language][key];
+    const chinese = i18n && i18n['zh-cn'] && i18n['zh-cn'][key];
+    return String(current || chinese || fallbackText[key] || '');
+  };
+  const rows = parseInteger(raw('data-rows'), 2, 1, 10);
+  const columns = parseInteger(raw('data-columns'), 4, 1, 6);
+  const categoryPageSize = parseInteger(raw('data-category-page-size'), 8, 1, 100);
+  const calculatedPageSize = rows && columns ? rows * columns : categoryPageSize;
+  const config = {
+    moduleType: isUnresolved(raw('data-module-type')) ? 'article' : raw('data-module-type'),
+    type: isUnresolved(raw('data-article-type')) ? '1' : raw('data-article-type'),
+    catIds: parseIds(raw('data-cat-ids')),
+    pageSize: Math.min(100, Math.max(1, calculatedPageSize)),
+    sortBy: /^[A-Za-z_][A-Za-z0-9_]*(\.[A-Za-z_][A-Za-z0-9_]*)?$/.test(raw('data-sort-by')) ? raw('data-sort-by') : 'published_at',
+    sort: raw('data-sort-direction') === 'asc' ? 'asc' : 'desc',
+    showCategoryFilter: parseSwitch(raw('data-show-category-filter'), true),
+    showSearch: parseSwitch(raw('data-show-search'), true),
+    showPagination: parseSwitch(raw('data-show-pagination'), true),
+    showCategory: parseSwitch(raw('data-show-category'), true),
+    showDate: parseSwitch(raw('data-show-date'), true),
+    fallbackImage: normalizeImageConfig(raw('data-fallback-image'))
+  };
+  const state = {
+    page: 1,
+    total: 0,
+    keywords: '',
+    selectedCatId: '',
+    categoryMap: new Map(),
+    categoryRoots: [],
+    allowedScopeIds: [],
+    requestSeq: 0,
+    destroyed: false,
+    pageCorrectionUsed: false
+  };
+
+  const clear = (element) => { while (element && element.firstChild) element.removeChild(element.firstChild); };
+  const getMediaUrl = (media) => {
+    if (!media || typeof media !== 'object') return '';
+    return safeUrl(media.url || media.thumbnail || '', '');
+  };
+  const getCover = (item) => getMediaUrl(item && item.thumbnail) || getMediaUrl(item && item.file) || safeUrl(config.fallbackImage, '');
+  const detailUrl = (item) => safeUrl(item && item.pcDetailLink, '');
+  const formatDate = (value) => {
+    if (!value) return '';
+    const date = new Date(value);
+    if (Number.isNaN(date.getTime())) return '';
+    const pad = (number) => number < 10 ? '0' + number : String(number);
+    return date.getFullYear() + '.' + pad(date.getMonth() + 1) + '.' + pad(date.getDate());
+  };
+  const normalizeItem = (item) => ({
+    id: item && item.id != null ? String(item.id) : '',
+    catId: item && item.cat_id != null ? String(item.cat_id) : '',
+    title: item && item.title != null ? String(item.title) : '',
+    cover: getCover(item || {}),
+    date: formatDate(item && (item.published_at || item.created_at || item.updated_at)),
+    pcDetailLink: item && item.pc_detail_link != null ? String(item.pc_detail_link) : ''
+  });
+  const unwrapResponse = (response) => {
+    let current = response;
+    for (let depth = 0; depth < 3; depth += 1) {
+      if (!current || typeof current !== 'object' || Array.isArray(current) || current.code != null) break;
+      const nested = current.data;
+      if (!nested || typeof nested !== 'object' || Array.isArray(nested)) break;
+      if (nested.code == null && nested.data == null && nested.msg == null) break;
+      current = nested;
+    }
+    return current;
+  };
+  const normalizeListResponse = (response) => {
+    const normalized = unwrapResponse(response);
+    const outer = normalized && normalized.data != null ? normalized.data : {};
+    const items = Array.isArray(outer) ? outer : (Array.isArray(outer.data) ? outer.data : (Array.isArray(outer.list) ? outer.list : []));
+    const totalValue = !Array.isArray(outer) && outer.total != null ? Number(outer.total) : items.length;
+    const pageSizeValue = !Array.isArray(outer) && outer.page_size != null ? Number(outer.page_size) : config.pageSize;
+    const currentPageValue = !Array.isArray(outer) && outer.current_page != null ? Number(outer.current_page) : state.page;
+    return {
+      items: items.map(normalizeItem),
+      total: Number.isFinite(totalValue) && totalValue >= 0 ? totalValue : items.length,
+      pageSize: Number.isFinite(pageSizeValue) && pageSizeValue > 0 ? pageSizeValue : config.pageSize,
+      currentPage: Number.isFinite(currentPageValue) && currentPageValue > 0 ? currentPageValue : state.page
+    };
+  };
+  const resolveRequestBridge = () => {
+    const contexts = [window];
+    if (window.parent && window.parent !== window) contexts.push(window.parent);
+    if (window.top && contexts.indexOf(window.top) === -1) contexts.push(window.top);
+    for (let index = 0; index < contexts.length; index += 1) {
+      try {
+        if (typeof contexts[index].r === 'function') return { context: contexts[index], request: contexts[index].r };
+      } catch (error) { continue; }
+    }
+    return null;
+  };
+  const request = (url, data) => {
+    const requestData = {};
+    Object.keys(data || {}).forEach((key) => { if (data[key] !== '' && data[key] != null) requestData[key] = data[key]; });
+    const currentWebsiteId = readWebsiteId();
+    if (currentWebsiteId) requestData.website_id = currentWebsiteId;
+    const bridge = isEditorContext ? resolveRequestBridge() : null;
+    if (bridge) {
+      try { return Promise.resolve(bridge.request.call(bridge.context, url, requestData, 'GET')); } catch (error) { return Promise.reject(error); }
+    }
+    const query = Object.keys(requestData).map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(requestData[key])).join('&');
+    const requestUrl = url + (query ? '?' + query : '');
+    if (typeof window.fetch === 'function') {
+      return window.fetch(requestUrl, { credentials: 'same-origin' }).then((response) => {
+        if (!response.ok) throw new Error('HTTP ' + response.status);
+        return response.json();
+      });
+    }
+    if (typeof window.XMLHttpRequest === 'function') {
+      return new Promise((resolve, reject) => {
+        const xhr = new window.XMLHttpRequest();
+        xhr.open('GET', requestUrl, true);
+        xhr.withCredentials = true;
+        xhr.onreadystatechange = () => {
+          if (xhr.readyState !== 4) return;
+          if (xhr.status < 200 || xhr.status >= 300) { reject(new Error('HTTP ' + xhr.status)); return; }
+          try { resolve(JSON.parse(xhr.responseText)); } catch (error) { reject(error); }
+        };
+        xhr.onerror = () => reject(new Error('Network error'));
+        xhr.send(null);
+      });
+    }
+    return Promise.reject(new Error('Request unavailable'));
+  };
+  const waitForWebsiteId = (attempts) => new Promise((resolve) => {
+    const check = (remaining) => {
+      const currentWebsiteId = readWebsiteId();
+      if (currentWebsiteId || remaining <= 0) { resolve(currentWebsiteId); return; }
+      window.setTimeout(() => check(remaining - 1), 120);
+    };
+    check(attempts);
+  });
+  const normalizeCategoryNodes = (response) => {
+    const normalized = unwrapResponse(response);
+    const data = normalized && normalized.data;
+    if (Array.isArray(data)) return data;
+    if (data && Array.isArray(data.data)) return data.data;
+    return [];
+  };
+  const indexCategories = (nodes) => {
+    state.categoryMap.clear();
+    state.categoryRoots = [];
+    const visit = (items, parentId) => (Array.isArray(items) ? items : []).forEach((item) => {
+      if (!item || item.id == null) return;
+      const id = String(item.id);
+      const children = Array.isArray(item.children) ? item.children : [];
+      const node = { id: id, name: String(item.name || item.title || ''), children: children, parentId: parentId || '' };
+      state.categoryMap.set(id, node);
+      if (!parentId) state.categoryRoots.push(node);
+      visit(children, id);
+    });
+    visit(nodes, '');
+  };
+  const expandCategory = (id, output) => {
+    const key = String(id);
+    if (output.indexOf(key) !== -1) return;
+    output.push(key);
+    const node = state.categoryMap.get(key);
+    if (node) node.children.forEach((child) => { if (child && child.id != null) expandCategory(String(child.id), output); });
+  };
+  const currentQueryCatIds = () => {
+    if (state.selectedCatId) {
+      const selected = [];
+      expandCategory(state.selectedCatId, selected);
+      return selected;
+    }
+    return state.allowedScopeIds.slice();
+  };
+  const categoryName = (id) => {
+    const node = id ? state.categoryMap.get(String(id)) : null;
+    return node ? node.name : '';
+  };
+  const updateToolbarVisibility = () => { toolbar.hidden = !!categoryBar.hidden && !!searchForm.hidden; };
+  const visibleCategoryNodes = () => {
+    if (!config.catIds.length) return state.categoryRoots.slice();
+    return config.catIds.map((id) => state.categoryMap.get(String(id))).filter(Boolean);
+  };
+  const createCategoryButton = (label, id) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'news-category-button' + (state.selectedCatId === id ? ' is-active' : '');
+    button.textContent = label;
+    button.setAttribute('aria-pressed', state.selectedCatId === id ? 'true' : 'false');
+    button.addEventListener('click', () => {
+      if (state.selectedCatId === id) return;
+      state.selectedCatId = id;
+      state.page = 1;
+      state.pageCorrectionUsed = false;
+      renderCategoryFilter();
+      loadList();
+    });
+    return button;
+  };
+  const renderCategoryFilter = () => {
+    clear(categoryBar);
+    if (!config.showCategoryFilter) { categoryBar.hidden = true; updateToolbarVisibility(); return; }
+    const nodes = visibleCategoryNodes();
+    if (!nodes.length) { categoryBar.hidden = true; updateToolbarVisibility(); return; }
+    categoryBar.hidden = false;
+    categoryBar.appendChild(createCategoryButton(text('all'), ''));
+    nodes.forEach((node) => {
+      if (node.name) categoryBar.appendChild(createCategoryButton(node.name, node.id));
+    });
+    updateToolbarVisibility();
+  };
+  const loadCategories = () => request('/api/gatewayCms/articles/category', { mold_types: config.type, language_type: language }).then((response) => {
+    indexCategories(normalizeCategoryNodes(response));
+    const allowed = [];
+    config.catIds.forEach((id) => expandCategory(id, allowed));
+    state.allowedScopeIds = allowed;
+    renderCategoryFilter();
+  }).catch(() => {
+    state.allowedScopeIds = config.catIds.slice();
+    categoryBar.hidden = true;
+    updateToolbarVisibility();
+  });
+  const renderLoading = () => {
+    clear(grid);
+    pagination.hidden = true;
+    const count = Math.min(config.pageSize, Math.max(1, columns));
+    for (let index = 0; index < count; index += 1) {
+      const skeleton = document.createElement('div');
+      skeleton.className = 'news-skeleton';
+      skeleton.setAttribute('aria-label', text('loading'));
+      grid.appendChild(skeleton);
+    }
+  };
+  const renderMessage = (message, retry) => {
+    clear(grid);
+    pagination.hidden = true;
+    const status = document.createElement('div');
+    status.className = 'news-status';
+    const label = document.createElement('span');
+    label.textContent = message;
+    status.appendChild(label);
+    if (retry) {
+      const button = document.createElement('button');
+      button.className = 'news-retry';
+      button.type = 'button';
+      button.textContent = text('retry');
+      button.addEventListener('click', () => initializeData());
+      status.appendChild(button);
+    }
+    grid.appendChild(status);
+  };
+  const placeholderSvg = () => '<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 11h32v26H8zM8 31l9-9 7 7 5-5 11 11M31 18h.01" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"/></svg>';
+  const renderItems = (items) => {
+    clear(grid);
+    const fragment = document.createDocumentFragment();
+    items.forEach((item) => {
+      const href = detailUrl(item);
+      const article = document.createElement('article');
+      article.className = 'news-card';
+      const media = document.createElement(href ? 'a' : 'div');
+      media.className = 'news-media' + (item.cover ? '' : ' news-image-placeholder');
+      if (href) media.href = href;
+      if (item.cover) {
+        const image = document.createElement('img');
+        image.className = 'news-image';
+        image.src = item.cover;
+        image.alt = item.title;
+        image.loading = 'lazy';
+        media.appendChild(image);
+      } else {
+        media.innerHTML = placeholderSvg();
+      }
+      article.appendChild(media);
+      const category = config.showCategory ? categoryName(item.catId) : '';
+      if (category || (config.showDate && item.date)) {
+        const meta = document.createElement('div');
+        meta.className = 'news-meta';
+        if (category) {
+          const categoryNode = document.createElement('span');
+          categoryNode.className = 'news-category';
+          categoryNode.textContent = category;
+          meta.appendChild(categoryNode);
+        }
+        if (config.showDate && item.date) {
+          const date = document.createElement('time');
+          date.className = 'news-date';
+          date.textContent = item.date;
+          meta.appendChild(date);
+        }
+        article.appendChild(meta);
+      }
+      const title = document.createElement('h3');
+      title.className = 'news-card-title';
+      const titleContent = document.createElement(href ? 'a' : 'span');
+      if (href) titleContent.href = href;
+      titleContent.textContent = item.title;
+      title.appendChild(titleContent);
+      article.appendChild(title);
+      fragment.appendChild(article);
+    });
+    grid.appendChild(fragment);
+  };
+  const createPageButton = (label, page, disabled, current, ariaLabel) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'news-page-button' + (current ? ' is-current' : '');
+    button.textContent = label;
+    button.disabled = !!disabled;
+    if (ariaLabel) button.setAttribute('aria-label', ariaLabel);
+    if (current) button.setAttribute('aria-current', 'page');
+    if (!disabled && !current) button.addEventListener('click', () => {
+      state.page = page;
+      state.pageCorrectionUsed = false;
+      loadList();
+      try { root.scrollIntoView({ behavior: 'smooth', block: 'start' }); } catch (error) { root.scrollIntoView(true); }
+    });
+    return button;
+  };
+  const pageSequence = (current, total) => {
+    if (total <= 7) {
+      const all = [];
+      for (let page = 1; page <= total; page += 1) all.push(page);
+      return all;
+    }
+    const values = [1, current - 1, current, current + 1, total].filter((page) => page >= 1 && page <= total);
+    const unique = values.filter((page, index) => values.indexOf(page) === index).sort((a, b) => a - b);
+    const output = [];
+    unique.forEach((page, index) => {
+      if (index && page - unique[index - 1] > 1) output.push(null);
+      output.push(page);
+    });
+    return output;
+  };
+  const renderPagination = (total, pageSize) => {
+    clear(pagination);
+    const totalPages = Math.max(1, Math.ceil(total / pageSize));
+    if (!config.showPagination || total <= pageSize) { pagination.hidden = true; return; }
+    pagination.hidden = false;
+    pagination.setAttribute('aria-label', text('pagination'));
+    pagination.appendChild(createPageButton('←', state.page - 1, state.page <= 1, false, text('previous')));
+    pageSequence(state.page, totalPages).forEach((page) => {
+      if (page == null) {
+        const ellipsis = document.createElement('span');
+        ellipsis.className = 'news-page-ellipsis';
+        ellipsis.textContent = '…';
+        pagination.appendChild(ellipsis);
+      } else {
+        pagination.appendChild(createPageButton(String(page), page, false, page === state.page, String(page)));
+      }
+    });
+    pagination.appendChild(createPageButton('→', state.page + 1, state.page >= totalPages, false, text('next')));
+  };
+  const loadList = () => {
+    if (config.moduleType !== 'article' || config.type !== '1') {
+      renderMessage(text('error'), false);
+      return;
+    }
+    if (!readWebsiteId()) {
+      renderMessage(text('error'), true);
+      return;
+    }
+    const requestId = ++state.requestSeq;
+    renderLoading();
+    const data = {
+      mold_types: config.type,
+      page: state.page,
+      page_size: config.pageSize,
+      sort_by: config.sortBy,
+      sort: config.sort,
+      language_type: language
+    };
+    const catIds = currentQueryCatIds();
+    if (catIds.length) data.cat_ids = catIds.join(',');
+    if (state.keywords) data.keywords = state.keywords;
+    request('/api/gatewayCms/articles/list', data).then((response) => {
+      if (state.destroyed || requestId !== state.requestSeq) return;
+      const normalized = unwrapResponse(response);
+      if (normalized && normalized.code != null && Number(normalized.code) !== 0) throw new Error('API');
+      const result = normalizeListResponse(normalized);
+      state.total = result.total;
+      const totalPages = Math.max(1, Math.ceil(result.total / result.pageSize));
+      if (result.total > 0 && state.page > totalPages && !state.pageCorrectionUsed) {
+        state.page = totalPages;
+        state.pageCorrectionUsed = true;
+        loadList();
+        return;
+      }
+      state.page = result.currentPage;
+      state.pageCorrectionUsed = false;
+      if (!result.items.length) renderMessage(text('empty'), false); else renderItems(result.items);
+      renderPagination(result.total, result.pageSize);
+    }).catch(() => {
+      if (state.destroyed || requestId !== state.requestSeq) return;
+      renderMessage(text('error'), true);
+    });
+  };
+  const initializeData = () => {
+    renderLoading();
+    return waitForWebsiteId(20).then((currentWebsiteId) => {
+      if (!currentWebsiteId) { renderMessage(text('error'), true); return null; }
+      return loadCategories().then(loadList);
+    });
+  };
+  const onSearchSubmit = (event) => {
+    event.preventDefault();
+    const keywords = String(searchInput.value || '').trim();
+    if (keywords === state.keywords) return;
+    state.keywords = keywords;
+    state.page = 1;
+    state.pageCorrectionUsed = false;
+    loadList();
+  };
+
+  searchForm.hidden = !config.showSearch;
+  updateToolbarVisibility();
+  searchInput.placeholder = text('search_placeholder');
+  searchInput.setAttribute('aria-label', text('search_label'));
+  searchButton.setAttribute('aria-label', text('search_label'));
+  searchForm.addEventListener('submit', onSearchSubmit);
+  initializeData();
+
+  let removalObserver = null;
+  if (typeof MutationObserver === 'function') {
+    removalObserver = new MutationObserver(() => {
+      if (document.documentElement.contains(root)) return;
+      state.destroyed = true;
+      state.requestSeq += 1;
+      searchForm.removeEventListener('submit', onSearchSubmit);
+      removalObserver.disconnect();
+    });
+    removalObserver.observe(document.documentElement, { childList: true, subtree: true });
+  }
+}());
+</script>

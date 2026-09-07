@@ -1,0 +1,6 @@
+interface:
+  display_name: "LTD 文章自动推送"
+  short_description: "先自动排版并校验本地文章，再安全推送到 LTD 网站并完成查重与验收"
+  default_prompt: "Use $ltd-article-publisher to format a local article for the website, validate it, publish it through an LTD-compatible API, and verify the result."
+policy:
+  allow_implicit_invocation: true

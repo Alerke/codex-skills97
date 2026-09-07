@@ -1,0 +1,157 @@
+{
+  "version": 1,
+  "palettes": [
+    {
+      "id": "olive-gold",
+      "name": "墨绿暖金",
+      "recommended_for": ["企业案例", "经营复盘", "品牌观点", "长期主义"],
+      "colors": {
+        "background": "#FFFFFF",
+        "body": "#232829",
+        "secondary": "#2E3435",
+        "heading": "#1B5A5E",
+        "emphasis": "#1D5558",
+        "accent": "#A57635",
+        "label": "#5F6969",
+        "url": "#6F7A7A",
+        "border": "#E5E8E7",
+        "strong_border": "#D9DEDD",
+        "cta": "#163F42",
+        "soft": "#F4F7F6"
+      }
+    },
+    {
+      "id": "ocean-copper",
+      "name": "海蓝铜棕",
+      "recommended_for": ["AI 工具", "科技教程", "数字化", "产品能力"],
+      "colors": {
+        "background": "#FFFFFF",
+        "body": "#232A31",
+        "secondary": "#303A43",
+        "heading": "#174C6B",
+        "emphasis": "#185A78",
+        "accent": "#B06B32",
+        "label": "#66727C",
+        "url": "#6B7C89",
+        "border": "#E3E9ED",
+        "strong_border": "#D6E0E6",
+        "cta": "#123B53",
+        "soft": "#F3F7F9"
+      }
+    },
+    {
+      "id": "indigo-amber",
+      "name": "靛紫琥珀",
+      "recommended_for": ["创新趋势", "专业洞察", "知识服务", "创意方法"],
+      "colors": {
+        "background": "#FFFFFF",
+        "body": "#282832",
+        "secondary": "#373743",
+        "heading": "#3F3A76",
+        "emphasis": "#4A4682",
+        "accent": "#B47A18",
+        "label": "#6C6A78",
+        "url": "#737188",
+        "border": "#E6E4EC",
+        "strong_border": "#D9D6E4",
+        "cta": "#312D63",
+        "soft": "#F6F5FA"
+      }
+    },
+    {
+      "id": "burgundy-brass",
+      "name": "酒红黄铜",
+      "recommended_for": ["人物故事", "品牌文化", "高端服务", "深度访谈"],
+      "colors": {
+        "background": "#FFFFFF",
+        "body": "#2B2527",
+        "secondary": "#3A3134",
+        "heading": "#7A2938",
+        "emphasis": "#853245",
+        "accent": "#A97924",
+        "label": "#75676B",
+        "url": "#7F6F74",
+        "border": "#ECE3E5",
+        "strong_border": "#E0D4D7",
+        "cta": "#63202D",
+        "soft": "#FAF5F6"
+      }
+    },
+    {
+      "id": "pine-clay",
+      "name": "松绿陶土",
+      "recommended_for": ["制造业", "可持续经营", "农业", "生活方式"],
+      "colors": {
+        "background": "#FFFFFF",
+        "body": "#242A26",
+        "secondary": "#333B36",
+        "heading": "#2F5B46",
+        "emphasis": "#34664F",
+        "accent": "#B56845",
+        "label": "#66716A",
+        "url": "#6E7A73",
+        "border": "#E2E8E4",
+        "strong_border": "#D4DED7",
+        "cta": "#264B3A",
+        "soft": "#F4F8F5"
+      }
+    },
+    {
+      "id": "graphite-blue",
+      "name": "石墨蓝灰",
+      "recommended_for": ["研究报告", "B2B 方案", "数据分析", "行业白皮书"],
+      "colors": {
+        "background": "#FFFFFF",
+        "body": "#25282B",
+        "secondary": "#343A40",
+        "heading": "#34495E",
+        "emphasis": "#3B6289",
+        "accent": "#4C78A8",
+        "label": "#68737D",
+        "url": "#707D89",
+        "border": "#E3E7EA",
+        "strong_border": "#D5DCE1",
+        "cta": "#2B3D4F",
+        "soft": "#F4F6F8"
+      }
+    },
+    {
+      "id": "teal-coral",
+      "name": "青黛珊瑚",
+      "recommended_for": ["用户案例", "增长实践", "服务体验", "轻量教程"],
+      "colors": {
+        "background": "#FFFFFF",
+        "body": "#222B2C",
+        "secondary": "#303C3D",
+        "heading": "#16656A",
+        "emphasis": "#1D7075",
+        "accent": "#C15E4A",
+        "label": "#617174",
+        "url": "#697B7E",
+        "border": "#E0E9E9",
+        "strong_border": "#D2DFE0",
+        "cta": "#115358",
+        "soft": "#F2F8F8"
+      }
+    },
+    {
+      "id": "midnight-gold",
+      "name": "午夜蓝金",
+      "recommended_for": ["战略观点", "企业管理", "商业分析", "发布公告"],
+      "colors": {
+        "background": "#FFFFFF",
+        "body": "#242833",
+        "secondary": "#333947",
+        "heading": "#25385B",
+        "emphasis": "#304B78",
+        "accent": "#B58A3A",
+        "label": "#697184",
+        "url": "#727C91",
+        "border": "#E3E6ED",
+        "strong_border": "#D6DBE5",
+        "cta": "#1D2D4B",
+        "soft": "#F4F6FA"
+      }
+    }
+  ]
+}

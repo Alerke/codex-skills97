@@ -1,0 +1,7 @@
+interface:
+  display_name: "自适应3D极简海报"
+  short_description: "把文案设计成白色主调、彩色3D视觉的自适应多尺寸宣传海报"
+  brand_color: "#7C5CFC"
+  default_prompt: "使用 $adaptive-3d-poster-maker 将这段文案制作成适合目标渠道的3D极简宣传海报。"
+policy:
+  allow_implicit_invocation: true

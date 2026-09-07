@@ -1,0 +1,723 @@
+[
+  {
+    "key": "cat",
+    "label": "新闻文章分类",
+    "value": "{\"moduleType\":\"article\",\"type\":\"1\",\"ids\":\"\",\"names\":[],\"pageSize\":6,\"sortColumn\":\"published_at\",\"sortDirection\":\"desc\",\"sortColumnVersion\":2}",
+    "default_value": "{\"moduleType\":\"article\",\"type\":\"1\",\"ids\":\"\",\"names\":[],\"pageSize\":6,\"sortColumn\":\"published_at\",\"sortDirection\":\"desc\",\"sortColumnVersion\":2}",
+    "input_type": "category"
+  },
+  {
+    "key": "i18n",
+    "label": "状态多语言文案",
+    "value": "{\"zh-cn\":{\"loading\":\"正在加载...\",\"empty\":\"暂无新闻资讯\",\"error\":\"加载失败，请稍后重试\",\"retry\":\"重新加载\",\"read_more\":\"查看详情\"},\"zh\":{\"loading\":\"正在載入...\",\"empty\":\"暫無新聞資訊\",\"error\":\"載入失敗，請稍後重試\",\"retry\":\"重新載入\",\"read_more\":\"查看詳情\"},\"en\":{\"loading\":\"Loading...\",\"empty\":\"No news yet\",\"error\":\"Failed to load news\",\"retry\":\"Retry\",\"read_more\":\"Read more\"},\"kr\":{\"loading\":\"불러오는 중...\",\"empty\":\"뉴스가 없습니다\",\"error\":\"뉴스를 불러오지 못했습니다\",\"retry\":\"다시 시도\",\"read_more\":\"자세히 보기\"},\"ru\":{\"loading\":\"Загрузка...\",\"empty\":\"Новостей пока нет\",\"error\":\"Не удалось загрузить новости\",\"retry\":\"Повторить\",\"read_more\":\"Подробнее\"},\"jp\":{\"loading\":\"読み込み中...\",\"empty\":\"ニュースはありません\",\"error\":\"ニュースを読み込めませんでした\",\"retry\":\"再読み込み\",\"read_more\":\"詳細を見る\"}}",
+    "default_value": "{\"zh-cn\":{\"loading\":\"正在加载...\",\"empty\":\"暂无新闻资讯\",\"error\":\"加载失败，请稍后重试\",\"retry\":\"重新加载\",\"read_more\":\"查看详情\"},\"zh\":{\"loading\":\"正在載入...\",\"empty\":\"暫無新聞資訊\",\"error\":\"載入失敗，請稍後重試\",\"retry\":\"重新載入\",\"read_more\":\"查看詳情\"},\"en\":{\"loading\":\"Loading...\",\"empty\":\"No news yet\",\"error\":\"Failed to load news\",\"retry\":\"Retry\",\"read_more\":\"Read more\"},\"kr\":{\"loading\":\"불러오는 중...\",\"empty\":\"뉴스가 없습니다\",\"error\":\"뉴스를 불러오지 못했습니다\",\"retry\":\"다시 시도\",\"read_more\":\"자세히 보기\"},\"ru\":{\"loading\":\"Загрузка...\",\"empty\":\"Новостей пока нет\",\"error\":\"Не удалось загрузить новости\",\"retry\":\"Повторить\",\"read_more\":\"Подробнее\"},\"jp\":{\"loading\":\"読み込み中...\",\"empty\":\"ニュースはありません\",\"error\":\"ニュースを読み込めませんでした\",\"retry\":\"再読み込み\",\"read_more\":\"詳細を見る\"}}",
+    "input_type": "i18n"
+  },
+  {
+    "key": "section_title",
+    "label": "版块标题",
+    "value": "新闻",
+    "default_value": "新闻",
+    "input_type": "text"
+  },
+  {
+    "key": "all_news_text",
+    "label": "全部新闻按钮文案",
+    "value": "全部新闻",
+    "default_value": "全部新闻",
+    "input_type": "text"
+  },
+  {
+    "key": "all_news_link",
+    "label": "更多资讯跳转（仅此按钮）",
+    "value": "{\"type\":\"web\",\"href\":\"/news\",\"target\":\"_self\"}",
+    "default_value": "{\"type\":\"web\",\"href\":\"/news\",\"target\":\"_self\"}",
+    "input_type": "jump"
+  },
+  {
+    "key": "previous_label",
+    "label": "上一条轮播按钮说明",
+    "value": "上一条新闻",
+    "default_value": "上一条新闻",
+    "input_type": "text"
+  },
+  {
+    "key": "next_label",
+    "label": "下一条轮播按钮说明",
+    "value": "下一条新闻",
+    "default_value": "下一条新闻",
+    "input_type": "text"
+  },
+  {
+    "key": "show_all_news",
+    "label": "显示全部新闻按钮",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "switch"
+  },
+  {
+    "key": "show_arrows",
+    "label": "显示轮播箭头",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "switch"
+  },
+  {
+    "key": "show_thumbnail",
+    "label": "显示文章封面",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "switch"
+  },
+  {
+    "key": "show_abstract",
+    "label": "显示文章摘要",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "switch"
+  },
+  {
+    "key": "show_date",
+    "label": "显示发布日期",
+    "value": "0",
+    "default_value": "0",
+    "input_type": "switch"
+  },
+  {
+    "key": "show_card_arrow",
+    "label": "显示卡片详情箭头",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "switch"
+  },
+  {
+    "key": "editor_preview_enabled",
+    "label": "接口无数据时显示示例卡片（开启后可能与前端不同）",
+    "value": "0",
+    "default_value": "0",
+    "input_type": "switch"
+  },
+  {
+    "key": "fallback_image",
+    "label": "文章无封面时的默认图片",
+    "value": "https://static.ltdcdn.com/assets/images/no-image.jpg",
+    "default_value": "https://static.ltdcdn.com/assets/images/no-image.jpg",
+    "input_type": "image"
+  },
+  {
+    "key": "editor_preview_image_1",
+    "label": "编辑器预览图1",
+    "value": "https://static.ltdcdn.com/assets/images/no-image.jpg",
+    "default_value": "https://static.ltdcdn.com/assets/images/no-image.jpg",
+    "input_type": "image"
+  },
+  {
+    "key": "editor_preview_title_1",
+    "label": "编辑器预览标题1",
+    "value": "iGel 扩展产品系列：洁净体验全面升级",
+    "default_value": "iGel 扩展产品系列：洁净体验全面升级",
+    "input_type": "text"
+  },
+  {
+    "key": "editor_preview_abstract_1",
+    "label": "编辑器预览摘要1",
+    "value": "品牌推出更多家庭清洁品类，以专业配方满足日常清洁需求。",
+    "default_value": "品牌推出更多家庭清洁品类，以专业配方满足日常清洁需求。",
+    "input_type": "text"
+  },
+  {
+    "key": "editor_preview_image_2",
+    "label": "编辑器预览图2",
+    "value": "https://static.ltdcdn.com/assets/images/no-image.jpg",
+    "default_value": "https://static.ltdcdn.com/assets/images/no-image.jpg",
+    "input_type": "image"
+  },
+  {
+    "key": "editor_preview_title_2",
+    "label": "编辑器预览标题2",
+    "value": "iGel 亮相行业盛会：创新品牌引发关注",
+    "default_value": "iGel 亮相行业盛会：创新品牌引发关注",
+    "input_type": "text"
+  },
+  {
+    "key": "editor_preview_abstract_2",
+    "label": "编辑器预览摘要2",
+    "value": "iGel 携全系列产品亮相行业活动，展示品牌研发与产品创新实力。",
+    "default_value": "iGel 携全系列产品亮相行业活动，展示品牌研发与产品创新实力。",
+    "input_type": "text"
+  },
+  {
+    "key": "editor_preview_image_3",
+    "label": "编辑器预览图3",
+    "value": "https://static.ltdcdn.com/assets/images/no-image.jpg",
+    "default_value": "https://static.ltdcdn.com/assets/images/no-image.jpg",
+    "input_type": "image"
+  },
+  {
+    "key": "editor_preview_title_3",
+    "label": "编辑器预览标题3",
+    "value": "iGel：一个创新清洁品牌的诞生",
+    "default_value": "iGel：一个创新清洁品牌的诞生",
+    "input_type": "text"
+  },
+  {
+    "key": "editor_preview_abstract_3",
+    "label": "编辑器预览摘要3",
+    "value": "从配方研发到包装设计，每一个细节都围绕高效、安全与便捷展开。",
+    "default_value": "从配方研发到包装设计，每一个细节都围绕高效、安全与便捷展开。",
+    "input_type": "text"
+  },
+  {
+    "key": "editor_preview_image_4",
+    "label": "编辑器预览图4",
+    "value": "https://static.ltdcdn.com/assets/images/no-image.jpg",
+    "default_value": "https://static.ltdcdn.com/assets/images/no-image.jpg",
+    "input_type": "image"
+  },
+  {
+    "key": "editor_preview_title_4",
+    "label": "编辑器预览标题4",
+    "value": "全新家居清洁方案，让日常护理更轻松",
+    "default_value": "全新家居清洁方案，让日常护理更轻松",
+    "input_type": "text"
+  },
+  {
+    "key": "editor_preview_abstract_4",
+    "label": "编辑器预览摘要4",
+    "value": "覆盖衣物与居家清洁场景，为消费者带来稳定、舒适的使用体验。",
+    "default_value": "覆盖衣物与居家清洁场景，为消费者带来稳定、舒适的使用体验。",
+    "input_type": "text"
+  },
+  {
+    "key": "columns",
+    "label": "桌面显示列数",
+    "value": "3",
+    "default_value": "3",
+    "input_type": "number"
+  },
+  {
+    "key": "tablet_columns",
+    "label": "平板显示列数",
+    "value": "2",
+    "default_value": "2",
+    "input_type": "number"
+  },
+  {
+    "key": "mobile_columns",
+    "label": "手机显示列数",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "number"
+  },
+  {
+    "key": "section_min_height",
+    "label": "版块最小高度(px)",
+    "value": "740",
+    "default_value": "740",
+    "input_type": "number"
+  },
+  {
+    "key": "content_max_width",
+    "label": "内容最大宽度(px)",
+    "value": "1200",
+    "default_value": "1200",
+    "input_type": "number"
+  },
+  {
+    "key": "content_side_padding",
+    "label": "桌面端两侧留白(px)",
+    "value": "48",
+    "default_value": "48",
+    "input_type": "number"
+  },
+  {
+    "key": "tablet_side_padding",
+    "label": "平板端两侧留白(px)",
+    "value": "40",
+    "default_value": "40",
+    "input_type": "number"
+  },
+  {
+    "key": "mobile_side_padding",
+    "label": "手机端两侧留白(px)",
+    "value": "28",
+    "default_value": "28",
+    "input_type": "number"
+  },
+  {
+    "key": "padding_top",
+    "label": "顶部留白(px)",
+    "value": "73",
+    "default_value": "73",
+    "input_type": "number"
+  },
+  {
+    "key": "padding_bottom",
+    "label": "底部留白(px)",
+    "value": "64",
+    "default_value": "64",
+    "input_type": "number"
+  },
+  {
+    "key": "header_margin_bottom",
+    "label": "标题与卡片间距(px)",
+    "value": "47",
+    "default_value": "47",
+    "input_type": "number"
+  },
+  {
+    "key": "action_gap",
+    "label": "桌面端顶部按钮间距(px)",
+    "value": "14",
+    "default_value": "14",
+    "input_type": "number"
+  },
+  {
+    "key": "mobile_padding_top",
+    "label": "手机端顶部留白(px)",
+    "value": "52",
+    "default_value": "52",
+    "input_type": "number"
+  },
+  {
+    "key": "mobile_section_title_size",
+    "label": "手机端版块标题字号(px)",
+    "value": "34",
+    "default_value": "34",
+    "input_type": "number"
+  },
+  {
+    "key": "mobile_header_margin_bottom",
+    "label": "手机端标题与卡片间距(px)",
+    "value": "32",
+    "default_value": "32",
+    "input_type": "number"
+  },
+  {
+    "key": "mobile_header_gap",
+    "label": "手机端标题与按钮横向间距(px)",
+    "value": "22",
+    "default_value": "22",
+    "input_type": "number"
+  },
+  {
+    "key": "mobile_action_gap",
+    "label": "手机端顶部按钮间距(px)",
+    "value": "8",
+    "default_value": "8",
+    "input_type": "number"
+  },
+  {
+    "key": "mobile_button_padding_x",
+    "label": "手机端全部新闻按钮左右内距(px)",
+    "value": "12",
+    "default_value": "12",
+    "input_type": "number"
+  },
+  {
+    "key": "card_gap",
+    "label": "卡片间距(px)",
+    "value": "20",
+    "default_value": "20",
+    "input_type": "number"
+  },
+  {
+    "key": "card_height",
+    "label": "卡片高度(px)",
+    "value": "513",
+    "default_value": "513",
+    "input_type": "number"
+  },
+  {
+    "key": "card_padding",
+    "label": "卡片内边距(px)",
+    "value": "13",
+    "default_value": "13",
+    "input_type": "number"
+  },
+  {
+    "key": "card_radius",
+    "label": "卡片圆角(px)",
+    "value": "10",
+    "default_value": "10",
+    "input_type": "number"
+  },
+  {
+    "key": "card_border_width",
+    "label": "卡片边框宽度(px)",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "number"
+  },
+  {
+    "key": "image_width_percent",
+    "label": "封面宽度比例(%)",
+    "value": "100",
+    "default_value": "100",
+    "input_type": "number"
+  },
+  {
+    "key": "image_height",
+    "label": "封面高度(px)",
+    "value": "240",
+    "default_value": "240",
+    "input_type": "number"
+  },
+  {
+    "key": "image_radius",
+    "label": "封面圆角(px)",
+    "value": "9",
+    "default_value": "9",
+    "input_type": "number"
+  },
+  {
+    "key": "image_fit",
+    "label": "封面填充方式(cover/contain)",
+    "value": "cover",
+    "default_value": "cover",
+    "input_type": "text"
+  },
+  {
+    "key": "section_title_size",
+    "label": "版块标题字号(px)",
+    "value": "44",
+    "default_value": "44",
+    "input_type": "number"
+  },
+  {
+    "key": "section_title_weight",
+    "label": "版块标题字重",
+    "value": "400",
+    "default_value": "400",
+    "input_type": "number"
+  },
+  {
+    "key": "section_title_line_height",
+    "label": "版块标题行高",
+    "value": "1.1",
+    "default_value": "1.1",
+    "input_type": "number"
+  },
+  {
+    "key": "section_title_letter_spacing",
+    "label": "版块标题字间距(em)",
+    "value": "-0.02",
+    "default_value": "-0.02",
+    "input_type": "number"
+  },
+  {
+    "key": "card_title_size",
+    "label": "文章标题字号(px)",
+    "value": "23",
+    "default_value": "23",
+    "input_type": "number"
+  },
+  {
+    "key": "card_title_weight",
+    "label": "文章标题字重",
+    "value": "600",
+    "default_value": "600",
+    "input_type": "number"
+  },
+  {
+    "key": "card_title_line_height",
+    "label": "文章标题行高",
+    "value": "1.45",
+    "default_value": "1.45",
+    "input_type": "number"
+  },
+  {
+    "key": "card_title_lines",
+    "label": "文章标题最多行数",
+    "value": "3",
+    "default_value": "3",
+    "input_type": "number"
+  },
+  {
+    "key": "card_title_margin_top",
+    "label": "文章标题顶部间距(px)",
+    "value": "10",
+    "default_value": "10",
+    "input_type": "number"
+  },
+  {
+    "key": "abstract_size",
+    "label": "文章摘要字号(px)",
+    "value": "14",
+    "default_value": "14",
+    "input_type": "number"
+  },
+  {
+    "key": "abstract_weight",
+    "label": "文章摘要字重",
+    "value": "500",
+    "default_value": "500",
+    "input_type": "number"
+  },
+  {
+    "key": "abstract_line_height",
+    "label": "文章摘要行高",
+    "value": "1.38",
+    "default_value": "1.38",
+    "input_type": "number"
+  },
+  {
+    "key": "abstract_lines",
+    "label": "文章摘要最多行数",
+    "value": "3",
+    "default_value": "3",
+    "input_type": "number"
+  },
+  {
+    "key": "abstract_margin_top",
+    "label": "文章摘要顶部间距(px)",
+    "value": "9",
+    "default_value": "9",
+    "input_type": "number"
+  },
+  {
+    "key": "date_size",
+    "label": "发布日期字号(px)",
+    "value": "13",
+    "default_value": "13",
+    "input_type": "number"
+  },
+  {
+    "key": "date_line_height",
+    "label": "发布日期行高",
+    "value": "1.4",
+    "default_value": "1.4",
+    "input_type": "number"
+  },
+  {
+    "key": "date_margin_top",
+    "label": "发布日期顶部间距(px)",
+    "value": "8",
+    "default_value": "8",
+    "input_type": "number"
+  },
+  {
+    "key": "status_font_size",
+    "label": "加载与空状态字号(px)",
+    "value": "16",
+    "default_value": "16",
+    "input_type": "number"
+  },
+  {
+    "key": "top_button_font_size",
+    "label": "全部新闻按钮字号(px)",
+    "value": "13",
+    "default_value": "13",
+    "input_type": "number"
+  },
+  {
+    "key": "top_button_font_weight",
+    "label": "全部新闻按钮字重",
+    "value": "600",
+    "default_value": "600",
+    "input_type": "number"
+  },
+  {
+    "key": "top_button_height",
+    "label": "全部新闻按钮高度(px)",
+    "value": "36",
+    "default_value": "36",
+    "input_type": "number"
+  },
+  {
+    "key": "top_button_min_width",
+    "label": "全部新闻按钮最小宽度(px)",
+    "value": "92",
+    "default_value": "92",
+    "input_type": "number"
+  },
+  {
+    "key": "top_button_padding_x",
+    "label": "全部新闻按钮左右内距(px)",
+    "value": "18",
+    "default_value": "18",
+    "input_type": "number"
+  },
+  {
+    "key": "top_button_border_width",
+    "label": "全部新闻按钮边框宽度(px)",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "number"
+  },
+  {
+    "key": "top_button_radius",
+    "label": "全部新闻按钮圆角(px)",
+    "value": "999",
+    "default_value": "999",
+    "input_type": "number"
+  },
+  {
+    "key": "top_arrow_size",
+    "label": "顶部箭头按钮大小(px)",
+    "value": "36",
+    "default_value": "36",
+    "input_type": "number"
+  },
+  {
+    "key": "top_arrow_border_width",
+    "label": "顶部箭头边框宽度(px)",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "number"
+  },
+  {
+    "key": "top_arrow_icon_size",
+    "label": "顶部箭头图标大小(px)",
+    "value": "17",
+    "default_value": "17",
+    "input_type": "number"
+  },
+  {
+    "key": "top_arrow_stroke_width",
+    "label": "顶部箭头线条粗细",
+    "value": "1.7",
+    "default_value": "1.7",
+    "input_type": "number"
+  },
+  {
+    "key": "card_arrow_size",
+    "label": "卡片箭头按钮大小(px)",
+    "value": "48",
+    "default_value": "48",
+    "input_type": "number"
+  },
+  {
+    "key": "card_arrow_border_width",
+    "label": "卡片箭头边框宽度(px)",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "number"
+  },
+  {
+    "key": "card_arrow_icon_size",
+    "label": "卡片箭头图标大小(px)",
+    "value": "25",
+    "default_value": "25",
+    "input_type": "number"
+  },
+  {
+    "key": "card_arrow_stroke_width",
+    "label": "卡片箭头线条粗细",
+    "value": "1.3",
+    "default_value": "1.3",
+    "input_type": "number"
+  },
+  {
+    "key": "retry_font_size",
+    "label": "重试按钮字号(px)",
+    "value": "14",
+    "default_value": "14",
+    "input_type": "number"
+  },
+  {
+    "key": "retry_height",
+    "label": "重试按钮高度(px)",
+    "value": "36",
+    "default_value": "36",
+    "input_type": "number"
+  },
+  {
+    "key": "retry_padding_x",
+    "label": "重试按钮左右内距(px)",
+    "value": "18",
+    "default_value": "18",
+    "input_type": "number"
+  },
+  {
+    "key": "retry_gap",
+    "label": "重试按钮与提示间距(px)",
+    "value": "12",
+    "default_value": "12",
+    "input_type": "number"
+  },
+  {
+    "key": "font_family",
+    "label": "模块字体",
+    "value": "Arial,Microsoft YaHei,sans-serif",
+    "default_value": "Arial,Microsoft YaHei,sans-serif",
+    "input_type": "text"
+  },
+  {
+    "key": "gradient_angle",
+    "label": "背景渐变角度(deg)",
+    "value": "105",
+    "default_value": "105",
+    "input_type": "number"
+  },
+  {
+    "key": "background_start",
+    "label": "背景渐变起始色",
+    "value": "#2675c5",
+    "default_value": "#2675c5",
+    "input_type": "color"
+  },
+  {
+    "key": "background_end",
+    "label": "背景渐变结束色",
+    "value": "#59c2dc",
+    "default_value": "#59c2dc",
+    "input_type": "color"
+  },
+  {
+    "key": "section_title_color",
+    "label": "版块标题颜色",
+    "value": "#ffffff",
+    "default_value": "#ffffff",
+    "input_type": "color"
+  },
+  {
+    "key": "card_title_color",
+    "label": "文章标题颜色",
+    "value": "#ffffff",
+    "default_value": "#ffffff",
+    "input_type": "color"
+  },
+  {
+    "key": "abstract_color",
+    "label": "文章摘要颜色",
+    "value": "#ffffff",
+    "default_value": "#ffffff",
+    "input_type": "color"
+  },
+  {
+    "key": "card_background_color",
+    "label": "卡片背景颜色",
+    "value": "rgba(255,255,255,0.10)",
+    "default_value": "rgba(255,255,255,0.10)",
+    "input_type": "color"
+  },
+  {
+    "key": "card_border_color",
+    "label": "卡片边框颜色",
+    "value": "rgba(255,255,255,0.11)",
+    "default_value": "rgba(255,255,255,0.11)",
+    "input_type": "color"
+  },
+  {
+    "key": "button_border_color",
+    "label": "按钮边框颜色",
+    "value": "#ffffff",
+    "default_value": "#ffffff",
+    "input_type": "color"
+  },
+  {
+    "key": "button_text_color",
+    "label": "按钮图标文字颜色",
+    "value": "#ffffff",
+    "default_value": "#ffffff",
+    "input_type": "color"
+  },
+  {
+    "key": "image_background_color",
+    "label": "封面占位背景颜色",
+    "value": "rgba(255,255,255,0.08)",
+    "default_value": "rgba(255,255,255,0.08)",
+    "input_type": "color"
+  }
+]

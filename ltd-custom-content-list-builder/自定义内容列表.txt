@@ -1,0 +1,23 @@
+LTD 自定义内容列表模块 Skill
+
+1. moduleType 固定为 customContent，分类 input_type 固定为 category。
+2. 分类接口使用 /api/website/customizedContentCat。
+3. 列表接口使用 /api/gatewayCms/getCustomizedContentList。
+4. 列表数组优先读取 response.data.data。
+5. 已观察参数为 cat_id、page、page_size、keywords、sort_by、sort、language_type。
+6. 分类为空时省略 cat_id，获取全部内容，不自动选择首项。
+7. 父分类包含自身与全部后代；“全部”只查询后台允许范围。
+8. 常见字段为 id、cat_id、title、abstract、content、images、defined_link、attrs、sort。
+9. images 逐项寻找真实安全 URL，不假设第一项必定存在。
+10. attrs 先归一成按 id/key/name 查询的 Map，字段缺失不能报错。
+11. content 可能是 HTML，默认只显示 abstract；未经可信净化不得注入。
+12. defined_link 安全有效时才可点击；无链接不虚构详情路径。
+13. 至少实现加载、成功、空数据、错误重试四种状态。
+14. 分类、搜索、排序变化重置第 1 页，旧请求不能覆盖新结果。
+15. 只使用原生 CSS，根类 .customContentListYYYYMMDD。
+16. 使用 document.currentScript 定位实例，查询和事件限制在当前模块。
+17. 使用成熟 ES6、const/let、箭头函数和模板字面量，动态数据先转义。
+18. 多语言 key/input_type 均为 i18n，配置错误必须安全回退。
+19. 同一轮交付完整 HTML 和覆盖全部占位符的可导入 JSON。
+
+默认配置见同目录“自定义内容列表配置.json”。

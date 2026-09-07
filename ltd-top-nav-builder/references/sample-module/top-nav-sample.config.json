@@ -1,0 +1,184 @@
+[
+  {
+    "key": "nav",
+    "label": "导航菜单",
+    "value": "[{\"id\":\"home\",\"title\":\"首页\",\"jump\":{\"type\":\"web\",\"href\":\"/\",\"target\":\"_self\"},\"children\":[],\"remark\":\"\",\"icon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hoverIcon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hidden\":false,\"isBackend\":false},{\"id\":\"about\",\"title\":\"关于我们\",\"jump\":{\"type\":\"web\",\"href\":\"/about\",\"target\":\"_self\"},\"children\":[{\"id\":\"about-company\",\"title\":\"公司简介\",\"jump\":{\"type\":\"web\",\"href\":\"/about/company\",\"target\":\"_self\"},\"children\":[],\"remark\":\"\",\"icon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hoverIcon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hidden\":false,\"isBackend\":false},{\"id\":\"about-culture\",\"title\":\"企业文化\",\"jump\":{\"type\":\"web\",\"href\":\"/dingbudaohang\",\"target\":\"_self\"},\"children\":[],\"remark\":\"\",\"icon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hoverIcon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hidden\":false,\"isBackend\":false}],\"remark\":\"\",\"icon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hoverIcon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hidden\":false,\"isBackend\":false},{\"id\":\"services\",\"title\":\"产品服务\",\"jump\":{\"type\":\"web\",\"href\":\"/services\",\"target\":\"_self\"},\"children\":[{\"id\":\"services-main\",\"title\":\"核心服务\",\"jump\":{\"type\":\"web\",\"href\":\"/services/core\",\"target\":\"_self\"},\"children\":[],\"remark\":\"\",\"icon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hoverIcon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hidden\":false,\"isBackend\":false},{\"id\":\"services-solution\",\"title\":\"解决方案\",\"jump\":{\"type\":\"web\",\"href\":\"/services/solution\",\"target\":\"_self\"},\"children\":[],\"remark\":\"\",\"icon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hoverIcon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hidden\":false,\"isBackend\":false}],\"remark\":\"\",\"icon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hoverIcon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hidden\":false,\"isBackend\":false},{\"id\":\"news\",\"title\":\"新闻资讯\",\"jump\":{\"type\":\"web\",\"href\":\"/news\",\"target\":\"_self\"},\"children\":[{\"id\":\"news-company\",\"title\":\"公司动态\",\"jump\":{\"type\":\"web\",\"href\":\"/news/company\",\"target\":\"_self\"},\"children\":[],\"remark\":\"\",\"icon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hoverIcon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hidden\":false,\"isBackend\":false},{\"id\":\"news-industry\",\"title\":\"行业资讯\",\"jump\":{\"type\":\"web\",\"href\":\"/news/industry\",\"target\":\"_self\"},\"children\":[],\"remark\":\"\",\"icon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hoverIcon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hidden\":false,\"isBackend\":false}],\"remark\":\"\",\"icon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hoverIcon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hidden\":false,\"isBackend\":false},{\"id\":\"contact\",\"title\":\"联系我们\",\"jump\":{\"type\":\"web\",\"href\":\"/contact\",\"target\":\"_self\"},\"children\":[],\"remark\":\"\",\"icon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hoverIcon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hidden\":false,\"isBackend\":false}]",
+    "default_value": "[{\"id\":\"home\",\"title\":\"首页\",\"jump\":{\"type\":\"web\",\"href\":\"/\",\"target\":\"_self\"},\"children\":[]},{\"id\":\"about\",\"title\":\"关于我们\",\"jump\":{\"type\":\"web\",\"href\":\"/about\",\"target\":\"_self\"},\"children\":[{\"id\":\"about-company\",\"title\":\"公司简介\",\"jump\":{\"type\":\"web\",\"href\":\"/about/company\",\"target\":\"_self\"},\"children\":[]},{\"id\":\"about-culture\",\"title\":\"企业文化\",\"jump\":{\"type\":\"web\",\"href\":\"/about/culture\",\"target\":\"_self\"},\"children\":[]}]},{\"id\":\"services\",\"title\":\"产品服务\",\"jump\":{\"type\":\"web\",\"href\":\"/services\",\"target\":\"_self\"},\"children\":[{\"id\":\"services-main\",\"title\":\"核心服务\",\"jump\":{\"type\":\"web\",\"href\":\"/services/core\",\"target\":\"_self\"},\"children\":[]},{\"id\":\"services-solution\",\"title\":\"解决方案\",\"jump\":{\"type\":\"web\",\"href\":\"/services/solution\",\"target\":\"_self\"},\"children\":[]}]},{\"id\":\"news\",\"title\":\"新闻资讯\",\"jump\":{\"type\":\"web\",\"href\":\"/news\",\"target\":\"_self\"},\"children\":[{\"id\":\"news-company\",\"title\":\"公司动态\",\"jump\":{\"type\":\"web\",\"href\":\"/news/company\",\"target\":\"_self\"},\"children\":[]},{\"id\":\"news-industry\",\"title\":\"行业资讯\",\"jump\":{\"type\":\"web\",\"href\":\"/news/industry\",\"target\":\"_self\"},\"children\":[]}]},{\"id\":\"contact\",\"title\":\"联系我们\",\"jump\":{\"type\":\"web\",\"href\":\"/contact\",\"target\":\"_self\"},\"children\":[]}]",
+    "input_type": "navList"
+  },
+  {
+    "key": "use_custom_language_jump",
+    "label": "使用自定义语言跳转",
+    "value": "1",
+    "default_value": "0",
+    "input_type": "switch"
+  },
+  {
+    "key": "language_nav",
+    "label": "语言跳转列表",
+    "value": "[{\"id\":\"zh-cn\",\"title\":\"简体中文\",\"jump\":{\"type\":\"web\",\"href\":\"/\",\"target\":\"_self\",\"title\":\"\",\"summary\":\"\",\"description\":\"\",\"query\":\"\",\"popupType\":\"\",\"qrMode\":\"\",\"qrStyle\":\"\",\"qrText\":\"\",\"qrImage\":\"\",\"html\":\"\",\"pageUrl\":\"\",\"modulePageUrl\":\"\",\"moduleName\":\"\",\"moduleId\":\"\",\"moduleSelector\":\"\",\"moduleTargetType\":\"\",\"moduleOffset\":\"\",\"miniProgramPath\":\"\",\"formId\":\"\",\"form\":null,\"autoCloseOnSuccess\":false},\"children\":[],\"remark\":\"\",\"icon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hoverIcon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hidden\":false,\"isBackend\":false,\"collapsed\":false},{\"id\":\"zh\",\"title\":\"繁體中文\",\"jump\":{\"type\":\"web\",\"href\":\"/zh\",\"target\":\"_self\"},\"children\":[],\"remark\":\"\",\"icon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hoverIcon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hidden\":true,\"isBackend\":false,\"collapsed\":false},{\"id\":\"en\",\"title\":\"English\",\"jump\":{\"type\":\"web\",\"href\":\"/en\",\"target\":\"_self\"},\"children\":[],\"remark\":\"\",\"icon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hoverIcon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hidden\":false,\"isBackend\":false,\"collapsed\":false},{\"id\":\"jp\",\"title\":\"日本語\",\"jump\":{\"type\":\"web\",\"href\":\"/jp\",\"target\":\"_self\"},\"children\":[],\"remark\":\"\",\"icon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hoverIcon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hidden\":true,\"isBackend\":false,\"collapsed\":false},{\"id\":\"kr\",\"title\":\"한국어\",\"jump\":{\"type\":\"web\",\"href\":\"/kr\",\"target\":\"_self\"},\"children\":[],\"remark\":\"\",\"icon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hoverIcon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hidden\":true,\"isBackend\":false,\"collapsed\":false},{\"id\":\"ru\",\"title\":\"Русский\",\"jump\":{\"type\":\"web\",\"href\":\"/ru\",\"target\":\"_self\"},\"children\":[],\"remark\":\"\",\"icon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hoverIcon\":{\"type\":\"image\",\"value\":\"\",\"name\":\"\"},\"hidden\":true,\"isBackend\":false,\"collapsed\":false}]",
+    "default_value": "[{\"id\":\"zh-cn\",\"title\":\"简体中文\",\"jump\":{\"type\":\"web\",\"href\":\"/\",\"target\":\"_self\"},\"children\":[]},{\"id\":\"zh\",\"title\":\"繁體中文\",\"jump\":{\"type\":\"web\",\"href\":\"/zh\",\"target\":\"_self\"},\"children\":[]},{\"id\":\"en\",\"title\":\"English\",\"jump\":{\"type\":\"web\",\"href\":\"/en\",\"target\":\"_self\"},\"children\":[]},{\"id\":\"jp\",\"title\":\"日本語\",\"jump\":{\"type\":\"web\",\"href\":\"/jp\",\"target\":\"_self\"},\"children\":[]},{\"id\":\"kr\",\"title\":\"한국어\",\"jump\":{\"type\":\"web\",\"href\":\"/kr\",\"target\":\"_self\"},\"children\":[]},{\"id\":\"ru\",\"title\":\"Русский\",\"jump\":{\"type\":\"web\",\"href\":\"/ru\",\"target\":\"_self\"},\"children\":[]}]",
+    "input_type": "navList"
+  },
+  {
+    "key": "logo",
+    "label": "默认 Logo",
+    "value": "",
+    "default_value": "",
+    "input_type": "image"
+  },
+  {
+    "key": "stickyLogo",
+    "label": "吸顶 Logo",
+    "value": "",
+    "default_value": "",
+    "input_type": "image"
+  },
+  {
+    "key": "logo_link",
+    "label": "Logo 跳转链接",
+    "value": "{\"type\":\"web\",\"href\":\"/\",\"target\":\"_self\"}",
+    "default_value": "{\"type\":\"web\",\"href\":\"/\",\"target\":\"_self\"}",
+    "input_type": "jump"
+  },
+  {
+    "key": "phone",
+    "label": "联系电话",
+    "value": "",
+    "default_value": "",
+    "input_type": "text"
+  },
+  {
+    "key": "email",
+    "label": "联系邮箱",
+    "value": "",
+    "default_value": "",
+    "input_type": "text"
+  },
+  {
+    "key": "address",
+    "label": "联系地址",
+    "value": "",
+    "default_value": "",
+    "input_type": "text"
+  },
+  {
+    "key": "sticky_mode",
+    "label": "默认吸顶",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "switch"
+  },
+  {
+    "key": "sticky_scroll_distance",
+    "label": "吸顶切换距离",
+    "value": "10",
+    "default_value": "10",
+    "input_type": "number"
+  },
+  {
+    "key": "theme_color",
+    "label": "主题色",
+    "value": "#722dbd",
+    "default_value": "#722dbd",
+    "input_type": "color"
+  },
+  {
+    "key": "nav_background_color",
+    "label": "导航背景色",
+    "value": "rgba(255,255,255,0.00)",
+    "default_value": "rgba(255,255,255,0.00)",
+    "input_type": "color"
+  },
+  {
+    "key": "nav_blur",
+    "label": "毛玻璃强度",
+    "value": "15",
+    "default_value": "15",
+    "input_type": "number"
+  },
+  {
+    "key": "nav_text_color",
+    "label": "默认文字颜色",
+    "value": "#222222",
+    "default_value": "#ffffff",
+    "input_type": "color"
+  },
+  {
+    "key": "i18n",
+    "label": "多语言文案",
+    "value": "{\"zh-cn\":{\"menu\":\"菜单\",\"lang\":\"语言\",\"more\":\"更多\",\"requestTimeout\":\"请求超时，请检查网络\",\"requestFailed\":\"网络请求失败\",\"searchPlaceholder\":\"搜索\",\"loginText\":\"登录\",\"loginUserName\":\"用户中心\",\"searchLabel\":\"搜索\",\"closeSearch\":\"关闭搜索\",\"openMenu\":\"打开菜单\",\"closeMenu\":\"关闭菜单\",\"hotSearch\":\"热门搜索\",\"searchHistory\":\"搜索记录\",\"clearHistory\":\"清空\"},\"zh\":{\"menu\":\"選單\",\"lang\":\"語言\",\"more\":\"更多\",\"requestTimeout\":\"請求逾時，請檢查網路\",\"requestFailed\":\"網路請求失敗\",\"searchPlaceholder\":\"搜尋\",\"loginText\":\"登入\",\"loginUserName\":\"會員中心\",\"searchLabel\":\"搜尋\",\"closeSearch\":\"關閉搜尋\",\"openMenu\":\"開啟選單\",\"closeMenu\":\"關閉選單\",\"hotSearch\":\"熱門搜尋\",\"searchHistory\":\"搜尋記錄\",\"clearHistory\":\"清空\"},\"en\":{\"menu\":\"Menu\",\"lang\":\"Language\",\"more\":\"More\",\"requestTimeout\":\"Request timeout\",\"requestFailed\":\"Network request failed\",\"searchPlaceholder\":\"Search\",\"loginText\":\"Login\",\"loginUserName\":\"User Center\",\"searchLabel\":\"Search\",\"closeSearch\":\"Close Search\",\"openMenu\":\"Open Menu\",\"closeMenu\":\"Close Menu\",\"hotSearch\":\"Hot Search\",\"searchHistory\":\"Search History\",\"clearHistory\":\"Clear\"},\"jp\":{\"menu\":\"メニュー\",\"lang\":\"言語\",\"more\":\"もっと見る\",\"requestTimeout\":\"リクエストがタイムアウトしました。ネットワークを確認してください\",\"requestFailed\":\"ネットワーク要求に失敗しました\",\"searchPlaceholder\":\"検索\",\"loginText\":\"ログイン\",\"loginUserName\":\"ユーザーセンター\",\"searchLabel\":\"検索\",\"closeSearch\":\"検索を閉じる\",\"openMenu\":\"メニューを開く\",\"closeMenu\":\"メニューを閉じる\",\"hotSearch\":\"人気検索\",\"searchHistory\":\"検索履歴\",\"clearHistory\":\"クリア\"},\"kr\":{\"menu\":\"메뉴\",\"lang\":\"언어\",\"more\":\"더보기\",\"requestTimeout\":\"요청 시간이 초과되었습니다. 네트워크를 확인하세요\",\"requestFailed\":\"네트워크 요청 실패\",\"searchPlaceholder\":\"검색\",\"loginText\":\"로그인\",\"loginUserName\":\"사용자 센터\",\"searchLabel\":\"검색\",\"closeSearch\":\"검색 닫기\",\"openMenu\":\"메뉴 열기\",\"closeMenu\":\"메뉴 닫기\",\"hotSearch\":\"인기 검색\",\"searchHistory\":\"검색 기록\",\"clearHistory\":\"지우기\"},\"ru\":{\"menu\":\"Меню\",\"lang\":\"Язык\",\"more\":\"Еще\",\"requestTimeout\":\"Время ожидания запроса истекло, проверьте сеть\",\"requestFailed\":\"Ошибка сетевого запроса\",\"searchPlaceholder\":\"Поиск\",\"loginText\":\"Войти\",\"loginUserName\":\"Центр пользователя\",\"searchLabel\":\"Поиск\",\"closeSearch\":\"Закрыть поиск\",\"openMenu\":\"Открыть меню\",\"closeMenu\":\"Закрыть меню\",\"hotSearch\":\"Популярные запросы\",\"searchHistory\":\"История поиска\",\"clearHistory\":\"Очистить\"}}",
+    "default_value": "{\"zh-cn\":{\"menu\":\"菜单\",\"lang\":\"语言\",\"more\":\"更多\",\"requestTimeout\":\"请求超时，请检查网络\",\"requestFailed\":\"网络请求失败\",\"searchPlaceholder\":\"搜索\",\"loginText\":\"登录\",\"loginUserName\":\"用户中心\",\"searchLabel\":\"搜索\",\"closeSearch\":\"关闭搜索\",\"openMenu\":\"打开菜单\",\"closeMenu\":\"关闭菜单\",\"hotSearch\":\"热门搜索\",\"searchHistory\":\"搜索记录\",\"clearHistory\":\"清空\"},\"zh\":{\"menu\":\"選單\",\"lang\":\"語言\",\"more\":\"更多\",\"requestTimeout\":\"請求逾時，請檢查網路\",\"requestFailed\":\"網路請求失敗\",\"searchPlaceholder\":\"搜尋\",\"loginText\":\"登入\",\"loginUserName\":\"會員中心\",\"searchLabel\":\"搜尋\",\"closeSearch\":\"關閉搜尋\",\"openMenu\":\"開啟選單\",\"closeMenu\":\"關閉選單\",\"hotSearch\":\"熱門搜尋\",\"searchHistory\":\"搜尋記錄\",\"clearHistory\":\"清空\"},\"en\":{\"menu\":\"Menu\",\"lang\":\"Language\",\"more\":\"More\",\"requestTimeout\":\"Request timeout\",\"requestFailed\":\"Network request failed\",\"searchPlaceholder\":\"Search\",\"loginText\":\"Login\",\"loginUserName\":\"User Center\",\"searchLabel\":\"Search\",\"closeSearch\":\"Close Search\",\"openMenu\":\"Open Menu\",\"closeMenu\":\"Close Menu\",\"hotSearch\":\"Hot Search\",\"searchHistory\":\"Search History\",\"clearHistory\":\"Clear\"},\"jp\":{\"menu\":\"メニュー\",\"lang\":\"言語\",\"more\":\"もっと見る\",\"requestTimeout\":\"リクエストがタイムアウトしました。ネットワークを確認してください\",\"requestFailed\":\"ネットワーク要求に失敗しました\",\"searchPlaceholder\":\"検索\",\"loginText\":\"ログイン\",\"loginUserName\":\"ユーザーセンター\",\"searchLabel\":\"検索\",\"closeSearch\":\"検索を閉じる\",\"openMenu\":\"メニューを開く\",\"closeMenu\":\"メニューを閉じる\",\"hotSearch\":\"人気検索\",\"searchHistory\":\"検索履歴\",\"clearHistory\":\"クリア\"},\"kr\":{\"menu\":\"메뉴\",\"lang\":\"언어\",\"more\":\"더보기\",\"requestTimeout\":\"요청 시간이 초과되었습니다. 네트워크를 확인하세요\",\"requestFailed\":\"네트워크 요청 실패\",\"searchPlaceholder\":\"검색\",\"loginText\":\"로그인\",\"loginUserName\":\"사용자 센터\",\"searchLabel\":\"검색\",\"closeSearch\":\"검색 닫기\",\"openMenu\":\"메뉴 열기\",\"closeMenu\":\"메뉴 닫기\",\"hotSearch\":\"인기 검색\",\"searchHistory\":\"검색 기록\",\"clearHistory\":\"지우기\"},\"ru\":{\"menu\":\"Меню\",\"lang\":\"Язык\",\"more\":\"Еще\",\"requestTimeout\":\"Время ожидания запроса истекло, проверьте сеть\",\"requestFailed\":\"Ошибка сетевого запроса\",\"searchPlaceholder\":\"Поиск\",\"loginText\":\"Войти\",\"loginUserName\":\"Центр пользователя\",\"searchLabel\":\"Поиск\",\"closeSearch\":\"Закрыть поиск\",\"openMenu\":\"Открыть меню\",\"closeMenu\":\"Закрыть меню\",\"hotSearch\":\"Популярные запросы\",\"searchHistory\":\"История поиска\",\"clearHistory\":\"Очистить\"}}",
+    "input_type": "i18n"
+  },
+  {
+    "key": "show_search",
+    "label": "显示搜索框",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "switch"
+  },
+  {
+    "key": "search_link",
+    "label": "搜索跳转链接",
+    "value": "{\"type\":\"web\",\"href\":\"/search\",\"target\":\"_self\"}",
+    "default_value": "{\"type\":\"url\",\"href\":\"/search\",\"target\":\"_self\"}",
+    "input_type": "jump"
+  },
+  {
+    "key": "show_login",
+    "label": "显示登录入口",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "switch"
+  },
+  {
+    "key": "sticky_nav_background_color",
+    "label": "滚动后背景色",
+    "value": "#ffffff",
+    "default_value": "#ffffff",
+    "input_type": "color"
+  },
+  {
+    "key": "sticky_nav_text_color",
+    "label": "滚动后文字颜色",
+    "value": "#1a1a2e",
+    "default_value": "#1a1a2e",
+    "input_type": "color"
+  },
+  {
+    "key": "logo_height_percent",
+    "label": "Logo 高度百分比",
+    "value": "60",
+    "default_value": "60",
+    "input_type": "number"
+  },
+  {
+    "key": "company_name",
+    "label": "公司名称",
+    "value": "",
+    "default_value": "",
+    "input_type": "text"
+  },
+  {
+    "key": "company_name_color",
+    "label": "公司名颜色",
+    "value": "#1a1a2e",
+    "default_value": "#1a1a2e",
+    "input_type": "color"
+  },
+  {
+    "key": "sticky_company_name_color",
+    "label": "吸顶公司名颜色",
+    "value": "#722dbd",
+    "default_value": "#722dbd",
+    "input_type": "color"
+  },
+  {
+    "key": "mobile_menu_company_name_color",
+    "label": "弹出导航公司名颜色",
+    "value": "#333333",
+    "default_value": "#1a1a2e",
+    "input_type": "color"
+  }
+]

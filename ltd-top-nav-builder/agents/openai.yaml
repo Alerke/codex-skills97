@@ -1,0 +1,4 @@
+interface:
+  display_name: "LTD 顶部导航生成"
+  short_description: "创建原生 CSS、多端兼容并带 26 项 JSON 的 LTD 顶部导航"
+  default_prompt: "使用 $ltd-top-nav-builder 创建或优化 LTD 顶部导航；同步输出完整模块 HTML 和可直接导入的 26 项 JSON，默认不加入超长导航自动收缩逻辑。"

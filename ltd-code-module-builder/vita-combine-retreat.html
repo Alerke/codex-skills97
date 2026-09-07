@@ -1,0 +1,157 @@
+<!-- @dsCard group="LTD 旅行体验" name="Vita Combine Retreat" subtitle="沉浸背景 / 四步组合流程 / 独立卡片图片 / 多实例 / 响应式动效" -->
+<style data-module-initial>
+.ltdCombine20260813{background:#102124;color:#fff;min-height:1440px;overflow:hidden;position:relative;width:100%;}
+.ltdCombine20260813 *{box-sizing:border-box;}
+.ltdCombine20260813 .ltd-combine-bg,.ltdCombine20260813 .ltd-combine-card-image{display:block;height:100%;object-fit:cover;width:100%;}
+.ltdCombine20260813 .ltd-combine-bg{inset:0;position:absolute;}
+.ltdCombine20260813 .ltd-combine-content{position:relative;z-index:2;}
+.ltdCombine20260813 .ltd-combine-flow{display:grid;grid-template-columns:2fr repeat(4,1fr);}
+@media (max-width:768px){.ltdCombine20260813{min-height:1680px;}.ltdCombine20260813 .ltd-combine-flow{grid-template-columns:repeat(2,minmax(0,1fr));}}
+</style>
+
+<style data-module-styles>
+.ltdCombine20260813{--ltd-combine-title:#fff;--ltd-combine-feature:#fff;--ltd-combine-card-text:#fff;--ltd-combine-muted:rgba(255,255,255,.58);--ltd-combine-accent:#f1b55d;--ltd-combine-line:rgba(255,255,255,.18);--ltd-combine-card-bg:rgba(10,25,28,.2);--ltd-combine-title-size:62px;--ltd-combine-feature-size:42px;--ltd-combine-card-size:18px;--ltd-combine-description-size:24px;min-height:1440px;font-family:Inter,Arial,"Microsoft YaHei",sans-serif;}
+.ltdCombine20260813 .ltd-combine-bg{filter:saturate(.88) contrast(1.04);transform:translate(var(--ltd-bg-x,0),var(--ltd-bg-y,0)) scale(1.055);transition:filter .8s ease,transform .35s ease-out;}
+.ltdCombine20260813 .ltd-combine-overlay{background:linear-gradient(180deg,rgba(5,16,18,.16) 0%,rgba(5,17,20,.3) 42%,rgba(5,17,20,.74) 100%);inset:0;pointer-events:none;position:absolute;z-index:1;}
+.ltdCombine20260813 .ltd-combine-glow{background:radial-gradient(circle at var(--ltd-glow-x,62%) var(--ltd-glow-y,38%),rgba(241,181,93,.2),transparent 27%);inset:0;opacity:.7;pointer-events:none;position:absolute;transition:opacity .5s ease;z-index:1;}
+.ltdCombine20260813 .ltd-combine-content{min-height:1440px;position:relative;}
+.ltdCombine20260813 .ltd-combine-hero{min-height:1440px;padding:104px 40px 520px;}
+.ltdCombine20260813 .ltd-combine-eyebrow{align-items:center;color:var(--ltd-combine-muted);display:flex;font-size:11px;font-weight:700;gap:10px;letter-spacing:.14em;margin-bottom:17px;text-transform:uppercase;}
+.ltdCombine20260813 .ltd-combine-eyebrow-mark{border:1px solid currentColor;border-radius:50%;height:21px;position:relative;width:21px;}
+.ltdCombine20260813 .ltd-combine-eyebrow-mark:before,.ltdCombine20260813 .ltd-combine-eyebrow-mark:after{background:var(--ltd-combine-accent);content:"";left:50%;position:absolute;top:50%;transform:translate(-50%,-50%);}
+.ltdCombine20260813 .ltd-combine-eyebrow-mark:before{height:1px;width:27px;}
+.ltdCombine20260813 .ltd-combine-eyebrow-mark:after{height:27px;width:1px;}
+.ltdCombine20260813 .ltd-combine-title{color:var(--ltd-combine-title);font-size:var(--ltd-combine-title-size);font-weight:600;letter-spacing:-.048em;line-height:1;margin:0 0 42px;max-width:780px;}
+.ltdCombine20260813 .ltd-combine-features{display:flex;flex-direction:column;gap:4px;}
+.ltdCombine20260813 .ltd-combine-feature{align-items:center;color:var(--ltd-combine-feature);display:flex;font-size:var(--ltd-combine-feature-size);font-weight:620;letter-spacing:-.035em;line-height:1.15;width:max-content;}
+.ltdCombine20260813 .ltd-combine-plus{color:rgba(255,255,255,.45);display:inline-block;font-weight:400;margin-right:6px;transition:color .35s ease,transform .5s cubic-bezier(.2,.7,.2,1);}
+.ltdCombine20260813 .ltd-combine-feature-line{background:var(--ltd-combine-accent);height:1px;margin-left:14px;transform:scaleX(0);transform-origin:left center;transition:transform .5s cubic-bezier(.2,.7,.2,1);width:42px;}
+.ltdCombine20260813 .ltd-combine-feature:hover .ltd-combine-plus{color:var(--ltd-combine-accent);transform:rotate(90deg);}
+.ltdCombine20260813 .ltd-combine-feature:hover .ltd-combine-feature-line{transform:scaleX(1);}
+.ltdCombine20260813 .ltd-combine-flow{backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);background:linear-gradient(110deg,rgba(7,22,25,.7),rgba(7,20,23,.48));border-bottom:1px solid var(--ltd-combine-line);border-top:1px solid rgba(255,255,255,.26);bottom:0;box-shadow:0 34px 90px rgba(0,0,0,.34);left:0;position:absolute;right:0;z-index:3;}
+.ltdCombine20260813 .ltd-combine-intro,.ltdCombine20260813 .ltd-combine-card{min-height:360px;padding:46px 32px;position:relative;}
+.ltdCombine20260813 .ltd-combine-intro{align-items:flex-end;display:flex;}
+.ltdCombine20260813 .ltd-combine-description{color:var(--ltd-combine-card-text);font-size:var(--ltd-combine-description-size);font-weight:520;letter-spacing:-.025em;line-height:1.25;margin:0;max-width:420px;white-space:pre-line;}
+.ltdCombine20260813 .ltd-combine-card{--ltd-card-tilt-x:0deg;--ltd-card-tilt-y:0deg;background:var(--ltd-combine-card-bg);border-left:1px solid var(--ltd-combine-line);color:inherit;display:flex;flex-direction:column;isolation:isolate;justify-content:space-between;overflow:hidden;text-decoration:none;transform:perspective(900px) rotateX(var(--ltd-card-tilt-x)) rotateY(var(--ltd-card-tilt-y));transition:background-color .45s ease,transform .18s ease-out;}
+.ltdCombine20260813 .ltd-combine-card:before{background:radial-gradient(circle at var(--ltd-card-x,50%) var(--ltd-card-y,50%),rgba(241,181,93,.22),transparent 44%);content:"";inset:0;opacity:0;pointer-events:none;position:absolute;transition:opacity .35s ease;z-index:-1;}
+.ltdCombine20260813 .ltd-combine-card:after{background:linear-gradient(90deg,transparent,var(--ltd-combine-accent),transparent);content:"";height:1px;left:-100%;position:absolute;top:0;transition:left .7s cubic-bezier(.2,.7,.2,1);width:78%;z-index:3;}
+.ltdCombine20260813 .ltd-combine-card-image{filter:saturate(.82);inset:0;opacity:0;position:absolute;transform:scale(1.12);transition:filter .65s ease,opacity .5s ease,transform .8s cubic-bezier(.2,.7,.2,1);z-index:-3;}
+.ltdCombine20260813 .ltd-combine-card-shade{background:linear-gradient(180deg,rgba(8,22,25,.45),rgba(8,22,25,.88));inset:0;opacity:0;position:absolute;transition:opacity .5s ease;z-index:-2;}
+.ltdCombine20260813 .ltd-combine-card-head{align-items:flex-start;display:flex;gap:8px;}
+.ltdCombine20260813 .ltd-combine-number{color:var(--ltd-combine-card-text);font-size:38px;font-weight:520;letter-spacing:-.05em;line-height:1;}
+.ltdCombine20260813 .ltd-combine-step-label{color:var(--ltd-combine-muted);font-size:11px;font-weight:650;line-height:1;padding-top:7px;text-transform:uppercase;}
+.ltdCombine20260813 .ltd-combine-card-body{align-items:flex-end;display:flex;justify-content:space-between;position:relative;z-index:2;}
+.ltdCombine20260813 .ltd-combine-card-title{color:var(--ltd-combine-card-text);font-size:var(--ltd-combine-card-size);font-weight:550;letter-spacing:-.025em;line-height:1.28;max-width:150px;white-space:pre-line;}
+.ltdCombine20260813 .ltd-combine-arrow{align-items:center;border:1px solid rgba(255,255,255,.34);border-radius:50%;color:#fff;display:flex;height:37px;justify-content:center;opacity:0;transform:translate(-8px,8px) rotate(-25deg);transition:background-color .35s ease,border-color .35s ease,opacity .35s ease,transform .5s cubic-bezier(.2,.7,.2,1);width:37px;}
+.ltdCombine20260813 .ltd-combine-arrow svg{height:14px;width:14px;}
+.ltdCombine20260813 .ltd-combine-card:hover,.ltdCombine20260813 .ltd-combine-card:focus-visible{background:rgba(10,25,28,.42);}
+.ltdCombine20260813 .ltd-combine-card:hover:before,.ltdCombine20260813 .ltd-combine-card:focus-visible:before{opacity:1;}
+.ltdCombine20260813 .ltd-combine-card:hover:after,.ltdCombine20260813 .ltd-combine-card:focus-visible:after{left:120%;}
+.ltdCombine20260813 .ltd-combine-card:hover .ltd-combine-card-image,.ltdCombine20260813 .ltd-combine-card:focus-visible .ltd-combine-card-image{filter:saturate(1.06);opacity:.7;transform:scale(1.035);}
+.ltdCombine20260813 .ltd-combine-card:hover .ltd-combine-card-shade,.ltdCombine20260813 .ltd-combine-card:focus-visible .ltd-combine-card-shade{opacity:1;}
+.ltdCombine20260813 .ltd-combine-card.has-action:hover .ltd-combine-arrow,.ltdCombine20260813 .ltd-combine-card.has-action:focus-visible .ltd-combine-arrow{background:var(--ltd-combine-accent);border-color:var(--ltd-combine-accent);color:#102124;opacity:1;transform:none;}
+.ltdCombine20260813 .ltd-combine-card:not(.has-action) .ltd-combine-arrow{display:none;}
+.ltdCombine20260813 .ltd-combine-card:focus-visible{outline:2px solid var(--ltd-combine-accent);outline-offset:-3px;}
+.ltdCombine20260813 .ltd-combine-card.is-media-error .ltd-combine-card-image{display:none;}
+.ltdCombine20260813.is-motion-ready .ltd-combine-reveal{opacity:0;transform:translateY(34px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);}
+.ltdCombine20260813.is-motion-ready .ltd-combine-reveal.is-visible{opacity:1;transform:translateY(0);}
+.ltdCombine20260813.is-motion-ready .ltd-combine-card:nth-child(3){transition-delay:.07s;}.ltdCombine20260813.is-motion-ready .ltd-combine-card:nth-child(4){transition-delay:.14s;}.ltdCombine20260813.is-motion-ready .ltd-combine-card:nth-child(5){transition-delay:.21s;}
+@media (max-width:1100px){.ltdCombine20260813{min-height:1340px;}.ltdCombine20260813 .ltd-combine-content,.ltdCombine20260813 .ltd-combine-hero{min-height:1340px;}.ltdCombine20260813 .ltd-combine-hero{padding:86px 28px 470px;}.ltdCombine20260813 .ltd-combine-flow{bottom:0;}.ltdCombine20260813 .ltd-combine-title{font-size:min(var(--ltd-combine-title-size),54px);}.ltdCombine20260813 .ltd-combine-feature{font-size:min(var(--ltd-combine-feature-size),36px);}.ltdCombine20260813 .ltd-combine-intro,.ltdCombine20260813 .ltd-combine-card{min-height:330px;padding:40px 22px;}.ltdCombine20260813 .ltd-combine-description{font-size:min(var(--ltd-combine-description-size),21px);}}
+@media (max-width:768px){.ltdCombine20260813{min-height:1680px;}.ltdCombine20260813 .ltd-combine-content,.ltdCombine20260813 .ltd-combine-hero{min-height:1680px;}.ltdCombine20260813 .ltd-combine-hero{padding:76px 20px 650px;}.ltdCombine20260813 .ltd-combine-title{font-size:clamp(38px,12vw,var(--ltd-combine-title-size));margin-bottom:31px;}.ltdCombine20260813 .ltd-combine-feature{font-size:clamp(27px,8vw,var(--ltd-combine-feature-size));}.ltdCombine20260813 .ltd-combine-flow{bottom:0;grid-template-columns:repeat(2,minmax(0,1fr));}.ltdCombine20260813 .ltd-combine-intro{grid-column:1/-1;min-height:190px;padding:28px 20px;}.ltdCombine20260813 .ltd-combine-description{font-size:min(var(--ltd-combine-description-size),18px);max-width:335px;}.ltdCombine20260813 .ltd-combine-card{border-top:1px solid var(--ltd-combine-line);min-height:190px;padding:22px 20px;transform:none!important;}.ltdCombine20260813 .ltd-combine-card:nth-child(odd){border-left:0;}.ltdCombine20260813 .ltd-combine-card-image{opacity:.17;transform:scale(1.03);}.ltdCombine20260813 .ltd-combine-card-shade{opacity:.48;}.ltdCombine20260813 .ltd-combine-number{font-size:32px;}.ltdCombine20260813 .ltd-combine-arrow{display:none!important;}}
+@media (prefers-reduced-motion:reduce){.ltdCombine20260813 .ltd-combine-bg,.ltdCombine20260813 .ltd-combine-feature-line,.ltdCombine20260813 .ltd-combine-plus,.ltdCombine20260813 .ltd-combine-reveal,.ltdCombine20260813 .ltd-combine-card,.ltdCombine20260813 .ltd-combine-card-image,.ltdCombine20260813 .ltd-combine-card-shade,.ltdCombine20260813 .ltd-combine-arrow{opacity:1;transform:none;transition:none;}.ltdCombine20260813 .ltd-combine-card:after{display:none;}.ltdCombine20260813 .ltd-combine-card-image{opacity:.28;}}
+</style>
+
+<section class="ltdCombine20260813"
+  aria-label="$[section_title]"
+  data-title-color="$[title_color]"
+  data-title-size="$[title_size]"
+  data-feature-color="$[feature_color]"
+  data-feature-size="$[feature_size]"
+  data-card-text-color="$[card_text_color]"
+  data-card-text-size="$[card_text_size]"
+  data-description-color="$[description_color]"
+  data-description-size="$[description_size]"
+  data-accent-color="$[accent_color]"
+  data-card-background="$[card_background]">
+  <img class="ltd-combine-bg" src="$[background_image]" alt="$[background_image.alt]" loading="eager" decoding="async" style="object-fit:$[background_image.objectFit];object-position:$[background_image.objectPosition];">
+  <div class="ltd-combine-overlay"></div><div class="ltd-combine-glow"></div>
+  <div class="ltd-combine-content">
+    <div class="ltd-combine-hero ltd-combine-reveal">
+      <div class="ltd-combine-eyebrow"><span class="ltd-combine-eyebrow-mark" aria-hidden="true"></span><span>$[eyebrow_text]</span></div>
+      <h2 class="ltd-combine-title">$[section_title]</h2>
+      <div class="ltd-combine-features">
+        <div class="ltd-combine-feature"><span class="ltd-combine-plus">+</span><span>$[feature_1_text]</span><span class="ltd-combine-feature-line"></span></div>
+        <div class="ltd-combine-feature"><span class="ltd-combine-plus">+</span><span>$[feature_2_text]</span><span class="ltd-combine-feature-line"></span></div>
+        <div class="ltd-combine-feature"><span class="ltd-combine-plus">+</span><span>$[feature_3_text]</span><span class="ltd-combine-feature-line"></span></div>
+      </div>
+    </div>
+    <div class="ltd-combine-flow">
+      <div class="ltd-combine-intro ltd-combine-reveal"><p class="ltd-combine-description">$[description_text]</p></div>
+      <a class="ltd-combine-card ltd-combine-reveal" href="$[step_1_action.href]" target="$[step_1_action.target]">
+        <img class="ltd-combine-card-image" src="$[step_1_image]" alt="$[step_1_image.alt]" loading="lazy" decoding="async" style="object-fit:$[step_1_image.objectFit];object-position:$[step_1_image.objectPosition];"><span class="ltd-combine-card-shade"></span>
+        <div class="ltd-combine-card-head"><span class="ltd-combine-number">01</span><span class="ltd-combine-step-label">Step</span></div><div class="ltd-combine-card-body"><span class="ltd-combine-card-title">$[step_1_text]</span><span class="ltd-combine-arrow" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none"><path d="M4 16 16 4M7 4h9v9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+      </a>
+      <a class="ltd-combine-card ltd-combine-reveal" href="$[step_2_action.href]" target="$[step_2_action.target]">
+        <img class="ltd-combine-card-image" src="$[step_2_image]" alt="$[step_2_image.alt]" loading="lazy" decoding="async" style="object-fit:$[step_2_image.objectFit];object-position:$[step_2_image.objectPosition];"><span class="ltd-combine-card-shade"></span>
+        <div class="ltd-combine-card-head"><span class="ltd-combine-number">02</span><span class="ltd-combine-step-label">Step</span></div><div class="ltd-combine-card-body"><span class="ltd-combine-card-title">$[step_2_text]</span><span class="ltd-combine-arrow" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none"><path d="M4 16 16 4M7 4h9v9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+      </a>
+      <a class="ltd-combine-card ltd-combine-reveal" href="$[step_3_action.href]" target="$[step_3_action.target]">
+        <img class="ltd-combine-card-image" src="$[step_3_image]" alt="$[step_3_image.alt]" loading="lazy" decoding="async" style="object-fit:$[step_3_image.objectFit];object-position:$[step_3_image.objectPosition];"><span class="ltd-combine-card-shade"></span>
+        <div class="ltd-combine-card-head"><span class="ltd-combine-number">03</span><span class="ltd-combine-step-label">Step</span></div><div class="ltd-combine-card-body"><span class="ltd-combine-card-title">$[step_3_text]</span><span class="ltd-combine-arrow" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none"><path d="M4 16 16 4M7 4h9v9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+      </a>
+      <a class="ltd-combine-card ltd-combine-reveal" href="$[step_4_action.href]" target="$[step_4_action.target]">
+        <img class="ltd-combine-card-image" src="$[step_4_image]" alt="$[step_4_image.alt]" loading="lazy" decoding="async" style="object-fit:$[step_4_image.objectFit];object-position:$[step_4_image.objectPosition];"><span class="ltd-combine-card-shade"></span>
+        <div class="ltd-combine-card-head"><span class="ltd-combine-number">04</span><span class="ltd-combine-step-label">Step</span></div><div class="ltd-combine-card-body"><span class="ltd-combine-card-title">$[step_4_text]</span><span class="ltd-combine-arrow" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none"><path d="M4 16 16 4M7 4h9v9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  'use strict';
+  const script = document.currentScript;
+  const previous = script ? script.previousElementSibling : null;
+  const host = script && script.closest ? script.closest('.gw-browse-module') : null;
+  const root = previous && previous.classList && previous.classList.contains('ltdCombine20260813') ? previous : (host ? host.querySelector('.ltdCombine20260813') : null);
+  if (!root) return;
+  if (typeof root._ltdCombineCleanup === 'function') root._ltdCombineCleanup();
+
+  const readText = (value, fallback) => { if (typeof value !== 'string' && typeof value !== 'number') return fallback; const text = String(value).trim(); return !text || /^\$\[[^\]]+\]$/.test(text) ? fallback : text; };
+  const readNumber = (value, fallback, min, max) => { const number = Number(value); return Number.isFinite(number) ? Math.min(max, Math.max(min, number)) : fallback; };
+  const validColor = (value, fallback) => { const color = readText(value, ''); if (!color) return fallback; if (window.CSS && typeof window.CSS.supports === 'function') return window.CSS.supports('color', color) ? color : fallback; return /^#(?:[\da-f]{3}|[\da-f]{6}|[\da-f]{8})$/i.test(color) ? color : fallback; };
+  const normalizeLink = (card) => { const href = readText(card.getAttribute('href'), ''); const safe = href && !/^\$\[/.test(href) && (/^(?:https?:|mailto:|tel:)/i.test(href) || (!/^[a-z][a-z\d+.-]*:/i.test(href) && !/^\/\//.test(href))); const target = card.getAttribute('target') === '_blank' ? '_blank' : '_self'; if (!safe) { card.removeAttribute('href'); card.removeAttribute('target'); card.setAttribute('role', 'group'); return; } card.target = target; if (target === '_blank') card.rel = 'noopener noreferrer'; card.classList.add('has-action'); };
+
+  const data = root.dataset;
+  root.style.setProperty('--ltd-combine-title', validColor(data.titleColor, '#ffffff'));
+  root.style.setProperty('--ltd-combine-feature', validColor(data.featureColor, '#ffffff'));
+  root.style.setProperty('--ltd-combine-card-text', validColor(data.cardTextColor, '#ffffff'));
+  root.style.setProperty('--ltd-combine-accent', validColor(data.accentColor, '#f1b55d'));
+  root.style.setProperty('--ltd-combine-card-bg', validColor(data.cardBackground, 'rgba(10,25,28,.2)'));
+  root.style.setProperty('--ltd-combine-title-size', readNumber(data.titleSize, 62, 24, 110) + 'px');
+  root.style.setProperty('--ltd-combine-feature-size', readNumber(data.featureSize, 42, 16, 72) + 'px');
+  root.style.setProperty('--ltd-combine-card-size', readNumber(data.cardTextSize, 18, 11, 42) + 'px');
+  root.style.setProperty('--ltd-combine-description-size', readNumber(data.descriptionSize, 24, 13, 46) + 'px');
+  const description = root.querySelector('.ltd-combine-description');
+  if (description) description.style.color = validColor(data.descriptionColor, '#ffffff');
+
+  const background = root.querySelector('.ltd-combine-bg');
+  if (background) background.addEventListener('error', () => root.classList.add('is-background-error'));
+  const cards = root.querySelectorAll('.ltd-combine-card');
+  for (let index = 0; index < cards.length; index += 1) { const image = cards[index].querySelector('.ltd-combine-card-image'); const src = image ? readText(image.getAttribute('src'), '') : ''; if (!src || /^\$\[/.test(src)) cards[index].classList.add('is-media-error'); if (image) image.addEventListener('error', () => cards[index].classList.add('is-media-error')); normalizeLink(cards[index]); }
+
+  const reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const finePointer = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  let observer = null;
+  let revealTimer = null;
+  const bindings = [];
+  if (!reducedMotion && 'IntersectionObserver' in window) { root.classList.add('is-motion-ready'); observer = new IntersectionObserver((entries) => { for (let index = 0; index < entries.length; index += 1) { if (!entries[index].isIntersecting) continue; entries[index].target.classList.add('is-visible'); observer.unobserve(entries[index].target); } }, { threshold: .06, rootMargin: '0px 0px 8% 0px' }); const reveals = root.querySelectorAll('.ltd-combine-reveal'); for (let index = 0; index < reveals.length; index += 1) observer.observe(reveals[index]); revealTimer = window.setTimeout(() => { for (let index = 0; index < reveals.length; index += 1) reveals[index].classList.add('is-visible'); }, 1600); }
+  if (!reducedMotion && finePointer) {
+    const rootMove = (event) => { const rect = root.getBoundingClientRect(); const x = Math.min(1, Math.max(0, (event.clientX - rect.left) / rect.width)); const y = Math.min(1, Math.max(0, (event.clientY - rect.top) / rect.height)); root.style.setProperty('--ltd-bg-x', ((.5 - x) * 13) + 'px'); root.style.setProperty('--ltd-bg-y', ((.5 - y) * 9) + 'px'); root.style.setProperty('--ltd-glow-x', (x * 100) + '%'); root.style.setProperty('--ltd-glow-y', (y * 100) + '%'); };
+    const rootLeave = () => { root.style.setProperty('--ltd-bg-x', '0px'); root.style.setProperty('--ltd-bg-y', '0px'); };
+    root.addEventListener('pointermove', rootMove); root.addEventListener('pointerleave', rootLeave); bindings.push({ node: root, move: rootMove, leave: rootLeave });
+    for (let index = 0; index < cards.length; index += 1) { const card = cards[index]; const move = (event) => { const rect = card.getBoundingClientRect(); const x = Math.min(1, Math.max(0, (event.clientX - rect.left) / rect.width)); const y = Math.min(1, Math.max(0, (event.clientY - rect.top) / rect.height)); card.style.setProperty('--ltd-card-x', (x * 100) + '%'); card.style.setProperty('--ltd-card-y', (y * 100) + '%'); card.style.setProperty('--ltd-card-tilt-x', ((.5 - y) * 5) + 'deg'); card.style.setProperty('--ltd-card-tilt-y', ((x - .5) * 5) + 'deg'); }; const leave = () => { card.style.setProperty('--ltd-card-tilt-x', '0deg'); card.style.setProperty('--ltd-card-tilt-y', '0deg'); }; card.addEventListener('pointermove', move); card.addEventListener('pointerleave', leave); bindings.push({ node: card, move: move, leave: leave }); }
+  }
+  root._ltdCombineCleanup = () => { if (observer) observer.disconnect(); if (revealTimer) window.clearTimeout(revealTimer); for (let index = 0; index < bindings.length; index += 1) { bindings[index].node.removeEventListener('pointermove', bindings[index].move); bindings[index].node.removeEventListener('pointerleave', bindings[index].leave); } };
+}());
+</script>

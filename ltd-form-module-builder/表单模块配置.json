@@ -1,0 +1,9 @@
+[
+  {
+    "key": "fitForm",
+    "label": "表单",
+    "value": "",
+    "default_value": "",
+    "input_type": "form"
+  }
+]

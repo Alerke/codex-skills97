@@ -1,0 +1,226 @@
+<!-- @dsCard group="LTD 表单" name="Vita Travel Contacts 表单" subtitle="LTD preset / 深青旅行风 / 响应式双栏 / 原生提交" -->
+<style data-form-initial>
+.ltdVitaContactsForm20260813{background:#091b20;color:#fff;isolation:isolate;min-height:620px;overflow:hidden;position:relative;width:100%;}
+.ltdVitaContactsForm20260813 *{box-sizing:border-box;}
+.ltdVitaContactsForm20260813 .ltd-vita-contacts-inner{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:620px;position:relative;}
+.ltdVitaContactsForm20260813 .ltd-vita-contacts-visual,.ltdVitaContactsForm20260813 .ltd-vita-contacts-panel{min-width:0;padding:40px;position:relative;}
+.ltdVitaContactsForm20260813 .ltd-vita-contacts-visual{align-items:center;border-right:1px solid rgba(255,255,255,.2);display:flex;justify-content:center;}
+.ltdVitaContactsForm20260813 .ltd-vita-contacts-image{display:block;height:100%;max-height:618px;object-fit:cover;width:100%;}
+.ltdVitaContactsForm20260813 .ltd-vita-contacts-panel{align-items:center;display:flex;}
+.ltdVitaContactsForm20260813 .ltd-vita-contacts-content{margin:0 auto;max-width:640px;width:100%;}
+.ltdVitaContactsForm20260813 .ltd-vita-contacts-form-slot{min-height:220px;}
+@media (max-width:900px){.ltdVitaContactsForm20260813 .ltd-vita-contacts-inner{display:flex;flex-direction:column-reverse;min-height:0;}.ltdVitaContactsForm20260813 .ltd-vita-contacts-visual,.ltdVitaContactsForm20260813 .ltd-vita-contacts-panel{padding:30px 20px;}.ltdVitaContactsForm20260813 .ltd-vita-contacts-visual{border-right:0;border-top:1px solid rgba(255,255,255,.2);}.ltdVitaContactsForm20260813 .ltd-vita-contacts-image{aspect-ratio:335 / 340;height:auto;max-height:none;}.ltdVitaContactsForm20260813 .ltd-vita-contacts-panel{min-height:0;}}
+</style>
+
+<style data-form-styles>
+.ltdVitaContactsForm20260813{--vita-bg:#091b20;--vita-text:#fff;--vita-muted:rgba(255,255,255,.6);--vita-faint:rgba(255,255,255,.4);--vita-line:rgba(255,255,255,.1);--vita-line-strong:rgba(255,255,255,.28);--vita-accent:#fff;--vita-accent-text:#0d2e37;--vita-danger:#fd4f4f;--vita-control-size:22px;font-family:Inter,Arial,"Microsoft YaHei",sans-serif;}
+.ltdVitaContactsForm20260813 .ltd-vita-contacts-image-placeholder{align-items:center;aspect-ratio:640 / 618;background:radial-gradient(circle at 65% 30%,rgba(244,136,5,.28),transparent 27%),linear-gradient(145deg,#17383d,#0b252b 52%,#07181c);color:var(--vita-muted);display:none;justify-content:center;min-height:340px;padding:32px;text-align:center;width:100%;}
+.ltdVitaContactsForm20260813.is-image-error .ltd-vita-contacts-image{display:none;}
+.ltdVitaContactsForm20260813.is-image-error .ltd-vita-contacts-image-placeholder{display:flex;}
+.ltdVitaContactsForm20260813 .ltd-vita-contacts-kicker{align-items:center;display:flex;font-size:16px;font-weight:400;gap:8px;letter-spacing:-.02em;line-height:1.3;margin:0 0 24px;}
+.ltdVitaContactsForm20260813 .ltd-vita-contacts-mark{height:18px;position:relative;width:18px;}
+.ltdVitaContactsForm20260813 .ltd-vita-contacts-mark::before,.ltdVitaContactsForm20260813 .ltd-vita-contacts-mark::after{background:currentColor;content:"";inset:0;position:absolute;transform:rotate(45deg) scale(.64);}
+.ltdVitaContactsForm20260813 .ltd-vita-contacts-mark::after{transform:rotate(45deg) scale(.32);}
+.ltdVitaContactsForm20260813 .ltd-vita-contacts-title{color:var(--vita-text);font-size:60px;font-weight:600;letter-spacing:-.06em;line-height:1.1;margin:0;}
+.ltdVitaContactsForm20260813 .ltd-vita-contacts-description{color:var(--vita-muted);font-size:18px;font-weight:500;letter-spacing:-.025em;line-height:1.3;margin:24px 0 0;}
+.ltdVitaContactsForm20260813 .ltd-vita-contacts-form-slot{margin-top:40px;}
+
+.ltdVitaContactsForm20260813 .gw-fit-form-dom{background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;color:var(--vita-text)!important;font:inherit!important;margin:0!important;max-width:none!important;padding:0!important;width:100%!important;}
+.ltdVitaContactsForm20260813 .gw-fit-form-header{display:none!important;}
+.ltdVitaContactsForm20260813 .gw-fit-form-body{column-gap:24px!important;row-gap:40px!important;}
+.ltdVitaContactsForm20260813 .gw-fit-form-field{color:var(--vita-text)!important;min-width:0;}
+.ltdVitaContactsForm20260813 .gw-fit-form-field[data-field-type="text"],.ltdVitaContactsForm20260813 .gw-fit-form-field[data-field-type="email"]{grid-column:span 12!important;}
+.ltdVitaContactsForm20260813 .gw-fit-form-field[data-field-type="textarea"]{grid-column:1 / -1!important;}
+.ltdVitaContactsForm20260813 .gw-fit-form-field-shell,.ltdVitaContactsForm20260813 .gw-fit-form-field-content,.ltdVitaContactsForm20260813 .gw-fit-form-control-wrap{background:transparent!important;min-width:0;}
+.ltdVitaContactsForm20260813 .gw-fit-form-field-content{display:flex!important;flex-direction:column!important;gap:4px!important;}
+.ltdVitaContactsForm20260813 .gw-fit-form-field-content.is-label-left,.ltdVitaContactsForm20260813 .gw-fit-form-field-content.is-label-right{align-items:stretch!important;}
+.ltdVitaContactsForm20260813 .gw-fit-form-label{color:var(--vita-text)!important;font-size:14px!important;font-weight:400!important;letter-spacing:-.04em!important;line-height:1.3!important;margin:0!important;padding:0!important;width:auto!important;}
+.ltdVitaContactsForm20260813 .gw-fit-form-required{color:var(--vita-danger)!important;margin-left:4px!important;}
+.ltdVitaContactsForm20260813 .gw-fit-form-help,.ltdVitaContactsForm20260813 .gw-fit-form-description{color:var(--vita-muted)!important;font-size:13px!important;line-height:1.5!important;}
+
+.ltdVitaContactsForm20260813 .gw-fit-form-control,.ltdVitaContactsForm20260813 .gw-fit-form-select,.ltdVitaContactsForm20260813 .gw-fit-form-temporal input{appearance:none!important;background:transparent!important;border:0!important;border-bottom:1px solid var(--vita-line)!important;border-radius:0!important;box-shadow:none!important;color:var(--vita-text)!important;font:500 var(--vita-control-size)/1.25 Inter,Arial,"Microsoft YaHei",sans-serif!important;height:auto!important;letter-spacing:-.045em!important;margin:0!important;min-height:46px!important;outline:0!important;padding:0 34px 14px 0!important;transition:border-color .2s ease,color .2s ease!important;width:100%!important;}
+.ltdVitaContactsForm20260813 textarea.gw-fit-form-control{min-height:154px!important;padding-top:0!important;resize:none!important;}
+.ltdVitaContactsForm20260813 .gw-fit-form-control::placeholder{color:var(--vita-faint)!important;opacity:1!important;}
+.ltdVitaContactsForm20260813 .gw-fit-form-control:hover,.ltdVitaContactsForm20260813 .gw-fit-form-control:focus,.ltdVitaContactsForm20260813 .gw-fit-form-control:focus-visible,.ltdVitaContactsForm20260813 .gw-fit-form-select:hover,.ltdVitaContactsForm20260813 .gw-fit-form-select:focus{border-bottom-color:var(--vita-line-strong)!important;}
+.ltdVitaContactsForm20260813 .gw-fit-form-control:focus-visible,.ltdVitaContactsForm20260813 .gw-fit-form-select:focus-visible{outline:1px solid rgba(255,255,255,.18)!important;outline-offset:4px!important;}
+.ltdVitaContactsForm20260813 .gw-fit-form-control:disabled,.ltdVitaContactsForm20260813 .gw-fit-form-control[readonly],.ltdVitaContactsForm20260813 .gw-fit-form-select:disabled{color:rgba(255,255,255,.32)!important;cursor:not-allowed!important;opacity:.62!important;}
+.ltdVitaContactsForm20260813 .gw-fit-form-field.is-error .gw-fit-form-control,.ltdVitaContactsForm20260813 .gw-fit-form-captcha.is-error .gw-fit-form-control,.ltdVitaContactsForm20260813 .gw-fit-form-control.is-error,.ltdVitaContactsForm20260813 [aria-invalid="true"],.ltdVitaContactsForm20260813 [data-gw-fit-field-error="1"]{border-color:rgba(253,79,79,.55)!important;color:var(--vita-danger)!important;}
+.ltdVitaContactsForm20260813 .gw-fit-form-field.is-error .gw-fit-form-label{color:var(--vita-danger)!important;}
+
+.ltdVitaContactsForm20260813 .gw-fit-form-select-wrap{display:block!important;position:relative!important;}
+.ltdVitaContactsForm20260813 .gw-fit-form-select-wrap::after{border-bottom:1px solid var(--vita-text);border-right:1px solid var(--vita-text);content:"";height:7px;pointer-events:none;position:absolute;right:5px;top:15px;transform:rotate(45deg);width:7px;}
+.ltdVitaContactsForm20260813 .gw-fit-form-options{display:flex!important;flex-wrap:wrap!important;gap:12px 22px!important;padding-top:8px!important;}
+.ltdVitaContactsForm20260813 .gw-fit-form-option{align-items:flex-start!important;color:var(--vita-text)!important;cursor:pointer!important;display:inline-flex!important;font-size:15px!important;gap:9px!important;line-height:1.45!important;}
+.ltdVitaContactsForm20260813 .gw-fit-form-option input[type="radio"],.ltdVitaContactsForm20260813 .gw-fit-form-option input[type="checkbox"]{accent-color:#fff;height:18px;margin:1px 0 0;width:18px;}
+.ltdVitaContactsForm20260813 .gw-fit-form-option input:focus-visible{outline:2px solid #fff;outline-offset:3px;}
+.ltdVitaContactsForm20260813 .gw-fit-form-option input:disabled+.gw-fit-form-option-text{opacity:.4;}
+
+.ltdVitaContactsForm20260813 .gw-fit-form-captcha,.ltdVitaContactsForm20260813 .gw-fit-form-range,.ltdVitaContactsForm20260813 .gw-fit-form-address,.ltdVitaContactsForm20260813 .gw-fit-form-cascader{align-items:flex-start!important;display:flex!important;gap:12px!important;min-width:0;}
+.ltdVitaContactsForm20260813 .gw-fit-form-captcha .gw-fit-form-control,.ltdVitaContactsForm20260813 .gw-fit-form-range>*,.ltdVitaContactsForm20260813 .gw-fit-form-address>*,.ltdVitaContactsForm20260813 .gw-fit-form-cascader>*{flex:1 1 0!important;min-width:0!important;}
+.ltdVitaContactsForm20260813 .gw-fit-form-button{align-items:center!important;background:#fff!important;border:1px solid #fff!important;border-radius:80px!important;box-shadow:none!important;color:var(--vita-accent-text)!important;cursor:pointer!important;display:inline-flex!important;font:600 14px/1 Inter,Arial,"Microsoft YaHei",sans-serif!important;gap:14px!important;justify-content:center!important;letter-spacing:0!important;min-height:56px!important;padding:0 30px!important;text-decoration:none!important;transition:background-color .2s ease,border-color .2s ease,color .2s ease,opacity .2s ease,transform .2s ease!important;}
+.ltdVitaContactsForm20260813 .gw-fit-form-button::after{background:currentColor;content:"";height:8px;transform:rotate(45deg);width:8px;}
+.ltdVitaContactsForm20260813 .gw-fit-form-button:hover{background:#f48805!important;border-color:#f48805!important;color:#fff!important;transform:translateY(-1px)!important;}
+.ltdVitaContactsForm20260813 .gw-fit-form-button:focus-visible{outline:2px solid #fff!important;outline-offset:4px!important;}
+.ltdVitaContactsForm20260813 .gw-fit-form-button:disabled,.ltdVitaContactsForm20260813 .gw-fit-form-button.is-loading,.ltdVitaContactsForm20260813 .gw-fit-form-button.is-counting{background:rgba(255,255,255,.1)!important;border-color:transparent!important;color:rgba(255,255,255,.5)!important;cursor:not-allowed!important;opacity:1!important;transform:none!important;}
+.ltdVitaContactsForm20260813 .gw-fit-form-button.is-secondary{background:transparent!important;border-color:rgba(255,255,255,.22)!important;color:#fff!important;min-height:46px!important;white-space:nowrap!important;}
+.ltdVitaContactsForm20260813 .gw-fit-form-actions{display:none!important;}
+.ltdVitaContactsForm20260813 .ltd-vita-contacts-custom-actions{align-items:center;display:flex;gap:12px;justify-content:flex-start;margin-top:40px;}
+
+.ltdVitaContactsForm20260813 .gw-fit-form-counter{align-items:stretch!important;border-bottom:1px solid var(--vita-line)!important;display:flex!important;}
+.ltdVitaContactsForm20260813 .gw-fit-form-stepper{background:transparent!important;border:0!important;color:#fff!important;min-width:44px!important;}
+.ltdVitaContactsForm20260813 .gw-fit-form-counter-input{border:0!important;text-align:center!important;}
+.ltdVitaContactsForm20260813 .gw-fit-form-switch-row{align-items:center!important;display:flex!important;gap:12px!important;}
+.ltdVitaContactsForm20260813 .gw-fit-form-switch{background:rgba(255,255,255,.2)!important;border:0!important;border-radius:999px!important;min-height:26px!important;min-width:48px!important;}
+.ltdVitaContactsForm20260813 .gw-fit-form-switch.is-checked,.ltdVitaContactsForm20260813 .gw-fit-form-switch[aria-checked="true"]{background:#fff!important;color:var(--vita-accent-text)!important;}
+.ltdVitaContactsForm20260813 .gw-fit-form-slider{accent-color:#fff!important;width:100%!important;}
+.ltdVitaContactsForm20260813 .gw-fit-form-rate{color:var(--vita-faint)!important;display:flex!important;font-size:28px!important;gap:8px!important;}
+.ltdVitaContactsForm20260813 .gw-fit-form-rate-item.is-active,.ltdVitaContactsForm20260813 .gw-fit-form-rate-item:hover{color:#f48805!important;}
+.ltdVitaContactsForm20260813 .gw-fit-form-color{align-items:center!important;display:flex!important;gap:12px!important;}
+.ltdVitaContactsForm20260813 .gw-fit-form-color-input{background:transparent!important;border:1px solid var(--vita-line-strong)!important;border-radius:50%!important;height:42px!important;padding:3px!important;width:42px!important;}
+.ltdVitaContactsForm20260813 .gw-fit-form-upload{align-items:center!important;background:rgba(255,255,255,.035)!important;border:1px dashed rgba(255,255,255,.24)!important;border-radius:8px!important;color:#fff!important;display:flex!important;flex-wrap:wrap!important;gap:10px 14px!important;min-height:76px!important;padding:16px!important;}
+.ltdVitaContactsForm20260813 .gw-fit-form-upload:hover{border-color:rgba(255,255,255,.48)!important;}
+.ltdVitaContactsForm20260813 .gw-fit-form-upload-detail{color:var(--vita-muted)!important;}
+.ltdVitaContactsForm20260813 .gw-fit-form-upload-preview{border-radius:6px!important;height:80px!important;object-fit:cover!important;width:80px!important;}
+.ltdVitaContactsForm20260813 .gw-fit-form-upload.is-loading{opacity:.65!important;}
+.ltdVitaContactsForm20260813 .gw-fit-form-upload.is-error{border-color:rgba(253,79,79,.55)!important;}
+
+@media (max-width:1200px){.ltdVitaContactsForm20260813 .ltd-vita-contacts-title{font-size:48px;}.ltdVitaContactsForm20260813 .ltd-vita-contacts-visual,.ltdVitaContactsForm20260813 .ltd-vita-contacts-panel{padding:32px;}}
+@media (max-width:900px){.ltdVitaContactsForm20260813 .ltd-vita-contacts-title{font-size:36px;font-weight:700;letter-spacing:-.05em;line-height:1.2;}.ltdVitaContactsForm20260813 .ltd-vita-contacts-description{font-size:16px;margin-top:16px;}.ltdVitaContactsForm20260813 .ltd-vita-contacts-form-slot{margin-top:32px;}.ltdVitaContactsForm20260813 .gw-fit-form-body{grid-template-columns:1fr!important;}.ltdVitaContactsForm20260813 .gw-fit-form-field{grid-column:1 / -1!important;}.ltdVitaContactsForm20260813 .gw-fit-form-field-content.is-label-left,.ltdVitaContactsForm20260813 .gw-fit-form-field-content.is-label-right{display:flex!important;flex-direction:column!important;}.ltdVitaContactsForm20260813 .gw-fit-form-label{width:auto!important;}}
+@media (max-width:560px){.ltdVitaContactsForm20260813{--vita-control-size:20px;}.ltdVitaContactsForm20260813 .ltd-vita-contacts-panel,.ltdVitaContactsForm20260813 .ltd-vita-contacts-visual{padding:30px 20px;}.ltdVitaContactsForm20260813 .gw-fit-form-captcha,.ltdVitaContactsForm20260813 .gw-fit-form-range,.ltdVitaContactsForm20260813 .gw-fit-form-address,.ltdVitaContactsForm20260813 .gw-fit-form-cascader{flex-direction:column!important;}.ltdVitaContactsForm20260813 .gw-fit-form-captcha>*,.ltdVitaContactsForm20260813 .gw-fit-form-range>*,.ltdVitaContactsForm20260813 .gw-fit-form-address>*,.ltdVitaContactsForm20260813 .gw-fit-form-cascader>*{flex-basis:auto!important;width:100%!important;}.ltdVitaContactsForm20260813 .ltd-vita-contacts-custom-actions{align-items:stretch;flex-direction:column;}.ltdVitaContactsForm20260813 .ltd-vita-contacts-custom-actions .gw-fit-form-button{width:100%!important;}}
+@media (prefers-reduced-motion:reduce){.ltdVitaContactsForm20260813 *{scroll-behavior:auto!important;transition:none!important;}.ltdVitaContactsForm20260813 .gw-fit-form-button:hover{transform:none!important;}}
+</style>
+
+<section class="ltdVitaContactsForm20260813" aria-labelledby="ltd-vita-contacts-title-20260813">
+  <div class="ltd-vita-contacts-inner">
+    <div class="ltd-vita-contacts-visual" aria-hidden="true">
+      <img class="ltd-vita-contacts-image" src="$[contact_image]" alt="" loading="lazy" decoding="async">
+      <div class="ltd-vita-contacts-image-placeholder">请在模块设置中选择联系表单插画。</div>
+    </div>
+    <div class="ltd-vita-contacts-panel">
+      <div class="ltd-vita-contacts-content">
+        <p class="ltd-vita-contacts-kicker"><span class="ltd-vita-contacts-mark" aria-hidden="true"></span><span>$[eyebrow]</span></p>
+        <h2 class="ltd-vita-contacts-title" id="ltd-vita-contacts-title-20260813">$[title]</h2>
+        <p class="ltd-vita-contacts-description">$[description]</p>
+        <div class="ltd-vita-contacts-form-slot">
+          $[fitForm.preset]
+          <div class="ltd-vita-contacts-custom-actions">
+            <button class="gw-fit-form-button ltd-vita-contacts-submit" type="button"><span class="ltd-vita-contacts-submit-label">$[submit_text]</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  'use strict';
+
+  const script = document.currentScript;
+  const previous = script ? script.previousElementSibling : null;
+  const moduleHost = script && script.closest ? script.closest('.gw-browse-module') : null;
+  const root = previous && previous.classList && previous.classList.contains('ltdVitaContactsForm20260813')
+    ? previous
+    : (moduleHost ? moduleHost.querySelector('.ltdVitaContactsForm20260813') : null);
+  if (!root) return;
+
+  const customSubmitButton = root.querySelector('.ltd-vita-contacts-submit');
+
+  const findPresetSubmitButton = () => {
+    const candidates = root.querySelectorAll([
+      '.gw-fit-form-actions [data-submit-form]',
+      '.gw-fit-form-actions button[type="submit"]',
+      '.gw-fit-form-actions input[type="submit"]',
+      '.gw-fit-form-actions .gw-fit-form-button:not(.is-secondary)',
+      'button.gw-fit-form-button[type="submit"]',
+      'input.gw-fit-form-button[type="submit"]',
+      '[data-submit-form]'
+    ].join(','));
+
+    for (let index = 0; index < candidates.length; index += 1) {
+      const candidate = candidates[index];
+      if (!candidate.closest('.gw-fit-form-captcha') && !candidate.classList.contains('is-secondary')) return candidate;
+    }
+    return null;
+  };
+
+  const findPresetForm = () => root.querySelector('form[data-ltd-form-module], [data-ltd-form-module][data-form-id], form.gw-fit-form-dom');
+
+  const findFormRuntime = () => {
+    const form = findPresetForm();
+    if (!form) return null;
+    const formId = form.getAttribute('data-submit-form-id') || form.getAttribute('data-form-id') || '';
+    if (!formId) return null;
+    const runtimeNames = ['fitForm_' + formId];
+    for (let index = 0; index < runtimeNames.length; index += 1) {
+      const directRuntime = window[runtimeNames[index]];
+      if (directRuntime && typeof directRuntime.submit === 'function') return directRuntime;
+    }
+    const runtimeRegistry = window.__GwCodeRuntime;
+    for (let index = 0; index < runtimeNames.length; index += 1) {
+      const registryRuntime = runtimeRegistry && runtimeRegistry[runtimeNames[index]];
+      if (registryRuntime && typeof registryRuntime.submit === 'function') return registryRuntime;
+    }
+    const visualRuntime = window.VisualModuleRuntime;
+    const runtimeList = visualRuntime && typeof visualRuntime.list === 'function' ? visualRuntime.list('form') : [];
+    for (let index = 0; index < runtimeList.length; index += 1) {
+      const api = runtimeList[index];
+      if (api && String(api.id || '') === String(formId) && typeof api.submit === 'function') return api;
+    }
+    return null;
+  };
+
+  const showRuntimeError = () => {
+    const message = '表单尚未初始化，请稍后重试';
+    const utilsToast = window.Utils && window.Utils.Toast;
+    if (utilsToast && typeof utilsToast.error === 'function') {
+      utilsToast.error(message);
+      return;
+    }
+    if (window.toast && typeof window.toast.error === 'function') {
+      window.toast.error(message);
+      return;
+    }
+    if (window.console && typeof window.console.warn === 'function') window.console.warn('[Vita Contacts] ' + message);
+  };
+
+  const submitWithPreset = (button) => {
+    const runtime = findFormRuntime();
+    if (runtime) {
+      const readyResult = typeof runtime.ready === 'function' ? runtime.ready() : runtime;
+      Promise.resolve(readyResult).then(() => runtime.submit(button)).catch(() => showRuntimeError());
+      return;
+    }
+
+    const presetSubmitButton = findPresetSubmitButton();
+    if (presetSubmitButton && !presetSubmitButton.disabled) {
+      presetSubmitButton.click();
+      return;
+    }
+    showRuntimeError();
+  };
+
+  if (customSubmitButton) {
+    if (customSubmitButton._ltdVitaContactsClick) customSubmitButton.removeEventListener('click', customSubmitButton._ltdVitaContactsClick);
+    const handleSubmitClick = (event) => {
+      event.preventDefault();
+      if (customSubmitButton.disabled) return;
+      submitWithPreset(customSubmitButton);
+    };
+    customSubmitButton._ltdVitaContactsClick = handleSubmitClick;
+    customSubmitButton.addEventListener('click', handleSubmitClick);
+  }
+
+  const image = root.querySelector('.ltd-vita-contacts-image');
+  if (!image || root.dataset.vitaContactsImageReady === '1') return;
+  root.dataset.vitaContactsImageReady = '1';
+
+  const showImageFallback = () => root.classList.add('is-image-error');
+  if (!image.getAttribute('src')) {
+    showImageFallback();
+    return;
+  }
+  if (image.complete && image.naturalWidth === 0) showImageFallback();
+  image.addEventListener('error', showImageFallback, { once: true });
+}());
+</script>

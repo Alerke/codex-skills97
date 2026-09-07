@@ -1,0 +1,186 @@
+[
+  {
+    "key": "media_type",
+    "label": "Banner 内容类型（image/video）",
+    "value": "image",
+    "default_value": "image",
+    "input_type": "text"
+  },
+  {
+    "key": "slides",
+    "label": "Banner 图片、文字、按钮及跳转",
+    "value": "[{\"url\":\"https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2400&q=85\",\"filepath_thumb\":\"https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=75\",\"name\":\"探索隐世旅程\",\"title\":\"远行\",\"subtitle\":\"带着目的出发。静修、户外探索与精品旅居，\\n在一处相遇。\",\"hidden\":false,\"jump\":{\"type\":\"web\",\"href\":\"/retreats\",\"target\":\"_self\"}}]",
+    "default_value": "[{\"url\":\"https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2400&q=85\",\"filepath_thumb\":\"https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=75\",\"name\":\"探索隐世旅程\",\"title\":\"远行\",\"subtitle\":\"带着目的出发。静修、户外探索与精品旅居，\\n在一处相遇。\",\"hidden\":false,\"jump\":{\"type\":\"web\",\"href\":\"/retreats\",\"target\":\"_self\"}}]",
+    "input_type": "imageList"
+  },
+  {
+    "key": "video_slides",
+    "label": "Banner 视频列表",
+    "value": "[]",
+    "default_value": "[]",
+    "input_type": "videoList"
+  },
+  {
+    "key": "autoplay",
+    "label": "自动轮播",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "switch"
+  },
+  {
+    "key": "autoplay_delay",
+    "label": "轮播间隔（毫秒）",
+    "value": "6000",
+    "default_value": "6000",
+    "input_type": "number"
+  },
+  {
+    "key": "title_font_size",
+    "label": "主标题字号（px）",
+    "value": "120",
+    "default_value": "120",
+    "input_type": "number"
+  },
+  {
+    "key": "subtitle_font_size",
+    "label": "副标题字号（px）",
+    "value": "25",
+    "default_value": "25",
+    "input_type": "number"
+  },
+  {
+    "key": "title_font_weight",
+    "label": "主标题字重",
+    "value": "600",
+    "default_value": "600",
+    "input_type": "number"
+  },
+  {
+    "key": "text_color",
+    "label": "主标题颜色",
+    "value": "#ffffff",
+    "default_value": "#ffffff",
+    "input_type": "color"
+  },
+  {
+    "key": "subtitle_color",
+    "label": "副标题颜色",
+    "value": "#ffffff",
+    "default_value": "#ffffff",
+    "input_type": "color"
+  },
+  {
+    "key": "overlay_opacity",
+    "label": "渐变遮罩强度",
+    "value": "0.28",
+    "default_value": "0.28",
+    "input_type": "number"
+  },
+  {
+    "key": "content_bottom",
+    "label": "内容距底距离（px）",
+    "value": "105",
+    "default_value": "105",
+    "input_type": "number"
+  },
+  {
+    "key": "content_left",
+    "label": "内容中心水平偏移（px）",
+    "value": "0",
+    "default_value": "0",
+    "input_type": "number"
+  },
+  {
+    "key": "mobile_ratio_mode",
+    "label": "移动端按比例显示",
+    "value": "0",
+    "default_value": "0",
+    "input_type": "switch"
+  },
+  {
+    "key": "mobile_aspect_ratio",
+    "label": "移动端宽高比例",
+    "value": "4/5",
+    "default_value": "4/5",
+    "input_type": "text"
+  },
+  {
+    "key": "pc_ratio_mode",
+    "label": "PC 端按比例显示",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "switch"
+  },
+  {
+    "key": "pc_aspect_ratio",
+    "label": "PC 端宽高比例（数值越大越矮，建议 21/9）",
+    "value": "21/9",
+    "default_value": "21/9",
+    "input_type": "text"
+  },
+  {
+    "key": "show_overlay",
+    "label": "显示渐变遮罩",
+    "value": "1",
+    "default_value": "1",
+    "input_type": "switch"
+  },
+  {"key":"inherit_first_content","label":"新增图片继承第一张标题、副标题、按钮和跳转","value":"1","default_value":"1","input_type":"switch"},
+  {"key":"button_background_start","label":"按钮背景渐变起始颜色","value":"#ffffff","default_value":"#ffffff","input_type":"color"},
+  {"key":"button_background_end","label":"按钮背景渐变结束颜色","value":"#ffffff","default_value":"#ffffff","input_type":"color"},
+  {"key":"button_text_color","label":"按钮文字颜色","value":"#08292f","default_value":"#08292f","input_type":"color"},
+  {"key":"button_border_start","label":"按钮流体描边起始颜色","value":"#75d5cc","default_value":"#75d5cc","input_type":"color"},
+  {"key":"button_border_end","label":"按钮流体描边结束颜色","value":"#f3bc75","default_value":"#f3bc75","input_type":"color"},
+  {"key":"button_border_width","label":"按钮描边宽度（px）","value":"2","default_value":"2","input_type":"number"},
+  {"key":"button_gradient_angle","label":"按钮描边渐变角度","value":"120","default_value":"120","input_type":"number"},
+  {"key":"button_hover_background_start","label":"按钮悬浮背景起始颜色","value":"#eaf4f2","default_value":"#eaf4f2","input_type":"color"},
+  {"key":"button_hover_background_end","label":"按钮悬浮背景结束颜色","value":"#ffffff","default_value":"#ffffff","input_type":"color"},
+  {"key":"button_hover_text_color","label":"按钮悬浮文字颜色","value":"#08292f","default_value":"#08292f","input_type":"color"},
+  {"key":"button_hover_border_start","label":"按钮悬浮流体描边起始颜色","value":"#75d5cc","default_value":"#75d5cc","input_type":"color"},
+  {"key":"button_hover_border_end","label":"按钮悬浮流体描边结束颜色","value":"#f3bc75","default_value":"#f3bc75","input_type":"color"},
+  {"key":"button_hover_scale","label":"按钮悬浮放大比例","value":"1.03","default_value":"1.03","input_type":"number"},
+  {"key":"button_hover_lift","label":"按钮悬浮上移距离（px）","value":"-2","default_value":"-2","input_type":"number"},
+  {"key":"button_flow_duration","label":"按钮流体描边动画时长（秒）","value":"4","default_value":"4","input_type":"number"},
+  {"key":"slide_1_title","label":"第1张主标题","value":"远行","default_value":"远行","input_type":"text"},
+  {"key":"slide_1_subtitle","label":"第1张副标题","value":"带着目的出发。静修、户外探索与精品旅居，在一处相遇。","default_value":"带着目的出发。静修、户外探索与精品旅居，在一处相遇。","input_type":"text"},
+  {"key":"slide_1_button_text","label":"第1张按钮文字","value":"探索隐世旅程","default_value":"探索隐世旅程","input_type":"text"},
+  {"key":"slide_1_button_url","label":"第1张按钮跳转","value":"/retreats","default_value":"/retreats","input_type":"text"},
+  {"key":"slide_1_title_color","label":"第1张主标题颜色","value":"#ffffff","default_value":"#ffffff","input_type":"color"},
+  {"key":"slide_1_subtitle_color","label":"第1张副标题颜色","value":"#ffffff","default_value":"#ffffff","input_type":"color"},
+  {"key":"slide_1_button_background","label":"第1张按钮背景颜色","value":"#ffffff","default_value":"#ffffff","input_type":"color"},
+  {"key":"slide_1_button_text_color","label":"第1张按钮文字颜色","value":"#08292f","default_value":"#08292f","input_type":"color"},
+  {"key":"slide_1_button_border_start","label":"第1张按钮流体描边起始颜色","value":"#75d5cc","default_value":"#75d5cc","input_type":"color"},
+  {"key":"slide_1_button_border_end","label":"第1张按钮流体描边结束颜色","value":"#f3bc75","default_value":"#f3bc75","input_type":"color"},
+  {"key":"slide_1_button_hover_background","label":"第1张按钮悬浮背景颜色","value":"#eaf4f2","default_value":"#eaf4f2","input_type":"color"},
+  {"key":"slide_1_button_hover_text_color","label":"第1张按钮悬浮文字颜色","value":"#08292f","default_value":"#08292f","input_type":"color"},
+  {"key":"slide_1_button_hover_border_start","label":"第1张按钮悬浮流体描边起始颜色","value":"#75d5cc","default_value":"#75d5cc","input_type":"color"},
+  {"key":"slide_1_button_hover_border_end","label":"第1张按钮悬浮流体描边结束颜色","value":"#f3bc75","default_value":"#f3bc75","input_type":"color"},
+  {"key":"slide_2_title","label":"第2张主标题","value":"","default_value":"","input_type":"text"},
+  {"key":"slide_2_subtitle","label":"第2张副标题","value":"","default_value":"","input_type":"text"},
+  {"key":"slide_2_button_text","label":"第2张按钮文字","value":"","default_value":"","input_type":"text"},
+  {"key":"slide_2_button_url","label":"第2张按钮跳转","value":"","default_value":"","input_type":"text"},
+  {"key":"slide_2_title_color","label":"第2张主标题颜色","value":"#ffffff","default_value":"#ffffff","input_type":"color"},
+  {"key":"slide_2_subtitle_color","label":"第2张副标题颜色","value":"#e7fffb","default_value":"#e7fffb","input_type":"color"},
+  {"key":"slide_2_button_background","label":"第2张按钮背景颜色","value":"#f4fffd","default_value":"#f4fffd","input_type":"color"},
+  {"key":"slide_2_button_text_color","label":"第2张按钮文字颜色","value":"#083d47","default_value":"#083d47","input_type":"color"},
+  {"key":"slide_2_button_border_start","label":"第2张按钮流体描边起始颜色","value":"#24d6c8","default_value":"#24d6c8","input_type":"color"},
+  {"key":"slide_2_button_border_end","label":"第2张按钮流体描边结束颜色","value":"#3a7bd5","default_value":"#3a7bd5","input_type":"color"},
+  {"key":"slide_2_button_hover_background","label":"第2张按钮悬浮背景颜色","value":"#dff7f3","default_value":"#dff7f3","input_type":"color"},
+  {"key":"slide_2_button_hover_text_color","label":"第2张按钮悬浮文字颜色","value":"#062f37","default_value":"#062f37","input_type":"color"},
+  {"key":"slide_2_button_hover_border_start","label":"第2张按钮悬浮流体描边起始颜色","value":"#3a7bd5","default_value":"#3a7bd5","input_type":"color"},
+  {"key":"slide_2_button_hover_border_end","label":"第2张按钮悬浮流体描边结束颜色","value":"#24d6c8","default_value":"#24d6c8","input_type":"color"},
+  {"key":"slide_3_title","label":"第3张主标题","value":"","default_value":"","input_type":"text"},
+  {"key":"slide_3_subtitle","label":"第3张副标题","value":"","default_value":"","input_type":"text"},
+  {"key":"slide_3_button_text","label":"第3张按钮文字","value":"","default_value":"","input_type":"text"},
+  {"key":"slide_3_button_url","label":"第3张按钮跳转","value":"","default_value":"","input_type":"text"},
+  {"key":"slide_3_title_color","label":"第3张主标题颜色","value":"#ffffff","default_value":"#ffffff","input_type":"color"},
+  {"key":"slide_3_subtitle_color","label":"第3张副标题颜色","value":"#fff2df","default_value":"#fff2df","input_type":"color"},
+  {"key":"slide_3_button_background","label":"第3张按钮背景颜色","value":"#fffaf4","default_value":"#fffaf4","input_type":"color"},
+  {"key":"slide_3_button_text_color","label":"第3张按钮文字颜色","value":"#4d2b17","default_value":"#4d2b17","input_type":"color"},
+  {"key":"slide_3_button_border_start","label":"第3张按钮流体描边起始颜色","value":"#ff8a5b","default_value":"#ff8a5b","input_type":"color"},
+  {"key":"slide_3_button_border_end","label":"第3张按钮流体描边结束颜色","value":"#ffd166","default_value":"#ffd166","input_type":"color"},
+  {"key":"slide_3_button_hover_background","label":"第3张按钮悬浮背景颜色","value":"#fff0dc","default_value":"#fff0dc","input_type":"color"},
+  {"key":"slide_3_button_hover_text_color","label":"第3张按钮悬浮文字颜色","value":"#3f2110","default_value":"#3f2110","input_type":"color"},
+  {"key":"slide_3_button_hover_border_start","label":"第3张按钮悬浮流体描边起始颜色","value":"#ffd166","default_value":"#ffd166","input_type":"color"},
+  {"key":"slide_3_button_hover_border_end","label":"第3张按钮悬浮流体描边结束颜色","value":"#ff8a5b","default_value":"#ff8a5b","input_type":"color"}
+]
