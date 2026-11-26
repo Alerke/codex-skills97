@@ -1,0 +1,5 @@
+interface:
+  display_name: "极简扁平化信息图"
+  short_description: "仅在明确调用时制作纯白背景、模块化卡片与业务流程的极简扁平化信息图"
+policy:
+  allow_implicit_invocation: false
